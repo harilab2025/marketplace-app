@@ -40,7 +40,6 @@ const getSecurityHeaders = (isDev: boolean) => {
 
   // CSP: Only enable in production
   if (!isDev) {
-    // Production: Stricter CSP
     headers.push({
       key: 'Content-Security-Policy',
       value: [
@@ -58,7 +57,6 @@ const getSecurityHeaders = (isDev: boolean) => {
       ].join('; ')
     });
   }
-  // Development: No CSP for easier debugging
 
   return headers;
 };
@@ -71,30 +69,13 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
 
-  // Compiler Options (Next.js 15+)
+  // Compiler Options
   compiler: {
     removeConsole: process.env.APP_ENV === 'production' ? {
       exclude: ['error', 'warn']
     } : false,
   },
 
-  turbopack: {
-    rules: {
-      // Handle font files
-      '*.ttf': {
-        loaders: ['file-loader'],
-        as: '*.ttf',
-      },
-      '*.woff': {
-        loaders: ['file-loader'],
-        as: '*.woff',
-      },
-      '*.woff2': {
-        loaders: ['file-loader'],
-        as: '*.woff2',
-      }
-    }
-  },
   // Experimental Features
   experimental: {
     // Optimized Package Imports
@@ -107,13 +88,13 @@ const nextConfig: NextConfig = {
       'framer-motion'
     ],
 
-    // Server Actions & Components
+    // Server Actions Configuration
     serverActions: {
       bodySizeLimit: '2mb',
       allowedOrigins: [
         'http://localhost:3005',
         'http://DESKTOP-G02RU1N:3005',
-        process.env.ASSET_PREFIX as string
+        ...(process.env.ASSET_PREFIX ? [process.env.ASSET_PREFIX] : [])
       ]
     },
 
@@ -138,10 +119,10 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       // Add your allowed image domains here
       // {
-      //     protocol: 'https',
-      //     hostname: 'example.com',
-      //     port: '',
-      //     pathname: '/images/**',
+      //   protocol: 'https',
+      //   hostname: 'example.com',
+      //   port: '',
+      //   pathname: '/images/**',
       // },
     ],
   },
@@ -202,9 +183,9 @@ const nextConfig: NextConfig = {
     return [
       // Add your redirects here
       // {
-      //     source: '/old-path',
-      //     destination: '/new-path',
-      //     permanent: true,
+      //   source: '/old-path',
+      //   destination: '/new-path',
+      //   permanent: true,
       // },
     ];
   },
@@ -212,15 +193,9 @@ const nextConfig: NextConfig = {
   // Rewrites
   async rewrites() {
     return {
-      beforeFiles: [
-        // Add your rewrites here
-      ],
-      afterFiles: [
-        // Add your rewrites here
-      ],
-      fallback: [
-        // Add your fallback rewrites here
-      ],
+      beforeFiles: [],
+      afterFiles: [],
+      fallback: [],
     };
   },
 
@@ -311,12 +286,6 @@ const nextConfig: NextConfig = {
     tsconfigPath: './tsconfig.json',
   },
 
-  // ESLint Configuration
-  eslint: {
-    ignoreDuringBuilds: false,
-    dirs: ['app', 'pages', 'components', 'lib', 'src']
-  },
-
   // Logging
   logging: {
     fetches: {
@@ -324,7 +293,7 @@ const nextConfig: NextConfig = {
     },
   },
 
-  // Dev Indicators (Fixed for Next.js 15.5.6)
+  // Dev Indicators (Next.js 16 only supports boolean)
   devIndicators: {
     position: 'bottom-right',
   },
@@ -340,11 +309,8 @@ const nextConfig: NextConfig = {
     keepAlive: true,
   },
 
-  // On Demand Entries
-  onDemandEntries: {
-    maxInactiveAge: 60 * 1000,
-    pagesBufferLength: 5,
-  },
+  // ⚠️ REMOVED: onDemandEntries is deprecated in Next.js 16
+  // On-demand compilation is now handled automatically by Turbopack
 };
 
 export default nextConfig;

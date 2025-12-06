@@ -11,7 +11,7 @@ const accessRules: AccessRule[] = [
     { pattern: /^\/api\/dashboard\/.*$/, roles: ['ADMIN'] }
 ];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
 
     const url = new URL(request.url);
     const user = await userData();
