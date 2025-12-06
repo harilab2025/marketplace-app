@@ -1,0 +1,5714 @@
+{
+  "5K-Indonesia/Lingkungan Terbangun/Zona Taman Wisata (Area):3/1": {
+    "x": 0,
+    "y": 0,
+    "width": 198,
+    "height": 183,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lingkungan Terbangun/Zona Taman Wisata (Area):2/1": {
+    "x": 0,
+    "y": 0,
+    "width": 198,
+    "height": 183,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lingkungan Terbangun/Daya Tarik Wisata (Area)/1": {
+    "x": 0,
+    "y": 0,
+    "width": 198,
+    "height": 183,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lingkungan Terbangun/Zona Taman Wisata (Area):1/1": {
+    "x": 0,
+    "y": 0,
+    "width": 198,
+    "height": 183,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Hidrografi/Wilayah Pesisir:1/1": {
+    "x": 198,
+    "y": 0,
+    "width": 132,
+    "height": 122,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Hidrografi/Wilayah Pesisir:2/1": {
+    "x": 198,
+    "y": 0,
+    "width": 132,
+    "height": 122,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Pertambangan": {
+    "x": 330,
+    "y": 0,
+    "width": 152,
+    "height": 112,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Non Agrikultur Semak Belukar:1": {
+    "x": 482,
+    "y": 0,
+    "width": 103,
+    "height": 98,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Semak Belukar": {
+    "x": 482,
+    "y": 0,
+    "width": 103,
+    "height": 98,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Semak dan Belukar": {
+    "x": 482,
+    "y": 0,
+    "width": 103,
+    "height": 98,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Menara Telepon:3": {
+    "x": 585,
+    "y": 0,
+    "width": 44,
+    "height": 90,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Menara Telepon:1": {
+    "x": 585,
+    "y": 0,
+    "width": 44,
+    "height": 90,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Tiang Telepon (Titik)": {
+    "x": 585,
+    "y": 0,
+    "width": 44,
+    "height": 90,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Menara Telepon (titik):1": {
+    "x": 585,
+    "y": 0,
+    "width": 44,
+    "height": 90,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Menara Telepon (titik):2": {
+    "x": 585,
+    "y": 0,
+    "width": 44,
+    "height": 90,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Menara Telepon (Titik)": {
+    "x": 585,
+    "y": 0,
+    "width": 44,
+    "height": 90,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Hidrografi/Rawa (area):2": {
+    "x": 629,
+    "y": 0,
+    "width": 84,
+    "height": 84,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Hidrografi/Rawa:1/1": {
+    "x": 629,
+    "y": 0,
+    "width": 84,
+    "height": 84,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Hidrografi/Rawa (area):1": {
+    "x": 629,
+    "y": 0,
+    "width": 84,
+    "height": 84,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Hidrografi/Rawa (area):5/1": {
+    "x": 629,
+    "y": 0,
+    "width": 84,
+    "height": 84,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Hidrografi/Rawa (area):4/1": {
+    "x": 629,
+    "y": 0,
+    "width": 84,
+    "height": 84,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Hidrografi/Rawa (area):6": {
+    "x": 629,
+    "y": 0,
+    "width": 84,
+    "height": 84,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Vegetasi/Agrikultur Sawah:1/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Vegetasi/Agrikultur Sawah (area):1/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Agrikultur Sawah:5/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Sawah/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Vegetasi/Agrikultur Sawah (Area)/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Vegetasi/Agrikultur Sawah (area):2/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Vegetasi/Agrikultur Sawah:2/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Vegetasi/Agrikultur Sawah:4/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Vegetasi/Agrikultur Sawah:3/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Tanaman Semusim Lahan Basah/0": {
+    "x": 713,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Pematang/1": {
+    "x": 793,
+    "y": 0,
+    "width": 80,
+    "height": 78,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Kebun, Hutan, dan Tanaman Campur Lainnya/1": {
+    "x": 873,
+    "y": 0,
+    "width": 74,
+    "height": 74,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Pasir/Bukit Pasir Darat/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Hidrografi/Area Pasir/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Hidrografi/Beting (Area)/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Hidrografi/Pasir (area)/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Tanah/Pasir Darat:2/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Hidrografi/pasir (area):1/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Hidrografi/pasir (area):2/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Pasir/Bukit Pasir Laut/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Tanah/Pasir Darat:1/1": {
+    "x": 947,
+    "y": 0,
+    "width": 66,
+    "height": 61,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lingkungan Terbangun/Bangunan Budidaya (area):1": {
+    "x": 1013,
+    "y": 0,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lingkungan Terbangun/Bangunan Budidaya (area):2": {
+    "x": 1013,
+    "y": 0,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lingkungan Terbangun/Situs Cagar Budaya (Area):3": {
+    "x": 0,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lingkungan Terbangun/Situs Cagar Budaya (Area):1": {
+    "x": 0,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Lingkungan Terbangun/Situs Cagar Budaya (Area):2": {
+    "x": 0,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lingkungan Terbangun/Situs Cagar Budaya (Area):4": {
+    "x": 0,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Herba dan Rumput": {
+    "x": 76,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Padang Rumput": {
+    "x": 76,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Utilitas/Pembuangan": {
+    "x": 152,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Tanah Kosong/Gundul": {
+    "x": 228,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/Tanah Kosong/Gundul": {
+    "x": 228,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Alang-alang": {
+    "x": 304,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Sabana": {
+    "x": 304,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Vegetasi/Non Agrikultur Rumput Rawa (area)": {
+    "x": 380,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Non Agrikultur Rumput Rawa": {
+    "x": 380,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Hutan Rawa/Gambut": {
+    "x": 380,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Hutan Rawa/Gambut": {
+    "x": 380,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Hutan Bakau/Mangrove": {
+    "x": 456,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Hutan Mangrove": {
+    "x": 456,
+    "y": 183,
+    "width": 76,
+    "height": 56,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Hidrografi/Rawa:3/0": {
+    "x": 532,
+    "y": 183,
+    "width": 50,
+    "height": 50,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Hidrografi/Rawa (area):3/0": {
+    "x": 532,
+    "y": 183,
+    "width": 50,
+    "height": 50,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Hidrografi/Rawa:2/0": {
+    "x": 532,
+    "y": 183,
+    "width": 50,
+    "height": 50,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Hidrografi/Endapan Lumpur (area)/1": {
+    "x": 582,
+    "y": 183,
+    "width": 76,
+    "height": 48,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Basah:1": {
+    "x": 658,
+    "y": 183,
+    "width": 57,
+    "height": 48,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Basah:4": {
+    "x": 658,
+    "y": 183,
+    "width": 57,
+    "height": 48,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Basah (area)": {
+    "x": 658,
+    "y": 183,
+    "width": 57,
+    "height": 48,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Basah:3": {
+    "x": 658,
+    "y": 183,
+    "width": 57,
+    "height": 48,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Basah:2": {
+    "x": 658,
+    "y": 183,
+    "width": 57,
+    "height": 48,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Sumur Minyak": {
+    "x": 715,
+    "y": 183,
+    "width": 34,
+    "height": 42,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Tempat Pembuangan Akhir Sampah (Titik)": {
+    "x": 749,
+    "y": 183,
+    "width": 28,
+    "height": 40,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Hidrografi/Beting:2": {
+    "x": 777,
+    "y": 183,
+    "width": 35,
+    "height": 39,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Hidrografi/Beting:1": {
+    "x": 777,
+    "y": 183,
+    "width": 35,
+    "height": 39,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Hidrografi/Beting (area)": {
+    "x": 777,
+    "y": 183,
+    "width": 35,
+    "height": 39,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Utilitas/Tempat Sampah (area):1": {
+    "x": 812,
+    "y": 183,
+    "width": 35,
+    "height": 39,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Utillitas/Tempat Pembuangan Akhir Sampah (Area)": {
+    "x": 812,
+    "y": 183,
+    "width": 35,
+    "height": 39,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Utilitas/Tempat Sampah (area):2": {
+    "x": 812,
+    "y": 183,
+    "width": 35,
+    "height": 39,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/Krematorium": {
+    "x": 847,
+    "y": 183,
+    "width": 34,
+    "height": 34,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/Tempat Penyimpanan Jenazah": {
+    "x": 881,
+    "y": 183,
+    "width": 28,
+    "height": 34,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Makam (Titik):3/Tempat Penyimpanan Jenazah": {
+    "x": 881,
+    "y": 183,
+    "width": 28,
+    "height": 34,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Militer TNI": {
+    "x": 909,
+    "y": 183,
+    "width": 28,
+    "height": 34,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Militer TNI": {
+    "x": 909,
+    "y": 183,
+    "width": 28,
+    "height": 34,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Tangki Gas & Minyak:1": {
+    "x": 937,
+    "y": 183,
+    "width": 26,
+    "height": 32,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kantor Pengiriman paket (titik)": {
+    "x": 963,
+    "y": 183,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor Pengiriman Paket Pos": {
+    "x": 963,
+    "y": 183,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Makam (Titik):5/Krematorium": {
+    "x": 993,
+    "y": 183,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Makam (Titik):6/Kawasan Krematorium": {
+    "x": 993,
+    "y": 183,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Makam (Titik):5/Kantor Pemakaman": {
+    "x": 1023,
+    "y": 183,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Makam (Titik):3/Kantor Pemakaman": {
+    "x": 1023,
+    "y": 183,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Zona Taman wisata (titik):2/\u003Call other values\u003E": {
+    "x": 1053,
+    "y": 183,
+    "width": 26,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Taman Wisata (titik)/\u003Call other values\u003E": {
+    "x": 1053,
+    "y": 183,
+    "width": 26,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Daya Tarik Pariwisata/\u003Call other values\u003E": {
+    "x": 1053,
+    "y": 183,
+    "width": 26,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/\u003Call other values\u003E": {
+    "x": 1053,
+    "y": 183,
+    "width": 26,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Zona Taman Wisata (titik)/\u003Call other values\u003E": {
+    "x": 1053,
+    "y": 183,
+    "width": 26,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Radar (titik)": {
+    "x": 0,
+    "y": 239,
+    "width": 44,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Antena Stasiun Bumi Satelit Komunikasi (titik)": {
+    "x": 44,
+    "y": 239,
+    "width": 44,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Antena Stasiun Bumi Satelit Komunikasi": {
+    "x": 88,
+    "y": 239,
+    "width": 34,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Depo Bahan Bakar Gas (Titik):2": {
+    "x": 122,
+    "y": 239,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Depo Bahan Bakar Gas (Titik):1": {
+    "x": 122,
+    "y": 239,
+    "width": 30,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Kantor Stasiun Bumi Satelit Komunikasi": {
+    "x": 152,
+    "y": 239,
+    "width": 34,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor Stasiun Bumi Satelit Komunikasi (Titik):1": {
+    "x": 152,
+    "y": 239,
+    "width": 34,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kantor Stasiun Bumi Satelit Komunikasi (Titik):2": {
+    "x": 152,
+    "y": 239,
+    "width": 34,
+    "height": 30,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Menara Air Minum (titik):2": {
+    "x": 186,
+    "y": 239,
+    "width": 30,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Menara Air Minum (titik):1": {
+    "x": 186,
+    "y": 239,
+    "width": 30,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Menara Air Minum (Titik):2": {
+    "x": 186,
+    "y": 239,
+    "width": 30,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Menara Air Minum": {
+    "x": 186,
+    "y": 239,
+    "width": 30,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Menara Air Minum (Titik):1": {
+    "x": 186,
+    "y": 239,
+    "width": 30,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Lokasi Pengelolaan Limbah (titik):2": {
+    "x": 216,
+    "y": 239,
+    "width": 22,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Lokasi Pengelolaan Limbah (titik):1": {
+    "x": 216,
+    "y": 239,
+    "width": 22,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Geologi/Tambang (titik)": {
+    "x": 238,
+    "y": 239,
+    "width": 28,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Pengolahan Bahan Bakar Gas (Titik)": {
+    "x": 266,
+    "y": 239,
+    "width": 26,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor Gas (Titik)": {
+    "x": 292,
+    "y": 239,
+    "width": 26,
+    "height": 28,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Agama Budha": {
+    "x": 318,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Agama Budha": {
+    "x": 318,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Agama Kristen / Katolik": {
+    "x": 344,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Agama Kristen / Katolik": {
+    "x": 344,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Agama Islam (Pesantren)": {
+    "x": 370,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Agama Islam (Pesantren)": {
+    "x": 370,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Hidrografi/Terumbu Karang:2": {
+    "x": 396,
+    "y": 239,
+    "width": 28,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/Kantor Presiden": {
+    "x": 424,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Pipa Hidrokarbon (titik)": {
+    "x": 450,
+    "y": 239,
+    "width": 26,
+    "height": 26,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Hutan Rimba (Area)": {
+    "x": 476,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Hutan Rimba": {
+    "x": 476,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering:4": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering:3": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering (area):2": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering:1": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering:5": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering:6": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering (area):1": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Hutan Rakyat (area)": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Vegetasi/Non Agrikultur Hutan Lahan Kering:2": {
+    "x": 502,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Transportasi/Tempat Parkir (area):2": {
+    "x": 528,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Transportasi/Pool (area)": {
+    "x": 528,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Lahan Terbuka (area):1": {
+    "x": 554,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Utilitas/Sumber Air Minum (area):2/1": {
+    "x": 580,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Vegetasi/Non Agrikultur Semak Belukar (area)": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Vegetasi/Vegetasi non Budidaya (area)": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Vegetasi/Non Agrikultur Semak Belukar:4": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Vegetasi/Non Agrikultur Semak Belukar:3": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Vegetasi/Non Agrikultur Semak Belukar:2": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Vegetasi Non Budidaya Lainnya": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Vegetasi/Non Agrikultur Semak Belukar:5": {
+    "x": 606,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Vegetasi Budidaya Lainnya": {
+    "x": 632,
+    "y": 239,
+    "width": 26,
+    "height": 25,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Keagamaan": {
+    "x": 658,
+    "y": 239,
+    "width": 20,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Keagamaan": {
+    "x": 658,
+    "y": 239,
+    "width": 20,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Keagamaan": {
+    "x": 658,
+    "y": 239,
+    "width": 20,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Hidrografi/Tambak (area):4": {
+    "x": 678,
+    "y": 239,
+    "width": 47,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Daya Tarik Pariwisata/Menara": {
+    "x": 725,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Makam (Titik):6/\u003Call other values\u003E": {
+    "x": 749,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/\u003Call other values\u003E": {
+    "x": 749,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/Lainnya": {
+    "x": 749,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman lainnya": {
+    "x": 749,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Lainnya": {
+    "x": 749,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/\u003Call other values\u003E": {
+    "x": 749,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Lembaga Pemasyarakatan": {
+    "x": 773,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Lembaga Pemasyarakatan": {
+    "x": 773,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Lembaga Pemasyarakatan": {
+    "x": 773,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Lembaga Pemasyarakatan": {
+    "x": 773,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Polisi": {
+    "x": 797,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Polisi": {
+    "x": 797,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Gardu Listrik (titik):1": {
+    "x": 821,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Gardu Listrik:1": {
+    "x": 821,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Gardu Listrik (titik):2": {
+    "x": 821,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Gardu Listrik (Titik)": {
+    "x": 821,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Gardu Listrik:2": {
+    "x": 821,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Menara Eksploitasi Minyak": {
+    "x": 845,
+    "y": 239,
+    "width": 34,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Kedinasan": {
+    "x": 879,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Taman Botani": {
+    "x": 903,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Sumur": {
+    "x": 927,
+    "y": 239,
+    "width": 42,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Lokasi Bangunan/Pemerintahan (titik)/Kantor Gubernur": {
+    "x": 969,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Pool (titik)": {
+    "x": 993,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Pool (Titik)": {
+    "x": 993,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Observatorium": {
+    "x": 1017,
+    "y": 239,
+    "width": 20,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Observatorium": {
+    "x": 1017,
+    "y": 239,
+    "width": 20,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Stasiun Televisi (Titik)": {
+    "x": 1037,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Bendungan:4": {
+    "x": 1061,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Hidrografi/Bendungan:5": {
+    "x": 1061,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Bendungan:2": {
+    "x": 1061,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Bendungan:3": {
+    "x": 1061,
+    "y": 239,
+    "width": 24,
+    "height": 24,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Runway (Titik):1": {
+    "x": 0,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Runway (Titik):2": {
+    "x": 0,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Taxiway (Titik)": {
+    "x": 22,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Tempat Hiburan": {
+    "x": 44,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Menara Eksploitasi Bahan Bakar Minyak:3": {
+    "x": 66,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Menara Eksploitasi Bahan Bakar Minyak:1": {
+    "x": 66,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Sumber Air Minum (titik):1": {
+    "x": 88,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Sumber Air Minum (titik):2": {
+    "x": 88,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Sumber Air Minum (titik):3": {
+    "x": 88,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Sumber Air Minum": {
+    "x": 88,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Gelanggang Olahraga (Titik):1": {
+    "x": 110,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Luar Biasa / Cacat Fisik": {
+    "x": 132,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Luar Biasa / Cacat Fisik": {
+    "x": 132,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Khusus": {
+    "x": 158,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Khusus": {
+    "x": 158,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Tempat Sampah (titik)": {
+    "x": 184,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Pembangkit Listrik (Titik):4": {
+    "x": 210,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Pembangkit Listrik (titik)": {
+    "x": 210,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Pembangkit Listrik (Titik):2": {
+    "x": 210,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Pembangkit Listrik (Titik):1": {
+    "x": 210,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Pembangkit Listrik (Titik):3": {
+    "x": 210,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Laboratorium Pendidikan/Penelitian": {
+    "x": 236,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan/Penelitian Lainnya": {
+    "x": 262,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Penelitian/Iptek  Lainnya": {
+    "x": 262,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan/Penelitian Lainnya": {
+    "x": 262,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Penelitian/Iptek  Lainnya": {
+    "x": 262,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Perpustakaan": {
+    "x": 288,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Perpustakaan": {
+    "x": 288,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Perpustakaan": {
+    "x": 288,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lingkungan Terbangun/Gedung Pendidikan (Area):3/Perpustakaan": {
+    "x": 288,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Perpustakaan": {
+    "x": 288,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan HANKAM (Titik):1/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan HANKAM (Titik):2/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan HANKAM (Titik):3/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan HANKAM (Titik):4/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan HANKAM (Titik):6/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Bangunan/Kantor Pertahanan Keamanan Lainnya": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Bangunan/Kantor Pertahanan Keamanan Lainnya": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/\u003Call other values\u003E": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Bangunan/Kantor Pertahanan Keamanan Lainnya": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan HANKAM (Titik):1/Kantor Pertahanan Keamanan Lainnya": {
+    "x": 310,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Gardu Telepon (Titik):1": {
+    "x": 330,
+    "y": 269,
+    "width": 18,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Gardu Telepon (Titik):2": {
+    "x": 330,
+    "y": 269,
+    "width": 18,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Gardu Telepon (Titik):3": {
+    "x": 330,
+    "y": 269,
+    "width": 18,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Gardu Telepon (Titik):4": {
+    "x": 330,
+    "y": 269,
+    "width": 18,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Sarana Telekomunikasi (Titik):2": {
+    "x": 348,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Sarana Telekomunikasi (titik):1": {
+    "x": 348,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Sarana Telekomunikasi (titik):2": {
+    "x": 348,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Sarana Telekomunikasi (Titik):1": {
+    "x": 348,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Pariwisata/Seni/Budaya/Olah Raga Lainnya": {
+    "x": 370,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Daya Tarik Pariwisata/Tugu/Monumen/Gapura": {
+    "x": 370,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Mata Air": {
+    "x": 392,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Mata Air (Titik):1": {
+    "x": 392,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Mata Air (Titik):2": {
+    "x": 392,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Air Tanah": {
+    "x": 392,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Perpustakaan": {
+    "x": 408,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Kedinasan": {
+    "x": 430,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Gorong (Titik):2": {
+    "x": 452,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Gorong (Titik):1": {
+    "x": 452,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Daya Tarik Pariwisata/Gardu Pandang": {
+    "x": 472,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Pengolahan Air Minum (Point)": {
+    "x": 494,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Pengolahan Air Minum (titik):2": {
+    "x": 494,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Pemancar Radio (titik)": {
+    "x": 516,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Pemancar Radio": {
+    "x": 516,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Pemancar Radio (Titik):2": {
+    "x": 516,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Pemancar Radio (Titik):1": {
+    "x": 516,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Hidrografi/Air Terjun:2": {
+    "x": 538,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Air Terjun (Titik)": {
+    "x": 538,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Air Terjun:1": {
+    "x": 538,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Air Terjun (Point)": {
+    "x": 538,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Rumah Kaca Taman Botani": {
+    "x": 560,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas Lain(datasetkhusu)/Pos Hujan": {
+    "x": 582,
+    "y": 269,
+    "width": 36,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Batas, Toponim dan Laut (Baru)/Ibukota/Ibukota Negara": {
+    "x": 618,
+    "y": 269,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Empang:2": {
+    "x": 640,
+    "y": 269,
+    "width": 36,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Kolam (Titik)": {
+    "x": 676,
+    "y": 269,
+    "width": 36,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Lokasi Air Jeram": {
+    "x": 712,
+    "y": 269,
+    "width": 42,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Tempat Sampah Sementara (titik)": {
+    "x": 754,
+    "y": 269,
+    "width": 48,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Sumur Bahan Bakar Minyak (Titik)": {
+    "x": 802,
+    "y": 269,
+    "width": 50,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Pengolahan Bahan Bakar Minyak (Titik)": {
+    "x": 852,
+    "y": 269,
+    "width": 42,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Geologi/Daerah Sumber Minyak Bumi (Titik)": {
+    "x": 894,
+    "y": 269,
+    "width": 50,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Istana": {
+    "x": 944,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Kantor DPRD": {
+    "x": 944,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Lokasi Bangunan/Pemerintahan (titik)/Kantor Presiden": {
+    "x": 944,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Tinggi": {
+    "x": 970,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Tinggi": {
+    "x": 970,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Tinggi": {
+    "x": 970,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Tinggi": {
+    "x": 970,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lingkungan Terbangun/Gedung Pendidikan (Area):3/Pendidikan Tinggi": {
+    "x": 970,
+    "y": 269,
+    "width": 26,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Polisi": {
+    "x": 996,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan HANKAM (Titik):4/Kantor Polisi": {
+    "x": 996,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Polisi": {
+    "x": 996,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan HANKAM (Titik):2/Kantor Polisi": {
+    "x": 996,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Polisi": {
+    "x": 996,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan HANKAM (Titik):1/Kantor Polisi": {
+    "x": 996,
+    "y": 269,
+    "width": 20,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Menara Transmisi Listrik:1": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Taman Wisata (titik)/Menara Transmisi Listrik": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Menara Transmisi Listrik (titik):1": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Menara Transmisi Listrik:2": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Menara Transmisi Listrik (titik):3": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Menara Transmisi Listrik (titik):2": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Tiang Listrik (Titik)": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Tiang Listrik (titik):2": {
+    "x": 1016,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Tiang Lampu (Titik)": {
+    "x": 1030,
+    "y": 269,
+    "width": 18,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Lampu Jalan (Titik)": {
+    "x": 1030,
+    "y": 269,
+    "width": 18,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):2/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):6/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Peribadatan (Titik):1/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Peribadatan (Titik):7/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Peribadatan (Titik):4/Gereja": {
+    "x": 1048,
+    "y": 269,
+    "width": 14,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Peribadatan (Titik):7/Mesjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Masjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Mesjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Peribadatan (Titik):1/Masjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Peribadatan (Titik):4/Masjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):2/Mesjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):6/Masjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/Masjid": {
+    "x": 1062,
+    "y": 269,
+    "width": 16,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Pecah Ombak:1": {
+    "x": 0,
+    "y": 291,
+    "width": 24,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Pemecah Ombak": {
+    "x": 0,
+    "y": 291,
+    "width": 24,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Stasiun Radio (Titik):1": {
+    "x": 24,
+    "y": 291,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Stasiun Radio (Titik):3": {
+    "x": 24,
+    "y": 291,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Stasiun Radio (Titik):2": {
+    "x": 24,
+    "y": 291,
+    "width": 22,
+    "height": 22,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/SMP Negeri 3 Prabumulih/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/SMP Negeri 1 Prabumulih/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/SMK Negeri 1 Prabumulih/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/Perumahan recident sindur masih berupa lahan terbuka/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/Permukaan/Lapangan Diperkeras/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/Lapangan Pujasuma/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/Kantor PLN ULTG Prabumulih/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/TK Angelly Prabumulih School/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Penutup Lahan/Permukaan/Lapangan Diperkeras/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/\u003Call other values\u003E/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Penggunaan Bidang Tanah/SMP Negeri 8 Prabumulih/1": {
+    "x": 46,
+    "y": 291,
+    "width": 21,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Instalasi TNI (AD/AL/AU)": {
+    "x": 67,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Instalasi TNI (AD/AL/AU)": {
+    "x": 67,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Instalasi TNI (AD/AL/AU)": {
+    "x": 67,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan HANKAM (Titik):1/Instalasi TNI (AD/AL/AU)": {
+    "x": 67,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Politeknik / Kejuruan": {
+    "x": 91,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Politeknik / Kejuruan": {
+    "x": 91,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Pemancar Televisi (titik):1": {
+    "x": 115,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Pemancar Televisi (Titik)": {
+    "x": 115,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Pemancar Televisi:1": {
+    "x": 115,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Pemancar Televisi (titik):2": {
+    "x": 115,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Pemancar Televisi (titik):3": {
+    "x": 115,
+    "y": 291,
+    "width": 24,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Tiang Listrik (titik):1": {
+    "x": 139,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Sumur Bahan Bakar Gas": {
+    "x": 153,
+    "y": 291,
+    "width": 50,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Geologi/Daerah Sumber Gas Bumi (Titik):2": {
+    "x": 203,
+    "y": 291,
+    "width": 50,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Geologi/Daerah Sumber Gas Bumi (Titik):1": {
+    "x": 203,
+    "y": 291,
+    "width": 50,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor DPRD": {
+    "x": 253,
+    "y": 291,
+    "width": 22,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor DPRD": {
+    "x": 253,
+    "y": 291,
+    "width": 22,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor DPRD": {
+    "x": 253,
+    "y": 291,
+    "width": 22,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor DPRD": {
+    "x": 253,
+    "y": 291,
+    "width": 22,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Taman Kanak-kanak": {
+    "x": 275,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Anak Usia Dini": {
+    "x": 275,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Anak Usia Dini": {
+    "x": 275,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Anak Usia Dini": {
+    "x": 275,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Taman Kanak-kanak": {
+    "x": 275,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/Pendidikan Taman Kanak-kanak": {
+    "x": 275,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Luar Sekolah": {
+    "x": 289,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Luar Sekolah": {
+    "x": 289,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Luar Sekolah": {
+    "x": 289,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Menengah Umum": {
+    "x": 303,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Menengah Umum": {
+    "x": 303,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Menengah Umum": {
+    "x": 303,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Menengah Umum": {
+    "x": 303,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Menengah Umum": {
+    "x": 303,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/Pendidikan Menengah Umum": {
+    "x": 303,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Menengah Pertama": {
+    "x": 317,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Menengah Pertama": {
+    "x": 317,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/Pendidikan Menengah Pertama": {
+    "x": 317,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Menengah Pertama": {
+    "x": 317,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Menengah Pertama": {
+    "x": 317,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Menengah Pertama": {
+    "x": 317,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/\u003Call other values\u003E": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lingkungan Terbangun/Gedung Pendidikan (Area):3/Pendidikan Penelitian/Iptek  Lainnya": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/\u003Call other values\u003E": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/\u003Call other values\u003E": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/\u003Call other values\u003E": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan / Penelitian Lainnya": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan/Penelitian Lainnya": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lingkungan Terbangun/Gedung Pendidikan (Area):3/Pendidikan Politeknik/Kejuruan": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan / Penelitian Lainnya": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/\u003Call other values\u003E": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/Pendidikan Politeknik / Kejuruan": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/Pendidikan/Penelitian Lainnya": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/\u003Call other values\u003E": {
+    "x": 331,
+    "y": 291,
+    "width": 14,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Kantor PLN (titik):3": {
+    "x": 345,
+    "y": 291,
+    "width": 18,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Kantor PLN": {
+    "x": 345,
+    "y": 291,
+    "width": 18,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kantor PLN (titik):2": {
+    "x": 345,
+    "y": 291,
+    "width": 18,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor PLN (titik):1": {
+    "x": 345,
+    "y": 291,
+    "width": 18,
+    "height": 20,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Batu Karang:3": {
+    "x": 363,
+    "y": 291,
+    "width": 28,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Batu Karang (titik)": {
+    "x": 363,
+    "y": 291,
+    "width": 28,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Hidrografi/Batu Karang:1": {
+    "x": 363,
+    "y": 291,
+    "width": 28,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Batu Karang (Titik)": {
+    "x": 363,
+    "y": 291,
+    "width": 28,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Referensi Spasial/Stasiun Pasut (Titik):2": {
+    "x": 391,
+    "y": 291,
+    "width": 28,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gelanggang Olahraga (Titik):7": {
+    "x": 419,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gelanggang Olahraga (Titik):5": {
+    "x": 419,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gelanggang Olahraga (Titik):3": {
+    "x": 437,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Gelanggang Olahraga (Titik):4": {
+    "x": 437,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Pipa Air (titik)": {
+    "x": 455,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Khusus": {
+    "x": 473,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Laboratorium Pendidikan/Penelitian": {
+    "x": 493,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan HANKAM (Titik):6/Bangunan/Kantor Pertahanan Keamanan Lainnya": {
+    "x": 513,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Terowongan (Titik):3": {
+    "x": 531,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Terowongan (Titik):2": {
+    "x": 531,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Terowongan (Titik):1": {
+    "x": 531,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Stasiun Pompa Bahan Bakar Umum": {
+    "x": 549,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Stasiun Pengisian Bahan Bakar Umum (Titik)": {
+    "x": 549,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Stasiun Pompa Bahan Bakar Umum (titik):2": {
+    "x": 549,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Stasiun Pompa Bahan Bakar Umum (titik):3": {
+    "x": 549,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Stasiun Pompa Bahan Bakar Umum (titik):1": {
+    "x": 549,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Depo Bahan Bakar Minyak": {
+    "x": 567,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Depo Bahan Bakar Minyak (Titik)": {
+    "x": 567,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Depo Bahan Bakar Minyak (titik):2": {
+    "x": 567,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Depo Bahan Bakar Minyak (titik):1": {
+    "x": 567,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Cagar Alam": {
+    "x": 585,
+    "y": 291,
+    "width": 24,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Tempat Parkir (titik)": {
+    "x": 609,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Parkir Kendaraan (Titik):1": {
+    "x": 609,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Parkir Kendaraan (Titik):2": {
+    "x": 609,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Lokasi Bangunan/Pemerintahan (titik)/Kantor Bupati": {
+    "x": 627,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Camat": {
+    "x": 647,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Tinggi": {
+    "x": 667,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan HANKAM (Titik):6/Kantor Polisi": {
+    "x": 687,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Keamanan/Kantor Polisi": {
+    "x": 687,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gedung Pendidikan (Titik):4/Pendidikan Dasar": {
+    "x": 705,
+    "y": 291,
+    "width": 14,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Pendidikan (titik)/Pendidikan Dasar": {
+    "x": 705,
+    "y": 291,
+    "width": 14,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gedung Pendidikan (Titik):3/Pendidikan Dasar": {
+    "x": 705,
+    "y": 291,
+    "width": 14,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Gedung Pendidikan (Titik):2/Pendidikan Dasar": {
+    "x": 705,
+    "y": 291,
+    "width": 14,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Gedung Pendidikan (Titik):1/Pendidikan Dasar": {
+    "x": 705,
+    "y": 291,
+    "width": 14,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Gedung Pendidikan (Titik):5/Pendidikan Dasar": {
+    "x": 705,
+    "y": 291,
+    "width": 14,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Light": {
+    "x": 719,
+    "y": 291,
+    "width": 20,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Hidrografi/Bendung (Titik)": {
+    "x": 739,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Hidrografi/Bendung (Point)": {
+    "x": 739,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Hidrografi/Bendung:3": {
+    "x": 739,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Tanggul:4": {
+    "x": 757,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Lokasi Hidrografi/Tanggul:3": {
+    "x": 757,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Hidrografi/Tanggul:1": {
+    "x": 757,
+    "y": 291,
+    "width": 18,
+    "height": 18,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Utilitas/Kabel Listrik (area)/1": {
+    "x": 775,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Utilitas/Tangki Gas & Minyak:2/1": {
+    "x": 791,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Light Signal (titik):1": {
+    "x": 807,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Light Signal:1": {
+    "x": 807,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Light Signal:2": {
+    "x": 807,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Light Signal (titik):2": {
+    "x": 807,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Transportasi/Bandara (titik):2": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Bandara (titik):1": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Heliport (titik)": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Bandara:1": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Bandara:3": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Transportasi/Airport (titik)": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Transportasi/Bandara:2": {
+    "x": 823,
+    "y": 291,
+    "width": 18,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Geologi/Logam Mulia (titik)": {
+    "x": 841,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Makam (Titik):3/\u003Call other values\u003E": {
+    "x": 857,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Makam (Titik):5/\u003Call other values\u003E": {
+    "x": 857,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Makam (Titik):6/Pemakaman Hindu": {
+    "x": 857,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Makam (Titik):3/Pemakaman Bukan Umum": {
+    "x": 873,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Makam (Titik):5/Pemakaman Bukan Umum": {
+    "x": 873,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Gelanggang Olahraga (Titik):6": {
+    "x": 889,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Gelanggang Olahraga (Titik):2": {
+    "x": 889,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Peribadatan (Titik):1/Peribadatan/Sosial Lainnya": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Peribadatan (Titik):4/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Peribadatan (Titik):4/Peribadatan/Sosial Lainnya": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Peribadatan (Titik):1/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Peribadatan/Pendidikan Agama Lainnya": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Peribadatan / Pendidikan Agama Lainnya": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):6/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):2/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/Kelenteng": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/Peribadatan/Sosial Lainnya": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Peribadatan (Titik):4/Peribadatan/Pendidikan Agama Lainnya": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Peribadatan (Titik):7/\u003Call other values\u003E": {
+    "x": 905,
+    "y": 291,
+    "width": 14,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Pariwisata/Rekreasi Budaya": {
+    "x": 919,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Taman Wisata (titik)/Pariwisata / Seni / Budaya Lainnya": {
+    "x": 919,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Zona Taman Wisata (titik)/Pariwisata/Rekreasi Budaya": {
+    "x": 919,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Daya Tarik Pariwisata/Candi": {
+    "x": 919,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Pariwisata/Rekreasi Pegunungan": {
+    "x": 935,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Zona Taman Wisata (titik)/Pariwisata/Rekreasi Pantai": {
+    "x": 951,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Zona Taman wisata (titik):2/Pariwisata / Rekreasi Pantai": {
+    "x": 951,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Pariwisata/Rekreasi Pantai": {
+    "x": 951,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Daya Tarik Pariwisata/Bioskop": {
+    "x": 967,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Zona Taman Wisata (titik)/Pariwisata/Seni/Budaya Lainnya": {
+    "x": 967,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Pariwisata/Seni/Budaya Lainnya": {
+    "x": 967,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Zona Taman wisata (titik):2/Pariwisata / Rekreasi Budaya": {
+    "x": 967,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Zona Taman wisata (titik):1/Taman Sumber Air Panas": {
+    "x": 983,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan HANKAM (Titik):6/Instalasi TNI (AD/AL/AU)": {
+    "x": 999,
+    "y": 291,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan HANKAM (Titik):6/Pangkalan Transportasi TNI": {
+    "x": 1019,
+    "y": 291,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Kantor Telepon (titik):2": {
+    "x": 1039,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Kantor Telepon": {
+    "x": 1039,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Kantor Telepon (titik):1": {
+    "x": 1039,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor telepon (titik)": {
+    "x": 1039,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kantor Telepon (titik):3": {
+    "x": 1039,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Kantor Pos (titik):2": {
+    "x": 1055,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor Pos (Titik)": {
+    "x": 1055,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kantor Pos (titik):1": {
+    "x": 1055,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Kantor Pos (titik):3": {
+    "x": 1055,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Kantor Pos": {
+    "x": 1055,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Depo Kereta Api (Titik)": {
+    "x": 1071,
+    "y": 291,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Transportasi/Stasiun Kereta Api (titik):1": {
+    "x": 0,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Lokasi Stasiun Kereta Api:1": {
+    "x": 0,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Lokasi Stasiun Kereta Api:2": {
+    "x": 0,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Stasiun Kereta Api (titik):2": {
+    "x": 0,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Jalur Kereta Api (titik)": {
+    "x": 16,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Stasiun Pasang Surut (titik):1": {
+    "x": 32,
+    "y": 313,
+    "width": 52,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Utilitas/Stasiun Pasang Surut (titik):2": {
+    "x": 32,
+    "y": 313,
+    "width": 52,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Stasiun Pasut (Titik):1": {
+    "x": 32,
+    "y": 313,
+    "width": 52,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Wali Kota": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Lokasi Bangunan/Pemerintahan (titik)/Kantor Wali Kota / Setingkat": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Wali Kota": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/Kantor Wali Kota/Setingkat": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Wali Kota": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Wali Kota / Setingkat": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Wali Kota": {
+    "x": 84,
+    "y": 313,
+    "width": 20,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Layanan Kesehatan (Titik):3": {
+    "x": 104,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Puskesmas (Titik):2": {
+    "x": 104,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Lokasi Fasilitas Kesehatan (Titik):1": {
+    "x": 120,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Rumah Sakit (Titik):4": {
+    "x": 120,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Sarana Telekomunikasi (titik):3": {
+    "x": 136,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Transportasi/Dermaga (titik):4": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Dermaga (titik):3": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Pelabuhan (Titik):1": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Transportasi/Pelabuhan (Titik):2": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Pelabuhan (titik):3": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Pelabuhan (Titik):3": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Dermaga (titik):1": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Transportasi/Pelabuhan (titik):2": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Transportasi/Dermaga (titik):5": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Dermaga:1": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Transportasi/Dermaga (titik):2": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Transportasi/Pelabuhan (titik):1": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Dermaga (titik):6": {
+    "x": 152,
+    "y": 313,
+    "width": 16,
+    "height": 16,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):2/Pura": {
+    "x": 168,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/Pura": {
+    "x": 168,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Pura": {
+    "x": 168,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Peribadatan (Titik):1/Pura": {
+    "x": 168,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):6/Pura": {
+    "x": 168,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Peribadatan (Titik):7/Pura": {
+    "x": 168,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Sosial (Titik):1": {
+    "x": 178,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Sosial (titik)": {
+    "x": 178,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Sosial (Titik):2": {
+    "x": 178,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lingkungan Terbangun/Bangunan Usaha (Area):5": {
+    "x": 192,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Bangunan Usaha (Titik):4": {
+    "x": 192,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Usaha (Titik):6": {
+    "x": 192,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Industri (Titik):1": {
+    "x": 206,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Industri (Titik):4": {
+    "x": 206,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Industri (Titik):3": {
+    "x": 206,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Industri (Titik):2": {
+    "x": 206,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Peribadatan (Titik):1/Vihara": {
+    "x": 220,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Peribadatan (Titik):7/Vihara": {
+    "x": 220,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Peribadatan (Titik):4/Vihara": {
+    "x": 220,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Peribadatan (Titik):2/Vihara": {
+    "x": 220,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Peribadatan (Titik):5/Vihara": {
+    "x": 220,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Peribadatan (Titik):3/Vihara": {
+    "x": 220,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Batas, Toponim dan Laut (Baru)/Ibukota/Ibukota Provinsi": {
+    "x": 230,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan HANKAM (Titik):5/Pos Keamanan": {
+    "x": 244,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan HANKAM (Titik):6/Pos Keamanan": {
+    "x": 244,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan HANKAM (Titik):3/Pos Keamanan": {
+    "x": 244,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan HANKAM (Titik):5/\u003Call other values\u003E": {
+    "x": 244,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Transportasi/Terminal Bis (Titik):2": {
+    "x": 258,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Terminal Bis (Titik):5": {
+    "x": 258,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Terminal Bis (Titik):1": {
+    "x": 258,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Terminal Bis (Titik):4": {
+    "x": 258,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Transportasi/Terminal Bis (Titik):3": {
+    "x": 258,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Situs Cagar Budaya (Titik):3": {
+    "x": 272,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Situs Cagar Budaya (Titik):6": {
+    "x": 272,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Situs Cagar Budaya (Titik):4": {
+    "x": 272,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Situs Cagar Budaya (Titik):2": {
+    "x": 272,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Situs Cagar Budaya (Titik):1": {
+    "x": 272,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Situs Cagar Budaya (Titik):5": {
+    "x": 272,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Budidaya (titik):2": {
+    "x": 286,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Budidaya (titik):1": {
+    "x": 286,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Bangunan Budidaya (Titik)": {
+    "x": 286,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Lurah": {
+    "x": 300,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Lurah": {
+    "x": 300,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Lurah": {
+    "x": 300,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Lurah": {
+    "x": 300,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Kantor Lurah": {
+    "x": 300,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Lurah": {
+    "x": 300,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Kepala Desa": {
+    "x": 316,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Desa": {
+    "x": 316,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Desa": {
+    "x": 316,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Kepala Desa": {
+    "x": 316,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Kepala Desa": {
+    "x": 316,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Kepala Desa": {
+    "x": 316,
+    "y": 313,
+    "width": 16,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/Pemakaman Khusus": {
+    "x": 332,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Batas, Toponim dan Laut (Baru)/Batas/Batas Laut Negara/Zona Tambahan/0": {
+    "x": 342,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/Pemakaman Bukan Umum": {
+    "x": 356,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Makam (Titik):5/Pemakaman Khusus": {
+    "x": 356,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Khusus": {
+    "x": 356,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Bukan Umum": {
+    "x": 356,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Makam (Titik):3/Pemakaman Khusus": {
+    "x": 356,
+    "y": 313,
+    "width": 10,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Rumah Sakit (Titik):5": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Rumah Sakit (Titik):2": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Lokasi Fasilitas Kesehatan (Titik):2": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Layanan Kesehatan (Titik):2": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Layanan Kesehatan (Titik):5": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Puskesmas (Titik):4": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Layanan Kesehatan (Titik):1": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Rumah Sakit (Titik):3": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Puskesmas (titik)": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Rumah Sakit (Titik):1": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Puskesmas (Titik):1": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Puskesmas (Titik):3": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Layanan Kesehatan (Titik):4": {
+    "x": 366,
+    "y": 313,
+    "width": 14,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Hidran Umum (titik)": {
+    "x": 380,
+    "y": 313,
+    "width": 24,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Hidran Umum (Titik)": {
+    "x": 380,
+    "y": 313,
+    "width": 24,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Utilitas/Hidran Umum": {
+    "x": 380,
+    "y": 313,
+    "width": 24,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Jembatan (Titik):4": {
+    "x": 404,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Transportasi/Jembatan (Titik):6": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Jembatan (Titik):1": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Transportasi/Jembatan (titik):3": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Transportasi/Jembatan (titik):1": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Transportasi/Jembatan (Titik):5": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Transportasi/Jembatan (Titik):2": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Jembatan (Titik):3": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Jembatan (titik):2": {
+    "x": 426,
+    "y": 313,
+    "width": 22,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kabel Listrik (titik)": {
+    "x": 448,
+    "y": 313,
+    "width": 20,
+    "height": 14,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Utilitas/Gardu Telepon (area):1/1": {
+    "x": 468,
+    "y": 313,
+    "width": 13,
+    "height": 13,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Utilitas/Gardu Telepon (area):2/1": {
+    "x": 468,
+    "y": 313,
+    "width": 13,
+    "height": 13,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Kristiani": {
+    "x": 481,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Vegetasi/Hutan Asosiasi Bangunan": {
+    "x": 491,
+    "y": 313,
+    "width": 12,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/\u003Call other values\u003E": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Menteri/Kementerian/LPNK": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Lembaga Negara": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Pemerintahan (Titik):6/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/\u003Call other values\u003E": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/\u003Call other values\u003E": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Bangunan Pemerintahan (Titik):2/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Menteri/Kementerian/LPNK": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Menteri/Kementerian/LPNK": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Lokasi Bangunan/Pemerintahan (titik)/\u003Call other values\u003E": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/\u003Call other values\u003E": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Lembaga Negara": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Lembaga Negara": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):5/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Kantor Menteri/Kementerian/LPNK": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan (Titik):1/Kantor Lembaga Negara": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lokasi Bangunan/Bangunan Pemerintahan (Titik):3/Kantor Pemerintah Lainnya": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Bangunan Pemerintahan (Titik):7/\u003Call other values\u003E": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Pemerintahan Asing (Titik)": {
+    "x": 503,
+    "y": 313,
+    "width": 10,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Umum": {
+    "x": 513,
+    "y": 313,
+    "width": 22,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Makam (Titik):4/Pemakaman Umum": {
+    "x": 513,
+    "y": 313,
+    "width": 22,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Makam (Titik):1/\u003Call other values\u003E": {
+    "x": 513,
+    "y": 313,
+    "width": 22,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Makam (Titik):6/Pemakaman Umum": {
+    "x": 513,
+    "y": 313,
+    "width": 22,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Makam (Titik):3/Pemakaman Umum": {
+    "x": 513,
+    "y": 313,
+    "width": 22,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Makam (Titik):5/Pemakaman Umum": {
+    "x": 513,
+    "y": 313,
+    "width": 22,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Transportasi/Tonggak/Pal Kilometer:1": {
+    "x": 535,
+    "y": 313,
+    "width": 14,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Transportasi/Tonggak/Pal Kilometer (titik):1": {
+    "x": 535,
+    "y": 313,
+    "width": 14,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Transportasi/Tonggak/Pal Kilometer (titik):2": {
+    "x": 535,
+    "y": 313,
+    "width": 14,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Tonggak/Pal Kilometer:2": {
+    "x": 535,
+    "y": 313,
+    "width": 14,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Heliport (Titik)": {
+    "x": 549,
+    "y": 313,
+    "width": 24,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lokasi Lingkungan Terbangun/Lokasi Bangunan:4": {
+    "x": 573,
+    "y": 313,
+    "width": 12,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "100K-Indonesia/Lingkungan Terbangun/Tempat Tinggal (titik):2": {
+    "x": 573,
+    "y": 313,
+    "width": 12,
+    "height": 12,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Tambangan Sungai (Titik):2": {
+    "x": 585,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Lokasi Lingkungan Terbangun/Bangunan Usaha (Titik):5": {
+    "x": 585,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Transportasi 25K/Tambangan Sungai (Titik):1": {
+    "x": 585,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Usaha (Titik):3": {
+    "x": 595,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Bangunan Usaha (Titik):1": {
+    "x": 595,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Batas, Toponim dan Laut (Baru)/Batas/Batas Laut Negara/Garis Pangkal/0": {
+    "x": 605,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Hidrografi/Empang:1/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Hidrografi/Empang (area):1/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Hidrografi/Tambak:3/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Hidrografi/Empang (area):3/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Hidrografi/Empang:3/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Hidrografi/Tambak (area):3/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Hidrografi/Tambak:1/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Hidrografi/Empang (area):2/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Hidrografi/Tambak (area):2/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Hidrografi/Tambak:2/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Hidrografi/Empang:4/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Hidrografi/Tambak (Area)/0": {
+    "x": 615,
+    "y": 313,
+    "width": 19,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Batas, Toponim dan Laut (Baru)/Laut dan Gunung Bawah Laut/Gunung Bawah Laut": {
+    "x": 634,
+    "y": 313,
+    "width": 12,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Lokasi Bangunan:1": {
+    "x": 646,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Lingkungan Terbangun 25K/Lokasi Bangunan:3": {
+    "x": 646,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Tempat Tinggal (titik):1": {
+    "x": 646,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Lingkungan Terbangun 50K/Bangunan Usaha (Titik):2": {
+    "x": 646,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Lokasi Bangunan (titik)": {
+    "x": 646,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Tempat Tinggal (titik):3": {
+    "x": 646,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Utilitas/Kabel Telepon (Garis)/0": {
+    "x": 656,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Utilitas/Jaringan Kabel Telepon/0": {
+    "x": 656,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Utilitas/Jaringan Kabel Listrik:3/0": {
+    "x": 666,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Utilitas/Kabel Listrik (garis):1/0": {
+    "x": 666,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Transportasi 50K/Tonggak/Pal Kilometer:3": {
+    "x": 676,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Tonggak/Pal Kilometer (titik):3": {
+    "x": 676,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Bangunan Pemerintahan (Titik):4/Sungai": {
+    "x": 686,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Lokasi Bangunan:2": {
+    "x": 696,
+    "y": 313,
+    "width": 10,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Kantor Perusahaan Air Minum (Titik):2": {
+    "x": 706,
+    "y": 313,
+    "width": 16,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 25K/Lokasi Utilitas 25K/Kantor Perusahaan Air Minum": {
+    "x": 706,
+    "y": 313,
+    "width": 16,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "Lokasi Objek 50K/Lokasi Utilitas/Kantor Perusahaan Air Minum (Titik):1": {
+    "x": 706,
+    "y": 313,
+    "width": 16,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Utilitas/Pengolahan Air Minum (titik):1": {
+    "x": 706,
+    "y": 313,
+    "width": 16,
+    "height": 10,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Transportasi/Koridor KA (Area)/1": {
+    "x": 722,
+    "y": 313,
+    "width": 9,
+    "height": 9,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Budha": {
+    "x": 731,
+    "y": 313,
+    "width": 14,
+    "height": 8,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Makam (Titik):6/Pemakaman Budha": {
+    "x": 731,
+    "y": 313,
+    "width": 14,
+    "height": 8,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Lokasi Lingkungan terbangun/Makam (Titik):2/Pemakaman Islam": {
+    "x": 745,
+    "y": 313,
+    "width": 16,
+    "height": 8,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Lingkungan Terbangun/Makam (Titik):1/Pemakaman Islam": {
+    "x": 745,
+    "y": 313,
+    "width": 16,
+    "height": 8,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Lokasi Lingkungan Terbangun10K/Makam (Titik):6/Pemakaman Islam": {
+    "x": 745,
+    "y": 313,
+    "width": 16,
+    "height": 8,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Transportasi/Jalur Kereta Api:6/0": {
+    "x": 761,
+    "y": 313,
+    "width": 12,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K-Indonesia/Transportasi/Jalur Kereta Api (garis):2/0": {
+    "x": 761,
+    "y": 313,
+    "width": 12,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Transportasi/Jalur Kereta Api:2/0": {
+    "x": 773,
+    "y": 313,
+    "width": 10,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "10K-Indonesia/Transportasi/Jalur Kereta Api (garis):1/0": {
+    "x": 773,
+    "y": 313,
+    "width": 10,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "250K-Indonesia/Transportasi/Jalur Kereta Api:1/0": {
+    "x": 773,
+    "y": 313,
+    "width": 10,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "50K-Indonesia/Transportasi/Jalur Kereta Api:3/0": {
+    "x": 773,
+    "y": 313,
+    "width": 10,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "1M-Indonesia/Transportasi/Jalur Kereta Api:5/0": {
+    "x": 773,
+    "y": 313,
+    "width": 10,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "500K-Indonesia/Transportasi/Jalur Kereta Api:4/0": {
+    "x": 773,
+    "y": 313,
+    "width": 10,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "5K -Indonesia_2021/Transportasi/Taxi Way (Garis)": {
+    "x": 783,
+    "y": 313,
+    "width": 6,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  },
+  "25K-Indonesia/Garis Hidrografi/Air Jeram (garis)/0": {
+    "x": 789,
+    "y": 313,
+    "width": 6,
+    "height": 6,
+    "pixelRatio": 1,
+    "sdf": false
+  }
+}

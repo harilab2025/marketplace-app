@@ -1,0 +1,125 @@
+'use client'
+
+import { useState, useCallback, useRef } from 'react'
+import { MessageSquare, Users, Phone as PhoneIcon, Archive, Settings } from 'lucide-react'
+import { Chat, Message } from './types'
+import { messages, chats } from './data'
+import ChatUser from './chat.user'
+import ListUser from './list.user'
+import MenuUser from './menu.user'
+import WelcomeScreen from './components/WelcomeScreen'
+
+export default function ChatPage() {
+    const [selectedChat, setSelectedChat] = useState<Chat | null>(null)
+    const [chatMessages, setChatMessages] = useState<Message[]>(messages)
+    const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const chatContainerRef = useRef<HTMLDivElement>(null)
+
+    const handleSend = (messageText: string) => {
+        if (messageText.trim()) {
+            const newMessage: Message = {
+                id: Date.now().toString(),
+                text: messageText,
+                time: new Date().toLocaleTimeString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: true
+                }),
+                sent: true,
+                delivered: true,
+                read: false
+            }
+
+            setChatMessages([...chatMessages, newMessage])
+
+            // Simulate message delivery and read status updates
+            setTimeout(() => {
+                setChatMessages(prev =>
+                    prev.map(msg =>
+                        msg.id === newMessage.id
+                            ? { ...msg, delivered: true }
+                            : msg
+                    )
+                )
+            }, 1000)
+
+            setTimeout(() => {
+                setChatMessages(prev =>
+                    prev.map(msg =>
+                        msg.id === newMessage.id
+                            ? { ...msg, read: true }
+                            : msg
+                    )
+                )
+            }, 2000)
+        }
+    }
+
+    // Scroll to bottom when new messages arrive
+    const scrollToBottom = useCallback(() => {
+        if (chatContainerRef.current) {
+            const { scrollHeight, clientHeight } = chatContainerRef.current
+            chatContainerRef.current.scrollTop = scrollHeight - clientHeight
+        }
+    }, [])
+
+    return (
+        <div className="flex h-screen bg-gray-100">
+            {/* Navigation Sidebar */}
+            <div className="w-16 bg-gray-800 flex flex-col items-center py-4">
+                <div className="w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center text-white font-semibold mb-6 cursor-pointer">
+                    <MessageSquare size={20} />
+                </div>
+
+                <div className="space-y-4">
+                    <button className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+                        <MessageSquare size={20} />
+                    </button>
+                    <button className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+                        <Users size={20} />
+                    </button>
+                    <button className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+                        <PhoneIcon size={20} />
+                    </button>
+                    <button className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+                        <Archive size={20} />
+                    </button>
+                </div>
+
+                <div className="mt-auto">
+                    <button className="w-10 h-10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+                        <Settings size={20} />
+                    </button>
+                </div>
+            </div>
+
+            {/* Menu Sidebar */}
+            <MenuUser isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+
+            {/* Chat List Sidebar */}
+            <ListUser
+                chats={chats}
+                selectedChat={selectedChat}
+                setSelectedChat={setSelectedChat}
+                isSidebarOpen={isSidebarOpen}
+                setIsSidebarOpen={setIsSidebarOpen}
+                setIsMenuOpen={setIsMenuOpen}
+            />
+
+            {/* Chat Area */}
+            <main className="flex-1 flex flex-col">
+                {selectedChat ? (
+                    <ChatUser
+                        chat={selectedChat}
+                        messages={chatMessages}
+                        onSend={handleSend}
+                        chatContainerRef={chatContainerRef}
+                    />
+                ) : (
+                    <WelcomeScreen />
+                )}
+            </main>
+        </div>
+    )
+}

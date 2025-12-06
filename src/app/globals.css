@@ -1,0 +1,323 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Font configuration langsung di CSS */
+@theme {
+  --font-family-sans: var(--font-inter), ui-sans-serif;
+  /* --font-family-display: var(--font-plus-jakarta), var(--font-inter);
+  --font-family-atkinson: var(--font-atkinson), ui-sans-serif;
+  --font-family-manrope: var(--font-manrope), ui-sans-serif;
+  --font-family-outfit: var(--font-outfit), ui-sans-serif;
+  --font-family-recursive: var(--font-recursive), ui-monospace, SFMono-Regular;
+  --font-family-mono: var(--font-recursive), ui-monospace, SFMono-Regular; */
+}
+
+/* Custom font utilities untuk variable fonts */
+@layer utilities {
+  .font-inter-optical {
+    font-family: var(--font-inter);
+    font-variation-settings: "opsz" 14;
+  }
+/*   
+  .font-inter-display {
+    font-family: var(--font-inter);
+    font-variation-settings: "opsz" 72;
+  }
+  
+  .font-recursive-mono {
+    font-family: var(--font-recursive);
+    font-variation-settings: "MONO" 1, "CASL" 0;
+  }
+  
+  .font-recursive-casual {
+    font-family: var(--font-recursive);
+    font-variation-settings: "MONO" 0, "CASL" 1;
+  } */
+}
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-plus-jakarta), var(--font-inter), ui-sans-serif, system-ui;
+  }
+}
+
+/* OpenLayers CSS overrides */
+.ol-zoom {
+  top: 120px;
+  left: 8px;
+}
+
+.ol-zoom .ol-zoom-in,
+.ol-zoom .ol-zoom-out {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+}
+
+.ol-zoom .ol-zoom-in:hover,
+.ol-zoom .ol-zoom-out:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.ol-full-screen {
+  top: 8px;
+  right: 8px;
+}
+
+.ol-full-screen button {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.ol-full-screen button:hover {
+  background-color: #f0f0f0;
+}
+
+.ol-scale-line {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  bottom: 8px;
+  right: 8px;
+  left: auto;
+}
+
+.ol-zoom-extent {
+  top: 200px;
+  left: 8px;
+}
+
+.ol-zoom-extent button {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 6px;
+}
+
+.ol-zoom-extent button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Custom styles for the map container */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ol-zoom {
+    top: 80px;
+    left: 4px;
+  }
+  
+  .ol-full-screen {
+    top: 4px;
+    right: 4px;
+  }
+  
+  .ol-zoom-extent {
+    top: 160px;
+    left: 4px;
+  }
+  
+  .ol-scale-line {
+    bottom: 4px;
+    right: 4px;
+  }
+}
+/* 
+.grecaptcha-badge {
+  transform: scale(0.8) !important;
+  transform-origin: bottom right !important;
+} */
+
+/* Hide original reCAPTCHA badge */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+
+/* Custom reCAPTCHA logo styling */
+.recaptcha-custom-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  user-select: none;
+}
+
+.recaptcha-custom-logo:hover {
+  opacity: 1;
+}
+
+/* Show custom logo only when grecaptcha-badge is present */
+body:has(.grecaptcha-badge) .recaptcha-custom-logo {
+  opacity: 0.3;
+  visibility: visible;
+}
+
+body:has(.grecaptcha-badge) .recaptcha-custom-logo:hover {
+  opacity: 0.5;
+}
+
+/* Fallback for browsers that don't support :has() */
+@supports not selector(:has(*)) {
+  /* JavaScript will handle this case by adding a class */
+  .recaptcha-active .recaptcha-custom-logo {
+    opacity: 0.3;
+    visibility: visible;
+  }
+  
+  .recaptcha-active .recaptcha-custom-logo:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .recaptcha-custom-logo {
+    bottom: 80px; /* Move up on mobile to avoid covering input area */
+    right: 15px;
+    transform: scale(0.8);
+  }
+}

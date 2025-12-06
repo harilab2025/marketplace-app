@@ -1,0 +1,54 @@
+// Only storing the chat.user.tsx content temporarily
+import Image from 'next/image'
+import { Phone, Video, MoreVertical, Smile, Paperclip, Send, Mic } from 'lucide-react'
+import { getAvatarInitials, getRandomColor } from './utils'
+import { Chat, Message } from './types'
+import { MessageInput } from './components/MessageInput'
+import { ChatHeader } from './components/ChatHeader'
+
+interface ChatUserProps {
+    chat: Chat
+    messages: Message[]
+    onSend: (text: string) => void
+    chatContainerRef: React.RefObject<HTMLDivElement>
+}
+
+export default function ChatUser({ chat, messages, onSend, chatContainerRef }: ChatUserProps) {
+    return (
+        <div className="flex-1 flex flex-col">
+            <ChatHeader chat={chat} />
+            
+            <div
+                ref={chatContainerRef}
+                className="flex-1 overflow-y-auto p-4 space-y-4"
+            >
+                {messages.map((message) => (
+                    <div
+                        key={message.id}
+                        className={`flex ${message.sent ? 'justify-end' : 'justify-start'}`}
+                    >
+                        <div
+                            className={`max-w-[70%] rounded-lg px-4 py-2 ${
+                                message.sent
+                                    ? 'bg-sky-500 text-white'
+                                    : 'bg-white border border-gray-200'
+                            }`}
+                        >
+                            <p className="text-sm">{message.text}</p>
+                            <div className="flex items-center justify-end space-x-1 mt-1">
+                                <span className="text-xs opacity-75">{message.time}</span>
+                                {message.sent && (
+                                    <span className="text-xs">
+                                        {message.read ? '✓✓' : message.delivered ? '✓✓' : '✓'}
+                                    </span>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <MessageInput onSend={onSend} />
+        </div>
+    )
+}
