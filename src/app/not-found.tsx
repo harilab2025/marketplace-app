@@ -51,12 +51,12 @@ export default function NotFound() {
 
   if (!isClient) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-950 to-black flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-b from-indigo-950 via-purple-950 to-black flex items-center justify-center">
         <div className="text-center max-w-4xl px-4">
-          <div className="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-3xl mx-auto mb-8 relative">
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-blue-200 to-blue-300 rounded-full" />
+          <div className="w-32 h-40 bg-linear-to-b from-gray-300 to-gray-400 rounded-3xl mx-auto mb-8 relative">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-linear-to-b from-blue-200 to-blue-300 rounded-full" />
           </div>
-          <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 mb-6">
+          <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-purple-400 to-pink-400 mb-6">
             404
           </h1>
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
@@ -76,7 +76,7 @@ export default function NotFound() {
             </button>
             <button
               onClick={() => window.location.href = '/'}
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold"
+              className="px-8 py-4 bg-linear-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold"
             >
               <Home className="w-5 h-5 inline mr-2" />
               Return to Earth
@@ -88,7 +88,7 @@ export default function NotFound() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-purple-950 to-black overflow-hidden relative">
+    <div className="min-h-screen bg-linear-to-b from-indigo-950 via-purple-950 to-black overflow-hidden relative">
       {/* Animated stars */}
       {stars.map(star => (
         <div
@@ -106,9 +106,9 @@ export default function NotFound() {
       ))}
 
       {/* Planets in background */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-orange-400 to-red-600 rounded-full opacity-60 blur-sm animate-pulse" />
-      <div className="absolute bottom-40 left-10 w-24 h-24 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full opacity-40 blur-sm animate-pulse delay-1000" />
-      <div className="absolute top-1/2 left-4 w-16 h-16 bg-gradient-to-br from-green-400 to-teal-600 rounded-full opacity-50 blur-sm animate-pulse delay-500" />
+      <div className="absolute top-20 right-20 w-32 h-32 bg-linear-to-br from-orange-400 to-red-600 rounded-full opacity-60 blur-sm animate-pulse" />
+      <div className="absolute bottom-40 left-10 w-24 h-24 bg-linear-to-br from-blue-400 to-purple-600 rounded-full opacity-40 blur-sm animate-pulse delay-1000" />
+      <div className="absolute top-1/2 left-4 w-16 h-16 bg-linear-to-br from-green-400 to-teal-600 rounded-full opacity-50 blur-sm animate-pulse delay-500" />
 
       {/* Main content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
@@ -122,10 +122,10 @@ export default function NotFound() {
           >
             <div className="relative inline-block">
               {/* Astronaut body */}
-              <div className="w-32 h-40 bg-gradient-to-b from-gray-300 to-gray-400 rounded-3xl mx-auto relative shadow-2xl">
+              <div className="w-32 h-40 bg-linear-to-b from-gray-300 to-gray-400 rounded-3xl mx-auto relative shadow-2xl">
                 {/* Helmet */}
-                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gradient-to-b from-blue-200 to-blue-300 rounded-full shadow-inner">
-                  <div className="absolute inset-2 bg-gradient-to-b from-cyan-100 to-blue-100 rounded-full opacity-80" />
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-linear-to-b from-blue-200 to-blue-300 rounded-full shadow-inner">
+                  <div className="absolute inset-2 bg-linear-to-b from-cyan-100 to-blue-100 rounded-full opacity-80" />
                   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-6 bg-pink-200 rounded-full" />
                   <div className="absolute top-6 left-6 w-2 h-2 bg-black rounded-full" />
                   <div className="absolute top-6 right-6 w-2 h-2 bg-black rounded-full" />
@@ -133,7 +133,7 @@ export default function NotFound() {
                 </div>
 
                 {/* Body details */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-20 bg-gradient-to-b from-red-400 to-red-600 rounded-2xl" />
+                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-16 h-20 bg-linear-to-b from-red-400 to-red-600 rounded-2xl" />
                 <div className="absolute top-12 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full shadow-inner" />
 
                 {/* Arms */}
@@ -152,7 +152,7 @@ export default function NotFound() {
 
           {/* 404 with glitch effect */}
           <div className="relative mb-6">
-            <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse relative">
+            <h1 className="text-8xl md:text-9xl font-bold text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse relative">
               404
               {/* Glitch layers */}
               <span className="absolute inset-0 text-red-500 opacity-30 animate-ping" style={{ left: '2px' }}>404</span>
@@ -177,7 +177,7 @@ export default function NotFound() {
               onClick={() => window.history.back()}
               className="group relative px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-slate-200 rounded-2xl font-semibold transition-all duration-300 hover:bg-slate-700/50 hover:border-slate-500/50 hover:scale-105 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex items-center gap-2">
                 <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300" />
                 Go Back
@@ -186,9 +186,9 @@ export default function NotFound() {
 
             <button
               onClick={() => window.location.href = '/'}
-              className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 overflow-hidden"
+              className="group relative px-8 py-4 bg-linear-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex items-center gap-2">
                 <Home className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                 Return to Earth
@@ -199,7 +199,7 @@ export default function NotFound() {
               onClick={() => window.location.reload()}
               className="group relative px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-slate-200 rounded-2xl font-semibold transition-all duration-300 hover:bg-slate-700/50 hover:border-slate-500/50 hover:scale-105 overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-r from-orange-600/20 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative flex items-center gap-2">
                 <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 Try Again

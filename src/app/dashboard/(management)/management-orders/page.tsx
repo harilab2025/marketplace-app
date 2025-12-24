@@ -1,9 +1,5 @@
-import React from 'react'
+import ManagementOrdersTable from './table';
 
-function Page() {
-    return (
-        <div>Page</div>
-    )
+export default function ManagementOrdersPage() {
+    return <ManagementOrdersTable />;
 }
-
-export default Page

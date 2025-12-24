@@ -3,6 +3,10 @@ import { createLogger } from 'redux-logger';
 import signupReducer from './signupSlice';
 import loginReducer from './loginSlice';
 import productsReducer from './productsSlice';
+import categoriesReducer from './categoriesSlice';
+import usersReducer from './usersSlice';
+import ordersReducer from './ordersSlice';
+import cacheReducer from './cacheSlice';
 
 const logger = createLogger({
     collapsed: true,
@@ -18,8 +22,11 @@ export const store = configureStore({
     reducer: {
         signup: signupReducer,
         login: loginReducer,
-        products: productsReducer
-        // reducer lain...
+        products: productsReducer,
+        categories: categoriesReducer,
+        users: usersReducer,
+        orders: ordersReducer,
+        cache: cacheReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(middleware),

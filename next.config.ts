@@ -90,13 +90,17 @@ const nextConfig: NextConfig = {
 
     // Server Actions Configuration
     serverActions: {
-      bodySizeLimit: '2mb',
+      bodySizeLimit: '2mb', // For server actions only
       allowedOrigins: [
         'http://localhost:3005',
         'http://DESKTOP-G02RU1N:3005',
         ...(process.env.ASSET_PREFIX ? [process.env.ASSET_PREFIX] : [])
       ]
     },
+
+    // OPTIONAL: Increase body size limit for API routes (if needed)
+    // Uncomment if you want to upload files larger than default (4MB)
+    // serverComponentsExternalPackages: [],
 
     // Performance Optimizations
     optimisticClientCache: true,
@@ -117,13 +121,12 @@ const nextConfig: NextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
-      // Add your allowed image domains here
-      // {
-      //   protocol: 'https',
-      //   hostname: 'example.com',
-      //   port: '',
-      //   pathname: '/images/**',
-      // },
+      {
+        protocol: 'http',
+        hostname: process.env.HOST || 'localhost',
+        port: process.env.PORT_API || '3001',
+        pathname: '/api/files/**',
+      },
     ],
   },
 

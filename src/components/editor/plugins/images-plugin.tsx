@@ -41,12 +41,6 @@ import { Button } from "@/components/ui/button"
 import { DialogFooter } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
 
 export type InsertImagePayload = Readonly<ImagePayload>
 
@@ -109,19 +103,74 @@ export function InsertImageUploadedDialogBody({
 }) {
   const [src, setSrc] = useState("")
   const [altText, setAltText] = useState("")
+  const [uploading, setUploading] = useState(false)
+  const [error, setError] = useState("")
 
-  const isDisabled = src === ""
+  const isDisabled = src === "" || uploading
 
-  const loadImage = (files: FileList | null) => {
-    const reader = new FileReader()
-    reader.onload = function () {
-      if (typeof reader.result === "string") {
-        setSrc(reader.result)
+  const uploadImage = async (file: File) => {
+    try {
+      setUploading(true)
+      setError("")
+
+      // Validate file size (max 5MB)
+      const maxSize = 5 * 1024 * 1024 // 5MB
+      if (file.size > maxSize) {
+        throw new Error("File size must be less than 5MB")
       }
-      return ""
+
+      // Validate file type
+      const allowedTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp']
+      if (!allowedTypes.includes(file.type)) {
+        throw new Error("Only JPEG, PNG, GIF, and WebP images are allowed")
+      }
+
+      // Create form data
+      const formData = new FormData()
+      formData.append('file', file)
+
+      // Upload to server
+      const response = await fetch('/api/upload/image', {
+        method: 'POST',
+        body: formData,
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to upload image')
+      }
+
+      const data = await response.json()
+
+      // Log the upload response for debugging
+      console.log('📤 Upload response:', data)
+
+      // Set the uploaded image URL
+      if (data.url) {
+        console.log('✅ Using direct URL:', data.url)
+        setSrc(data.url)
+      } else if (data.publicId) {
+        // If backend returns publicId, construct the URL
+        const constructedUrl = `/api/files/${data.publicId}`
+        console.log('✅ Constructed URL from publicId:', constructedUrl)
+        setSrc(constructedUrl)
+      } else {
+        console.error('❌ Backend response:', data)
+        throw new Error('No URL or publicId returned from server')
+      }
+
+    } catch (err) {
+      console.error('Upload error:', err)
+      setError(err instanceof Error ? err.message : 'Failed to upload image')
+      setSrc("")
+    } finally {
+      setUploading(false)
     }
-    if (files !== null) {
-      reader.readAsDataURL(files[0])
+  }
+
+  const handleFileChange = (files: FileList | null) => {
+    if (files && files[0]) {
+      uploadImage(files[0])
     }
   }
 
@@ -132,10 +181,20 @@ export function InsertImageUploadedDialogBody({
         <Input
           id="image-upload"
           type="file"
-          onChange={(e) => loadImage(e.target.files)}
+          onChange={(e) => handleFileChange(e.target.files)}
           accept="image/*"
+          disabled={uploading}
           data-test-id="image-modal-file-upload"
         />
+        {uploading && (
+          <p className="text-sm text-blue-600">Uploading image...</p>
+        )}
+        {error && (
+          <p className="text-sm text-red-600">{error}</p>
+        )}
+        {src && !uploading && (
+          <p className="text-sm text-green-600">✓ Image uploaded successfully!</p>
+        )}
       </div>
       <div className="grid gap-2">
         <Label htmlFor="alt-text">Alt Text</Label>
@@ -153,7 +212,7 @@ export function InsertImageUploadedDialogBody({
         onClick={() => onClick({ altText, src })}
         data-test-id="image-modal-file-upload-btn"
       >
-        Confirm
+        {uploading ? 'Uploading...' : 'Confirm'}
       </Button>
     </div>
   )
@@ -184,24 +243,8 @@ export function InsertImageDialog({
     onClose()
   }
 
-  return (
-    <Tabs defaultValue="url">
-      <TabsList className="w-full">
-        <TabsTrigger value="url" className="w-full">
-          URL
-        </TabsTrigger>
-        <TabsTrigger value="file" className="w-full">
-          File
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value="url">
-        <InsertImageUriDialogBody onClick={onClick} />
-      </TabsContent>
-      <TabsContent value="file">
-        <InsertImageUploadedDialogBody onClick={onClick} />
-      </TabsContent>
-    </Tabs>
-  )
+  // Only show file upload, no URL option
+  return <InsertImageUploadedDialogBody onClick={onClick} />
 }
 
 export function ImagesPlugin({
@@ -253,6 +296,9 @@ export function ImagesPlugin({
       )
     )
   }, [captionsEnabled, editor])
+
+  // Drag & drop is now handled by DragDropPastePlugin to avoid duplicate insertion
+  // The native DOM event handler has been removed to prevent conflict
 
   return null
 }

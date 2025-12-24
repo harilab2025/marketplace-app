@@ -341,7 +341,7 @@ export default function WhatsAppClone() {
                             className={`flex items-center p-3 hover:bg-gray-50 cursor-pointer transition-colors ${selectedChat?.id === chat.id ? 'bg-sky-50 border-r-4 border-sky-500' : ''
                                 }`}
                         >
-                            <div className="relative mr-3 flex-shrink-0">
+                            <div className="relative mr-3 shrink-0">
                                 {chat.avatar && chat.avatar !== '' ? (
                                     <Image
                                         src={chat.avatar}
@@ -363,12 +363,12 @@ export default function WhatsAppClone() {
                             <div className="flex-1 min-w-0">
                                 <div className="flex justify-between items-start mb-1">
                                     <h3 className="font-medium text-gray-900 truncate text-sm">{chat.name}</h3>
-                                    <span className="text-xs text-gray-500 flex-shrink-0 ml-2">{chat.time}</span>
+                                    <span className="text-xs text-gray-500 shrink-0 ml-2">{chat.time}</span>
                                 </div>
                                 <div className="flex justify-between items-center">
                                     <p className="text-sm text-gray-600 truncate">{chat.lastMessage}</p>
                                     {chat.unread > 0 && (
-                                        <span className="bg-sky-500 text-white text-xs rounded-full px-2 py-1 min-w-5 h-5 flex items-center justify-center ml-2 flex-shrink-0">
+                                        <span className="bg-sky-500 text-white text-xs rounded-full px-2 py-1 min-w-5 h-5 flex items-center justify-center ml-2 shrink-0">
                                             {chat.unread}
                                         </span>
                                     )}
@@ -434,7 +434,7 @@ export default function WhatsAppClone() {
                         </div>
 
                         {/* Messages */}
-                        <div className="flex-1 overflow-y-auto p-4 bg-gradient-to-b from-sky-50 to-sky-100 chat-bg">
+                        <div className="flex-1 overflow-y-auto p-4 bg-linear-to-b from-sky-50 to-sky-100 chat-bg">
                             <div className="space-y-4">
                                 {chatMessages.map((message) => (
                                     <div

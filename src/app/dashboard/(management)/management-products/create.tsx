@@ -16,7 +16,7 @@ import { objectToFormData } from '@/utils/formData.helper';
 import { AxiosError } from 'axios';
 import { SerializedEditorState } from 'lexical';
 import { InfoIcon, LucideChevronDown, LucideChevronUp, Percent, Plus, Tag, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 
@@ -65,13 +65,19 @@ interface CreateVariant {
 interface CreateDiscount {
     id: number;
     variantId: number | null;
-    type: 'PERCENTAGE' | 'FIXED';
+    type: 'PERCENTAGE' | 'FIXED_AMOUNT';
     value: string;
     startDate: string;
     endDate: string;
     isActive: boolean;
 }
 
+interface Category {
+    publicId: string;
+    name: string;
+    slug: string;
+    isActive: boolean;
+}
 
 function Create({ setActionContent }: { setActionContent: (content: string) => void }) {
     const [newTag, setNewTag] = useState('');
@@ -81,6 +87,13 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
     const [discounts, setDiscounts] = useState<CreateDiscount[]>([]);
     const [files, setFiles] = useState<File[]>([]);
     const [showDiscounts, setShowDiscounts] = useState(true);
+    const [categories, setCategories] = useState<Category[]>([]);
+    const [loadingCategories, setLoadingCategories] = useState(true);
+
+    // Ref for debouncing price range calculation
+    const priceRangeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    // Check if product has variants
     const { confirm } = useConfirm();
     const {
         hide,
@@ -91,8 +104,8 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
         reset,
         handleSubmit,
         control,
-        setValue,
         getValues,
+        setValue,
         formState: { errors },
     } = useForm<createProductInput>({
         defaultValues: {
@@ -113,6 +126,44 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
         },
         mode: 'onBlur'
     });
+    const {
+        onChange,
+        ...priceRegister
+    } = register("price", {
+        required: "Price is required",
+        // pattern: {
+        //     value: /^\d*\.?\d{0,2}$/,
+        //     message: "Invalid price format (decimal max 2 digits) ex: 1000.00"
+        // }
+    });
+    // Fetch categories on component mount
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                setLoadingCategories(true);
+                const response = await apiClient.get('/categories/active');
+                if (response.data.status === 'success') {
+                    setCategories(response.data.items || []);
+                }
+            } catch (error) {
+                console.error('Error fetching categories:', error);
+                toast.error('Failed to load categories');
+            } finally {
+                setLoadingCategories(false);
+            }
+        };
+
+        fetchCategories();
+    }, []);
+
+    // Cleanup debounce timeout on unmount
+    useEffect(() => {
+        return () => {
+            if (priceRangeTimeoutRef.current) {
+                clearTimeout(priceRangeTimeoutRef.current);
+            }
+        };
+    }, []);
 
     const onSubmit = async (data: createProductInput): Promise<void> => {
         await confirm({
@@ -123,7 +174,24 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
             onConfirm: async () => {
                 try {
                     showSaving('Saving your data...');
-                    //name,    sku,    price,    stock,    weight,    isActive,    description,    tags,    dimensions
+
+                    // Process variants data - convert string values to numbers
+                    const processedVariants = variants.map(v => ({
+                        ...v,
+                        price: parseFloat(v.price) || 0,
+                        stock: v.stock || 0,
+                        discounts: v.discounts?.map(d => ({
+                            ...d,
+                            value: parseFloat(d.value) || 0
+                        })) || []
+                    }));
+
+                    // Process parent discounts
+                    const processedDiscounts = discounts.map(d => ({
+                        ...d,
+                        value: parseFloat(d.value) || 0
+                    }));
+
                     const sendData = {
                         ...data,
                         description: data.description,
@@ -131,10 +199,11 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                         price: data.price,
                         weight: Number(data.weight),
                         tags: Tags_value,
-                        variants: variants
+                        variants: processedVariants,
+                        discounts: processedDiscounts
                     }
                     const formData = objectToFormData(sendData, files);
-                    console.log(sendData);
+                    console.log('sendData : ', sendData);
                     // const res = { status: 201 };
                     const res = await apiClient.post(`/products`, formData);
                     hide();
@@ -168,7 +237,45 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
         setTags_value(prev => prev.filter(tag => tag !== tagToRemove));
     };
 
+    // Calculate price range from variants
+    const calculatePriceRange = () => {
+        if (variants.length === 0) {
+            setValue('price', '');
+            return '';
+        }
+
+        const prices = variants.map(v => {
+            const price = parseFloat(v.price) || 0;
+            const activeDiscount = v.discounts?.find(d => d.isActive);
+
+            if (activeDiscount && activeDiscount.value) {
+                return calculateDiscountedPrice(price, activeDiscount);
+            }
+            return price;
+        }).filter(p => p > 0);
+
+        if (prices.length === 0) {
+            setValue('price', '');
+            return '';
+        }
+
+        const min = Math.min(...prices);
+        const max = Math.max(...prices);
+
+        if (min === max) {
+            setValue('price', min.toString());
+            return `Rp ${min.toLocaleString('id-ID')}`;
+        }
+        setValue('price', `${min}-${max}`);
+        return `Rp ${min.toLocaleString('id-ID')} - Rp ${max.toLocaleString('id-ID')}`;
+    };
+
     const addVariant = () => {
+        // If this is the first variant, reset parent discounts
+        if (variants.length === 0) {
+            setDiscounts([]);
+        }
+
         setVariants((prev) => [...prev, {
             id: Date.now(),
             name: '',
@@ -182,9 +289,23 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
     };
 
     const updateVariant = (id: number, field: string, value: string | number | boolean) => {
-        setVariants(prev => prev.map(variant =>
-            variant.id === id ? { ...variant, [field]: value } : variant
-        ));
+        setVariants(prev => {
+            const updated = prev.map(variant =>
+                variant.id === id ? { ...variant, [field]: value } : variant
+            );
+            // Debounced price range calculation - only when variant price changes
+            if (field === 'price') {
+                // Clear previous timeout
+                if (priceRangeTimeoutRef.current) {
+                    clearTimeout(priceRangeTimeoutRef.current);
+                }
+                // Set new timeout for debounced calculation
+                priceRangeTimeoutRef.current = setTimeout(() => {
+                    calculatePriceRange();
+                }, 500); // 500ms debounce delay
+            }
+            return updated;
+        });
     };
 
     const removeVariant = (id: number) => {
@@ -205,17 +326,6 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
         } else {
             return price - parseFloat(discount.value);
         }
-    };
-
-    const getActiveDiscount = (discountsList: CreateDiscount[]) => {
-        if (!discountsList || discountsList.length === 0) return null;
-
-        const now = new Date();
-        return discountsList.find(d => {
-            const start = new Date(d.startDate);
-            const end = new Date(d.endDate);
-            return d.isActive && now >= start && now <= end;
-        });
     };
 
     const addDiscount = (variantId: number | null = null) => {
@@ -239,7 +349,6 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
             setDiscounts(prev => [...prev, newDiscount]);
         }
     };
-
     const updateDiscount = (discountId: number, field: string, value: string | number | boolean, variantId: number | null = null) => {
         if (variantId) {
             setVariants(prev => prev.map(v =>
@@ -252,6 +361,17 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                     }
                     : v
             ));
+
+            // Trigger debounced price range calculation when variant discount changes
+            // Only for fields that affect final price: value, type, isActive
+            if (field === 'value' || field === 'type' || field === 'isActive') {
+                if (priceRangeTimeoutRef.current) {
+                    clearTimeout(priceRangeTimeoutRef.current);
+                }
+                priceRangeTimeoutRef.current = setTimeout(() => {
+                    calculatePriceRange();
+                }, 500);
+            }
         } else {
             setDiscounts(prev => prev.map(d =>
                 d.id === discountId ? { ...d, [field]: value } : d
@@ -266,9 +386,30 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                     ? { ...v, discounts: (v.discounts ?? []).filter(d => d.id !== discountId) }
                     : v
             ));
+
+            // Trigger debounced price range calculation when variant discount is removed
+            if (priceRangeTimeoutRef.current) {
+                clearTimeout(priceRangeTimeoutRef.current);
+            }
+            priceRangeTimeoutRef.current = setTimeout(() => {
+                calculatePriceRange();
+            }, 500);
         } else {
             setDiscounts(prev => prev.filter(d => d.id !== discountId));
         }
+    };
+
+    const sanitizeDecimalInput = (value: string) => {
+        // hanya angka dan titik
+        let v = value.replace(/[^0-9.]/g, '');
+
+        // hanya boleh satu titik
+        const parts = v.split('.');
+        if (parts.length > 2) {
+            v = parts[0] + '.' + parts.slice(1).join('');
+        }
+
+        return v;
     };
     return (
         <div className='relative w-full h-full'>
@@ -340,16 +481,36 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                             </div>
                             {/* Price */}
                             <div className="flex flex-col gap-1">
-                                <Label htmlFor="price">PRICE</Label>
-                                <Input
-                                    id="price"
-                                    type="text"
-                                    placeholder="Price"
-                                    {...register("price", { required: "Price is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid price format (only numbers are allowed)" } })}
-                                    autoComplete="price"
-                                    className={errors.price ? "border-red-500" : ""}
-                                />
-                                {errors.price && (
+                                <Label htmlFor="price">
+                                    PRICE {variants.length > 0 && <span className="text-xs text-gray-500">(Range from variants)</span>}
+                                </Label>
+                                {variants.length > 0 ? (
+                                    // <span className="text-sm bg-gray-100 text-gray-400 mb-1 w-full h-9 flex items-center px-3 rounded-md">{calculatePriceRange() || 'Add variant prices'}</span>
+                                    <Input
+                                        id="price"
+                                        type="text"
+                                        placeholder="Price"
+                                        disabled
+                                        {...register("price", { required: "Price is required" })}
+                                        autoComplete="price"
+                                        className={"bg-zinc-100 cursor-not-allowed"}
+                                    />
+                                ) : (
+                                    <Input
+                                        {...priceRegister}
+                                        id="price"
+                                        type="text"
+                                        placeholder="Price"
+                                        onChange={(e) => {
+                                            const sanitized = sanitizeDecimalInput(e.target.value);
+                                            e.target.value = sanitized;
+                                            onChange(e);
+                                        }}
+                                        autoComplete="price"
+                                        className={errors.price ? "border-red-500" : ""}
+                                    />
+                                )}
+                                {variants.length === 0 && errors.price && (
                                     <p className="text-red-500 text-xs mt-1">{errors.price.message}</p>
                                 )}
                             </div>
@@ -360,7 +521,10 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                     id="stock"
                                     type="number"
                                     placeholder="Stock"
-                                    {...register("stock", { required: "Stock is required" })}
+                                    {...register("stock", {
+                                        required: "Stock is required",
+                                        valueAsNumber: true
+                                    })}
                                     autoComplete="stock"
                                     className={errors.stock ? "border-red-500" : ""}
                                 />
@@ -379,14 +543,20 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                             value ? true : "Category is required"
                                     }}
                                     render={({ field: { value, onChange } }) => (
-                                        <Select value={value} onValueChange={onChange}>
+                                        <Select value={value} onValueChange={onChange} disabled={loadingCategories}>
                                             <SelectTrigger className="w-full">
-                                                <SelectValue placeholder="Select category" />
+                                                <SelectValue placeholder={loadingCategories ? "Loading categories..." : "Select category"} />
                                             </SelectTrigger>
                                             <SelectContent>
-                                                <SelectItem value="electronics">Electronics</SelectItem>
-                                                <SelectItem value="clothing">Clothing</SelectItem>
-                                                <SelectItem value="home_appliances">Home Appliances</SelectItem>
+                                                {categories.length === 0 && !loadingCategories ? (
+                                                    <SelectItem value="" disabled>No categories available</SelectItem>
+                                                ) : (
+                                                    categories.map((cat) => (
+                                                        <SelectItem key={cat.publicId} value={cat.name}>
+                                                            {cat.name}
+                                                        </SelectItem>
+                                                    ))
+                                                )}
                                             </SelectContent>
                                         </Select>
                                     )}
@@ -402,7 +572,10 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                     id="weight"
                                     type="number"
                                     placeholder="Weight"
-                                    {...register("weight", { required: "Weight is required" })}
+                                    {...register("weight", {
+                                        required: "Weight is required",
+                                        valueAsNumber: true
+                                    })}
                                     autoComplete="weight"
                                     className={errors.weight ? "border-red-500" : ""}
                                 />
@@ -465,7 +638,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                     id="length"
                                     type="text"
                                     placeholder="Length"
-                                    {...register("dimensions.length", { required: "Length is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid price format (only numbers are allowed)" } })}
+                                    {...register("dimensions.length", { required: "Length is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid format (only numbers are allowed)" } })}
                                     autoComplete="length"
                                     className={errors.dimensions?.length ? "border-red-500" : ""}
                                 />
@@ -480,7 +653,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                     id="width"
                                     type="text"
                                     placeholder="Width"
-                                    {...register("dimensions.width", { required: "Width is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid price format (only numbers are allowed)" } })}
+                                    {...register("dimensions.width", { required: "Width is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid format (only numbers are allowed)" } })}
                                     autoComplete="width"
                                     className={errors.dimensions?.width ? "border-red-500" : ""}
                                 />
@@ -495,7 +668,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                     id="height"
                                     type="text"
                                     placeholder="Height"
-                                    {...register("dimensions.height", { required: "Height is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid price format (only numbers are allowed)" } })}
+                                    {...register("dimensions.height", { required: "Height is required", pattern: { value: /^\d+(\.\d{1,2})?$/, message: "Invalid format (only numbers are allowed)" } })}
                                     autoComplete="height"
                                     className={errors.dimensions?.height ? "border-red-500" : ""}
                                 />
@@ -557,131 +730,147 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                             ))}
                         </div>
                     </section>
-                    {/* Discount */}
-                    <section className="space-y-4">
-                        <div className="flex items-center justify-between border-b pb-2">
-                            <h2 className="text-xl font-semibold text-gray-800">Discount</h2>
-                            <Button
-                                type="button"
-                                onClick={() => setShowDiscounts(!showDiscounts)}
-                                variant='ghost'
-                            >
-                                {showDiscounts ? <LucideChevronUp /> : <LucideChevronDown />}
-                            </Button>
-                        </div>
-
-                        {showDiscounts && (
-                            <div className="space-y-4">
+                    {/* Discount - Only show for products WITHOUT variants */}
+                    {variants.length === 0 && (
+                        <section className="space-y-4">
+                            <div className="flex items-center justify-between border-b pb-2">
+                                <h2 className="text-xl font-semibold text-gray-800">Discount</h2>
                                 <Button
                                     type="button"
-                                    onClick={() => addDiscount()}
-                                    variant="outline"
-                                    className='w-full border-dashed'
+                                    onClick={() => setShowDiscounts(!showDiscounts)}
+                                    variant='ghost'
                                 >
-                                    <Plus size={20} />
-                                    Add Discount
+                                    {showDiscounts ? <LucideChevronUp /> : <LucideChevronDown />}
                                 </Button>
-
-                                {discounts.map((discount, index) => (
-                                    <div key={discount.id} className="bg-zinc-50 p-4 rounded-lg space-y-3 border-2 border-zinc-200">
-                                        <div className="flex items-center justify-between">
-                                            <h3 className="font-medium text-gray-700 flex items-center gap-2">
-                                                <Percent size={16} className="text-zinc-600" />
-                                                Discount {index + 1}
-                                            </h3>
-                                            <Button
-                                                type="button"
-                                                onClick={() => removeDiscount(discount.id)}
-                                                variant="ghost">
-                                                <X size={20} />
-                                            </Button>
-                                        </div>
-
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                            <div className="flex flex-col gap-1">
-                                                <Label>Type</Label>
-                                                <Select value={discount.type} onValueChange={(value) => updateDiscount(discount.id, 'type', value as 'PERCENTAGE' | 'FIXED')}>
-                                                    <SelectTrigger className="w-full">
-                                                        <SelectValue placeholder="Select type" />
-                                                    </SelectTrigger>
-                                                    <SelectContent>
-                                                        <SelectItem value="PERCENTAGE">Persentase (%)</SelectItem>
-                                                        <SelectItem value="FIXED">Nominal (Rp)</SelectItem>
-                                                    </SelectContent>
-                                                </Select>
-                                            </div>
-
-                                            <div className="flex flex-col gap-1">
-                                                <Label>
-                                                    Discount Value {discount.type === 'PERCENTAGE' ? '(%)' : '(Rp)'}
-                                                </Label>
-
-                                                <Input
-                                                    type="number"
-                                                    value={discount.value}
-                                                    onChange={(e) => updateDiscount(discount.id, 'value', e.target.value)}
-                                                    placeholder={discount.type === 'PERCENTAGE' ? '0 - 100' : '0'}
-                                                    step="0.01"
-                                                    min="0"
-                                                    max={discount.type === 'PERCENTAGE' ? '100' : undefined}
-                                                />
-                                            </div>
-
-                                            <div className="flex flex-col gap-1">
-                                                <Label>Start Date</Label>
-                                                <Input
-                                                    type="date"
-                                                    value={discount.startDate}
-                                                    onChange={(e) => updateDiscount(discount.id, 'startDate', e.target.value)}
-                                                />
-                                            </div>
-
-                                            <div className="flex flex-col gap-1">
-                                                <Label>End Date</Label>
-                                                <Input
-                                                    type="date"
-                                                    value={discount.endDate}
-                                                    onChange={(e) => updateDiscount(discount.id, 'endDate', e.target.value)}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="flex items-center space-x-2">
-                                            <Checkbox
-                                                id={`discount-active-${discount.id}`}
-                                                checked={discount.isActive}
-                                                onCheckedChange={(value) => updateDiscount(discount.id, 'isActive', value)}
-                                            />
-                                            <label htmlFor={`discount-active-${discount.id}`} className="text-sm text-gray-700">
-                                                Active
-                                            </label>
-                                        </div>
-
-                                        {getValues('price') && discount.value && (
-                                            <div className="bg-white p-3 rounded border border-red-200">
-                                                <p className="text-xs text-gray-600 mb-1">Preview Price:</p>
-                                                <div className="flex items-center gap-3">
-                                                    <span className="text-sm text-gray-400 line-through">
-                                                        Rp {parseFloat(getValues('price')).toLocaleString('id-ID')}
-                                                    </span>
-                                                    <span className="text-base font-bold text-blue-600">
-                                                        Rp {calculateDiscountedPrice(parseFloat(getValues('price')), discount).toLocaleString('id-ID')}
-                                                    </span>
-                                                    <span className="text-xs text-green-600">
-                                                        (Save Rp {(parseFloat(getValues('price')) - calculateDiscountedPrice(parseFloat(getValues('price')), discount)).toLocaleString('id-ID')})
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                ))}
                             </div>
-                        )}
-                    </section>
+
+                            {showDiscounts && (
+                                <div className="space-y-4">
+                                    <Button
+                                        type="button"
+                                        onClick={() => addDiscount()}
+                                        variant="outline"
+                                        className='w-full border-dashed'
+                                    >
+                                        <Plus size={20} />
+                                        Add Discount
+                                    </Button>
+
+                                    {discounts.map((discount, index) => {
+                                        // Pre-calculate discount preview values
+                                        const currentPrice = parseFloat(getValues('price')) || 0;
+                                        const discountedPrice = calculateDiscountedPrice(currentPrice, discount);
+                                        const savings = currentPrice - discountedPrice;
+
+                                        return (
+                                            <div key={discount.id} className="bg-zinc-50 p-4 rounded-lg space-y-3 border-2 border-zinc-200">
+                                                <div className="flex items-center justify-between">
+                                                    <h3 className="font-medium text-gray-700 flex items-center gap-2">
+                                                        <Percent size={16} className="text-zinc-600" />
+                                                        Discount {index + 1}
+                                                    </h3>
+                                                    <Button
+                                                        type="button"
+                                                        onClick={() => removeDiscount(discount.id)}
+                                                        variant="ghost">
+                                                        <X size={20} />
+                                                    </Button>
+                                                </div>
+
+                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                                    <div className="flex flex-col gap-1">
+                                                        <Label>Type</Label>
+                                                        <Select value={discount.type} onValueChange={(value) => updateDiscount(discount.id, 'type', value as 'PERCENTAGE' | 'FIXED_AMOUNT')}>
+                                                            <SelectTrigger className="w-full">
+                                                                <SelectValue placeholder="Select type" />
+                                                            </SelectTrigger>
+                                                            <SelectContent>
+                                                                <SelectItem value="PERCENTAGE">Persentase (%)</SelectItem>
+                                                                <SelectItem value="FIXED_AMOUNT">Nominal (Rp)</SelectItem>
+                                                            </SelectContent>
+                                                        </Select>
+                                                    </div>
+
+                                                    <div className="flex flex-col gap-1">
+                                                        <Label>
+                                                            Discount Value {discount.type === 'PERCENTAGE' ? '(%)' : '(Rp)'}
+                                                        </Label>
+
+                                                        <Input
+                                                            type="number"
+                                                            value={discount.value}
+                                                            onChange={(e) => updateDiscount(discount.id, 'value', e.target.value)}
+                                                            placeholder={discount.type === 'PERCENTAGE' ? '0 - 100' : '0'}
+                                                            step="0.01"
+                                                            min="0"
+                                                            max={discount.type === 'PERCENTAGE' ? '100' : undefined}
+                                                        />
+                                                    </div>
+
+                                                    <div className="flex flex-col gap-1">
+                                                        <Label>Start Date</Label>
+                                                        <Input
+                                                            type="date"
+                                                            value={discount.startDate}
+                                                            onChange={(e) => updateDiscount(discount.id, 'startDate', e.target.value)}
+                                                        />
+                                                    </div>
+
+                                                    <div className="flex flex-col gap-1">
+                                                        <Label>End Date</Label>
+                                                        <Input
+                                                            type="date"
+                                                            value={discount.endDate}
+                                                            onChange={(e) => updateDiscount(discount.id, 'endDate', e.target.value)}
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div className="flex items-center space-x-2">
+                                                    <Checkbox
+                                                        id={`discount-active-${discount.id}`}
+                                                        checked={discount.isActive}
+                                                        onCheckedChange={(value) => updateDiscount(discount.id, 'isActive', value)}
+                                                    />
+                                                    <label htmlFor={`discount-active-${discount.id}`} className="text-sm text-gray-700">
+                                                        Active
+                                                    </label>
+                                                </div>
+
+                                                {currentPrice > 0 && discount.value && (
+                                                    <div className="bg-white p-3 rounded border border-red-200">
+                                                        <p className="text-xs text-gray-600 mb-1">Preview Price:</p>
+                                                        <div className="flex items-center gap-3">
+                                                            <span className="text-sm text-gray-400 line-through">
+                                                                Rp {currentPrice.toLocaleString('id-ID')}
+                                                            </span>
+                                                            <span className="text-base font-bold text-blue-600">
+                                                                Rp {discountedPrice.toLocaleString('id-ID')}
+                                                            </span>
+                                                            <span className="text-xs text-green-600">
+                                                                (Save Rp {savings.toLocaleString('id-ID')})
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+                        </section>
+                    )}
                     {/* Variants */}
                     <section className="space-y-4">
                         <div className="flex items-center justify-between border-b pb-2">
-                            <h2 className="text-xl font-semibold text-gray-800">Variants</h2>
+                            <div>
+                                <h2 className="text-xl font-semibold text-gray-800">Variants</h2>
+                                {variants.length > 0 && (
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        💡 With variants: Discount applies per variant, price shows as range
+                                    </p>
+                                )}
+                            </div>
                             <Button
                                 type="button"
                                 onClick={() => setShowVariants(!showVariants)}
@@ -703,7 +892,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                     Add Variant
                                 </Button>
 
-                                {variants.map((variant, index) => (
+                                {variants.length > 0 && variants.map((variant, index) => (
                                     <div key={variant.id} className="border p-4 rounded-lg space-y-3">
                                         <div className="flex items-center justify-between">
                                             <h3 className="font-medium text-gray-700">Variant {index + 1}</h3>
@@ -737,12 +926,15 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                             <div className="flex flex-col gap-1">
                                                 <Label>Variant Price</Label>
                                                 <Input
-                                                    type="number"
+                                                    type="text"
+                                                    inputMode='decimal'
                                                     value={variant.price}
-                                                    onChange={(e) => updateVariant(variant.id, 'price', e.target.value)}
+                                                    onChange={(e) => updateVariant(
+                                                        variant.id,
+                                                        'price',
+                                                        sanitizeDecimalInput(e.target.value)
+                                                    )}
                                                     placeholder="example: 19.99"
-                                                    step="0.01"
-                                                    min="0"
                                                 />
                                             </div>
                                             <div className="flex flex-col gap-1">
@@ -750,7 +942,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                                 <Input
                                                     type="number"
                                                     value={variant.stock}
-                                                    onChange={(e) => updateVariant(variant.id, 'stock', e.target.value)}
+                                                    onChange={(e) => updateVariant(variant.id, 'stock', Number(e.target.value))}
                                                     placeholder="example: 100"
                                                     min="0"
                                                 />
@@ -761,7 +953,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                             <Checkbox
                                                 id={`variant-active-${variant.id}`}
                                                 checked={variant.isActive}
-                                                onCheckedChange={(checked) => { updateVariant(variant.id, 'isActive', checked) }}
+                                                onCheckedChange={(checked) => { updateVariant(variant.id, 'isActive', Boolean(checked)) }}
                                                 className="w-4 h-4"
                                             />
                                             <label htmlFor={`variant-active-${variant.id}`} className="text-sm text-gray-700">
@@ -780,38 +972,111 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                                             </Button>
 
                                             {variant.discounts && variant.discounts.length > 0 && (
-                                                <div className="mt-3 space-y-2">
-                                                    {variant.discounts.map((vDiscount) => (
-                                                        <div key={vDiscount.id} className="bg-red-50 p-3 rounded border border-red-200 text-sm">
-                                                            <div className="flex justify-between items-start mb-2">
-                                                                <span className="font-medium text-gray-700">
-                                                                    {vDiscount.type === 'PERCENTAGE' ? `${vDiscount.value}%` : `Rp ${vDiscount.value}`} OFF
-                                                                </span>
-                                                                <Button
-                                                                    type="button"
-                                                                    onClick={() => removeDiscount(vDiscount.id, variant.id)}
-                                                                    variant="ghost"
-                                                                >
-                                                                    <X size={14} />
-                                                                </Button>
-                                                            </div>
-                                                            <div className="text-xs text-gray-600">
-                                                                {new Date(vDiscount.startDate).toLocaleDateString('id-ID')} - {new Date(vDiscount.endDate).toLocaleDateString('id-ID')}
-                                                            </div>
-                                                            {variant.price && vDiscount.value && (
-                                                                <div className="mt-2 pt-2 border-t border-red-200">
-                                                                    <div className="flex items-center gap-2">
-                                                                        <span className="text-xs text-gray-400 line-through">
-                                                                            Rp {parseFloat(variant.price).toLocaleString('id-ID')}
-                                                                        </span>
-                                                                        <span className="text-sm font-bold text-blue-600">
-                                                                            Rp {calculateDiscountedPrice(parseFloat(variant.price), vDiscount).toLocaleString('id-ID')}
-                                                                        </span>
+                                                <div className="mt-3 space-y-3">
+                                                    {variant.discounts.map((vDiscount, idx) => {
+                                                        // Pre-calculate variant discount preview values
+                                                        const variantPrice = parseFloat(variant.price) || 0;
+                                                        const variantDiscountedPrice = calculateDiscountedPrice(variantPrice, vDiscount);
+                                                        const variantSavings = variantPrice - variantDiscountedPrice;
+
+                                                        return (
+                                                            <div key={vDiscount.id} className="bg-zinc-50 p-4 rounded-lg border-2 border-zinc-200">
+                                                                <div className="flex items-center justify-between mb-3">
+                                                                    <h4 className="font-medium text-gray-700 flex items-center gap-2">
+                                                                        <Percent size={16} className="text-zinc-600" />
+                                                                        Variant Discount {idx + 1}
+                                                                    </h4>
+                                                                    <Button
+                                                                        type="button"
+                                                                        onClick={() => removeDiscount(vDiscount.id, variant.id)}
+                                                                        variant="ghost"
+                                                                        size="sm"
+                                                                    >
+                                                                        <X size={16} />
+                                                                    </Button>
+                                                                </div>
+
+                                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                                                    <div className="flex flex-col gap-1">
+                                                                        <Label>Type</Label>
+                                                                        <Select
+                                                                            value={vDiscount.type}
+                                                                            onValueChange={(value) => updateDiscount(vDiscount.id, 'type', value as 'PERCENTAGE' | 'FIXED_AMOUNT', variant.id)}
+                                                                        >
+                                                                            <SelectTrigger className="w-full">
+                                                                                <SelectValue placeholder="Select type" />
+                                                                            </SelectTrigger>
+                                                                            <SelectContent>
+                                                                                <SelectItem value="PERCENTAGE">Persentase (%)</SelectItem>
+                                                                                <SelectItem value="FIXED_AMOUNT">Nominal (Rp)</SelectItem>
+                                                                            </SelectContent>
+                                                                        </Select>
+                                                                    </div>
+
+                                                                    <div className="flex flex-col gap-1">
+                                                                        <Label>
+                                                                            Discount Value {vDiscount.type === 'PERCENTAGE' ? '(%)' : '(Rp)'}
+                                                                        </Label>
+                                                                        <Input
+                                                                            type="number"
+                                                                            value={vDiscount.value}
+                                                                            onChange={(e) => updateDiscount(vDiscount.id, 'value', e.target.value, variant.id)}
+                                                                            placeholder={vDiscount.type === 'PERCENTAGE' ? '0 - 100' : '0'}
+                                                                            step="0.01"
+                                                                            min="0"
+                                                                            max={vDiscount.type === 'PERCENTAGE' ? '100' : undefined}
+                                                                        />
+                                                                    </div>
+
+                                                                    <div className="flex flex-col gap-1">
+                                                                        <Label>Start Date</Label>
+                                                                        <Input
+                                                                            type="date"
+                                                                            value={vDiscount.startDate}
+                                                                            onChange={(e) => updateDiscount(vDiscount.id, 'startDate', e.target.value, variant.id)}
+                                                                        />
+                                                                    </div>
+
+                                                                    <div className="flex flex-col gap-1">
+                                                                        <Label>End Date</Label>
+                                                                        <Input
+                                                                            type="date"
+                                                                            value={vDiscount.endDate}
+                                                                            onChange={(e) => updateDiscount(vDiscount.id, 'endDate', e.target.value, variant.id)}
+                                                                        />
                                                                     </div>
                                                                 </div>
-                                                            )}
-                                                        </div>
-                                                    ))}
+
+                                                                <div className="flex items-center space-x-2 mt-3">
+                                                                    <Checkbox
+                                                                        id={`variant-discount-active-${vDiscount.id}`}
+                                                                        checked={vDiscount.isActive}
+                                                                        onCheckedChange={(value) => updateDiscount(vDiscount.id, 'isActive', value, variant.id)}
+                                                                    />
+                                                                    <label htmlFor={`variant-discount-active-${vDiscount.id}`} className="text-sm text-gray-700">
+                                                                        Active
+                                                                    </label>
+                                                                </div>
+
+                                                                {variantPrice > 0 && vDiscount.value && (
+                                                                    <div className="bg-white p-3 rounded border border-blue-200 mt-3">
+                                                                        <p className="text-xs text-gray-600 mb-1">Preview Price:</p>
+                                                                        <div className="flex items-center gap-3">
+                                                                            <span className="text-sm text-gray-400 line-through">
+                                                                                Rp {variantPrice.toLocaleString('id-ID')}
+                                                                            </span>
+                                                                            <span className="text-base font-bold text-blue-600">
+                                                                                Rp {variantDiscountedPrice.toLocaleString('id-ID')}
+                                                                            </span>
+                                                                            <span className="text-xs text-green-600">
+                                                                                (Save Rp {variantSavings.toLocaleString('id-ID')})
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    })}
                                                 </div>
                                             )}
                                         </div>

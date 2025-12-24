@@ -22,7 +22,9 @@ export default function Container({
                     </span>
                     <div className='font-bold tracking-wide'>{selectedMenu.btn_title}</div>
                 </div>
-                {children}
+                <div className='w-full h-full overflow-y-auto'>
+                    {children}
+                </div>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { SerializedEditorState } from "lexical"
 
 import { Editor } from "@/components/blocks/editor-x/editor"
@@ -38,11 +38,27 @@ export const initialValue = {
 export default function EditorPage({ value, onChange, limitChars }: { value?: SerializedEditorState | undefined, onChange?: (value: SerializedEditorState) => void, limitChars?: number }) {
     const [editorState, setEditorState] =
         useState<SerializedEditorState | undefined>(value)
+    const isInternalChangeRef = useRef(false)
+    const prevValueRef = useRef(value)
+
+    // Sync editorState with value prop only when changed externally
+    useEffect(() => {
+        // Only update if value changed AND it wasn't an internal change
+        if (value !== prevValueRef.current) {
+            if (!isInternalChangeRef.current) {
+                setEditorState(value)
+            }
+            prevValueRef.current = value
+            isInternalChangeRef.current = false
+        }
+    }, [value])
+
     return (
         <Editor
             limitChars={limitChars}
             editorSerializedState={editorState}
             onSerializedChange={(values) => {
+                isInternalChangeRef.current = true
                 setEditorState(values)
                 onChange?.(values)
             }}

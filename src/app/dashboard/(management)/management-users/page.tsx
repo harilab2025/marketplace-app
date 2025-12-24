@@ -1,9 +1,5 @@
-import React from 'react'
+import ManagementUsersTable from './table';
 
-function Page() {
-    return (
-        <div>Page</div>
-    )
+export default function ManagementUsersPage() {
+    return <ManagementUsersTable />;
 }
-
-export default Page

@@ -3,24 +3,20 @@ import GoogleProvider from "next-auth/providers/google"
 import CredentialsProvider from "next-auth/providers/credentials"
 import axios from "axios"
 import { decryptData } from "@/actions/crypto.action";
-declare module "next-auth" {
-    interface User {
-        id?: string;
-        key?: string;
-    }
-    interface Session {
-        user: {
-            id?: string;
-            key?: string;
-        };
-    }
-}
+
 class CustomError extends AuthError {
     constructor(message: string) {
         super()
         this.message = message
     }
 }
+
+function generateUUID(): string {
+    return ('10000000-1000-4000-8000-100000000000').replace(/[018]/g, (c: string) =>
+        (parseInt(c) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> parseInt(c) / 4).toString(16)
+    );
+}
+
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 export const { handlers, auth, signIn, signOut } = NextAuth({
     providers: [
@@ -59,12 +55,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                     // Cek response status dan data
                     if (response.status === 200 && response.data?.data) {
                         const result_key = response.data.data;
-                        function generateUUID(): string {
-                            return ('10000000-1000-4000-8000-100000000000').replace(/[018]/g, (c: string) =>
-                                (parseInt(c) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> parseInt(c) / 4).toString(16)
-                            );
-                        }
-
                         const uuid: string = generateUUID();
                         if (result_key) {
                             return {
@@ -135,6 +125,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             if (token) {
                 session.user.id = token.id as string;
                 session.user.key = token.key as string;
+                session.user.role = token.role as string;
             }
             return session;
         },

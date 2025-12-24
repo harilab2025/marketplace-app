@@ -5,10 +5,10 @@ import { AlertTriangle, Eye, Key, Lock, Shield, Users } from "lucide-react";
 
 export default function SignupPage() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100">
             <div className="w-full max-w-5xl bg-white rounded-2xl shadow-xl flex overflow-hidden border border-slate-100">
                 {/* Left Info */}
-                <div className="lg:w-1/2 p-8 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+                <div className="lg:w-1/2 p-8 bg-linear-to-br from-indigo-600 to-purple-700 text-white">
                     <div className="mb-6">
                         <h2 className="text-3xl font-bold mb-2 flex items-center">
                             <Shield className="mr-3 h-8 w-8" />

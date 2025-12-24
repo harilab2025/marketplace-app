@@ -1,5 +1,6 @@
+'use client'
 import ManagementProductsPage from "./table";
 
-export default async function Page() {
+export default function Page() {
   return <ManagementProductsPage />;
 }

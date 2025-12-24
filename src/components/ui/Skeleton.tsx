@@ -14,7 +14,7 @@ export function Skeleton({
     spacing = 'md',
     children
 }: SkeletonProps) {
-    const baseClasses = 'bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 bg-[length:200%_100%]'
+    const baseClasses = 'bg-linear-to-r from-slate-200 via-slate-300 to-slate-200 bg-[length:200%_100%]'
     const animateClasses = animate ? 'animate-pulse' : ''
 
     const variantClasses = {

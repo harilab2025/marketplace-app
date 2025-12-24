@@ -51,7 +51,7 @@ const SimpleBarChart = ({ data, title }: { data: typeof mockData.salesData, titl
             ></div>
           </div>
           <div className="w-16 text-sm font-medium text-gray-800">
-            ${item.sales.toLocaleString()}
+            ${item.sales.toLocaleString("id-ID")}
           </div>
         </div>
       ))}
@@ -97,9 +97,9 @@ const TopProductsTable = ({ products }: { products: typeof mockData.topProducts 
           {products.map((product, index) => (
             <tr key={index} className="border-b border-gray-100">
               <td className="py-3 px-2 text-sm text-gray-800">{product.name}</td>
-              <td className="py-3 px-2 text-sm text-gray-600">{product.sales.toLocaleString()}</td>
+              <td className="py-3 px-2 text-sm text-gray-600">{product.sales.toLocaleString("id-ID")}</td>
               <td className="py-3 px-2 text-sm font-medium text-green-600">
-                ${product.revenue.toLocaleString()}
+                ${product.revenue.toLocaleString("id-ID")}
               </td>
             </tr>
           ))}

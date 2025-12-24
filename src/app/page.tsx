@@ -6,10 +6,10 @@ import { SkeletonGenerator } from "@/components/skeletons/SkeletonGenerator";
 
 export default function Home() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+        <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-slate-50 to-slate-100">
             <div className="w-full max-w-5xl bg-white rounded-2xl shadow-xl flex overflow-hidden border border-slate-100">
                 {/* Left Info */}
-                <div className="lg:w-1/2 p-8 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+                <div className="lg:w-1/2 p-8 bg-linear-to-br from-indigo-600 to-purple-700 text-white">
                     <div className="mb-6">
                         <h2 className="text-3xl font-bold mb-2 flex items-center">
                             <Shield className="mr-3 h-8 w-8" />
@@ -22,7 +22,7 @@ export default function Home() {
 
                     <div className="space-y-6">
                         <div className="flex items-start space-x-4">
-                            <div className="bg-white/20  rounded-full p-2 flex-shrink-0">
+                            <div className="bg-white/20  rounded-full p-2 shrink-0">
                                 <Lock className="h-5 w-5" />
                             </div>
                             <div>
@@ -32,7 +32,7 @@ export default function Home() {
                         </div>
 
                         <div className="flex items-start space-x-4">
-                            <div className="bg-white/20  rounded-full p-2 flex-shrink-0">
+                            <div className="bg-white/20  rounded-full p-2 shrink-0">
                                 <Key className="h-5 w-5" />
                             </div>
                             <div>
@@ -42,7 +42,7 @@ export default function Home() {
                         </div>
 
                         <div className="flex items-start space-x-4">
-                            <div className="bg-white/20  rounded-full p-2 flex-shrink-0">
+                            <div className="bg-white/20  rounded-full p-2 shrink-0">
                                 <Users className="h-5 w-5" />
                             </div>
                             <div>
@@ -52,7 +52,7 @@ export default function Home() {
                         </div>
 
                         <div className="flex items-start space-x-4">
-                            <div className="bg-white/20  rounded-full p-2 flex-shrink-0">
+                            <div className="bg-white/20  rounded-full p-2 shrink-0">
                                 <Eye className="h-5 w-5" />
                             </div>
                             <div>
@@ -62,7 +62,7 @@ export default function Home() {
                         </div>
 
                         <div className="flex items-start space-x-4">
-                            <div className="bg-white/20  rounded-full p-2 flex-shrink-0">
+                            <div className="bg-white/20  rounded-full p-2 shrink-0">
                                 <AlertTriangle className="h-5 w-5" />
                             </div>
                             <div>

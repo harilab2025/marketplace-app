@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx eslint:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill //F //PID 11852)",
+      "Bash(npm run dev)",
+      "Bash(taskkill //F //PID 76044)",
+      "Bash(npx tsc:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(curl:*)",
+      "Bash(redis-cli ping:*)",
+      "Bash(taskkill //F //PID 7956)",
+      "Bash(ls:*)",
+      "Bash(\"D:\\PROJECT_2025\\AUTHENTICATION\\App\\marketplace-app\\src\\app\\dashboard\\(management)\\management-users\\page.tsx\")",
+      "Bash(\"D:\\PROJECT_2025\\AUTHENTICATION\\App\\marketplace-app\\src\\app\\dashboard\\(management)\\management-users\\table.tsx\")",
+      "Bash(\"D:\\PROJECT_2025\\AUTHENTICATION\\App\\marketplace-app\\src\\app\\dashboard\\(management)\\management-orders\\page.tsx\")",
+      "Bash(\"D:\\PROJECT_2025\\AUTHENTICATION\\App\\marketplace-app\\src\\app\\dashboard\\(management)\\management-orders\\table.tsx\")",
+      "Bash(\"D:\\PROJECT_2025\\AUTHENTICATION\\App\\marketplace-app\\src\\app\\dashboard\\(management)\\management-users\\create.tsx\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -5,10 +5,11 @@ import { signOut } from './auth';
 type AccessRule = { pattern: RegExp; roles: string[] };
 
 const accessRules: AccessRule[] = [
-    { pattern: /^\/dashboard\/management-users(?:\/.*)?$/, roles: ['ADMIN'] },
-    { pattern: /^\/dashboard\/management-products(?:\/.*)?$/, roles: ['ADMIN', 'manager', 'USER'] },
-    { pattern: /^\/dashboard\/analytics(?:\/.*)?$/, roles: ['ADMIN', 'analyst'] },
-    { pattern: /^\/api\/dashboard\/.*$/, roles: ['ADMIN'] }
+    { pattern: /^\/dashboard\/management-users(?:\/.*)?$/, roles: ['SUPERADMIN'] },
+    { pattern: /^\/dashboard\/management-categories(?:\/.*)?$/, roles: ['SUPERADMIN'] },
+    { pattern: /^\/dashboard\/management-products(?:\/.*)?$/, roles: ['SUPERADMIN', 'PRODUCT_MANAGER'] },
+    { pattern: /^\/dashboard\/analytics(?:\/.*)?$/, roles: ['SUPERADMIN', 'PRODUCT_MANAGER'] },
+    { pattern: /^\/api\/dashboard\/.*$/, roles: ['SUPERADMIN', 'PRODUCT_MANAGER', 'CASHIER'] }
 ];
 
 export async function proxy(request: NextRequest) {

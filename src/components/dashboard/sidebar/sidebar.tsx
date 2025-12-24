@@ -2,13 +2,35 @@
 import { menuDashboard } from '@/constants/menu/menu.dashboard';
 import { useToggleSidebar } from '@/context/dashboard/useToggle.sidebar';
 import { ChevronRight } from 'lucide-react'
-import React, { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, useMemo } from 'react'
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
 import { usePathname, useRouter } from 'next/navigation';
+import { userData } from '@/lib/auth.user';
 
 export default function Sidebar() {
-    const data = menuDashboard;
+    const [user, setUser] = useState<Awaited<ReturnType<typeof userData>> | null>(null);
+    useEffect(() => {
+        async function fetchUser() {
+            const userInfo = await userData();
+            setUser(userInfo);
+        }
+        fetchUser();
+    }, []);
+    const userRole = user?.role || null;
+
+    // Filter menu based on user role - memoized to prevent infinite re-renders
+    const data = useMemo(() => menuDashboard.map(section => ({
+        ...section,
+        list: section.list.filter(item => {
+            // If item has no roles property, it's accessible to all
+            if (!item.roles || item.roles.length === 0) return true;
+            // If user has no role, show all items (for development/when session is loading)
+            if (!userRole) return true;
+            // Show item only if user's role is in the allowed roles
+            return item.roles.includes(userRole);
+        })
+    })).filter(section => section.list.length > 0), [userRole]); // Remove empty sections
     const [expandedSections, setExpandedSections] = useState<Record<number, boolean>>({});
     const [activeLink, setActiveLink] = useState('');
     const { toggleSidebar } = useToggleSidebar();
@@ -72,7 +94,7 @@ export default function Sidebar() {
                 }));
             }
         });
-    }, [data, pathname]);
+    }, [pathname, data]);
 
     // Cleanup navigation flag on unmount
     useEffect(() => {

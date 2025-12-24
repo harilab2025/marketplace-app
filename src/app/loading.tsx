@@ -43,16 +43,16 @@ export default function Loading() {
 
   if (!isClient) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-800 to-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-12 shadow-2xl" />
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+          <div className="w-24 h-24 bg-linear-to-br from-cyan-400 to-blue-500 rounded-full mx-auto mb-12 shadow-2xl" />
+          <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             Loading Experience
           </h2>
           <p className="text-slate-400 text-lg">Crafting something amazing...</p>
           <div className="w-80 mx-auto mt-8">
             <div className="h-3 bg-slate-700/50 rounded-full">
-              <div className="h-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full w-0" />
+              <div className="h-full bg-linear-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full w-0" />
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Loading() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 flex items-center justify-center overflow-hidden">
+    <div className="min-h-screen bg-linear-to-br from-gray-900 via-slate-800 to-gray-900 flex items-center justify-center overflow-hidden">
       {/* Ambient background effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
@@ -75,7 +75,7 @@ export default function Loading() {
           {/* Central morphing shape */}
           <div className="relative">
             <div
-              className={`w-24 h-24 bg-gradient-to-br ${colors[morphStage]} ${shapes[morphStage]} transition-all duration-1000 ease-in-out shadow-2xl`}
+              className={`w-24 h-24 bg-linear-to-br ${colors[morphStage]} ${shapes[morphStage]} transition-all duration-1000 ease-in-out shadow-2xl`}
               style={{
                 boxShadow: `0 0 60px ${morphStage === 0 ? '#06b6d4' : morphStage === 1 ? '#a855f7' : morphStage === 2 ? '#10b981' : '#f97316'}40`
               }}
@@ -112,7 +112,7 @@ export default function Loading() {
 
         {/* Loading text with typewriter effect */}
         <div className="mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-linear-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             Loading Experience
           </h2>
           <p className="text-slate-400 text-lg">
@@ -124,10 +124,10 @@ export default function Loading() {
         <div className="w-80 mx-auto mb-8">
           <div className="relative h-3 bg-slate-700/50 rounded-full overflow-hidden backdrop-blur-sm border border-slate-600/30">
             <div
-              className="absolute left-0 top-0 h-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full transition-all duration-300 ease-out"
+              className="absolute left-0 top-0 h-full bg-linear-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${Math.min(progress, 100)}%` }}
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
+            <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent animate-pulse" />
           </div>
           <div className="flex justify-between mt-2 text-sm text-slate-500">
             <span>0%</span>
@@ -141,7 +141,7 @@ export default function Loading() {
           {[...Array(4)].map((_, i) => (
             <div
               key={i}
-              className="w-3 h-3 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full animate-bounce shadow-lg"
+              className="w-3 h-3 bg-linear-to-br from-cyan-400 to-purple-500 rounded-full animate-bounce shadow-lg"
               style={{
                 animationDelay: `${i * 0.15}s`,
                 animationDuration: '1.2s'

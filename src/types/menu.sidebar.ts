@@ -4,6 +4,7 @@ interface MenuListItem {
     btn_title: string;
     btn_icon: ReactNode;
     btn_link: string;
+    roles?: string[];
 }
 export interface MenuSidebarDashboard {
 

@@ -252,7 +252,7 @@ export default function ChatUser() {
 
     return (
         <>
-            <div className="flex flex-col flex-1 overflow-y-auto p-4 bg-gradient-to-b from-sky-50 to-sky-100 space-y-4 justify-end" ref={chatContainerRef}>
+            <div className="flex flex-col flex-1 overflow-y-auto p-4 bg-linear-to-b from-sky-50 to-sky-100 space-y-4 justify-end" ref={chatContainerRef}>
                 {chatMessages.map((message) => (
                     <div
                         key={message.id}

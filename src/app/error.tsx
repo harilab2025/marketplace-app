@@ -40,10 +40,10 @@ export default function Error({ error, reset }: ErrorPageProps) {
 
   if (!isClient) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center px-4 max-w-2xl mx-auto">
           <AlertTriangle className="w-24 h-24 text-red-400 mx-auto mb-8" />
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-red-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
             Oops! Something Broke
           </h1>
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 mb-8 shadow-2xl">
@@ -58,7 +58,7 @@ export default function Error({ error, reset }: ErrorPageProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={reset}
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+              className="px-8 py-4 bg-linear-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
             >
               <RefreshCw className="w-5 h-5 inline mr-2" />
               Try Again
@@ -77,7 +77,7 @@ export default function Error({ error, reset }: ErrorPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden relative flex items-center justify-center">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden relative flex items-center justify-center">
       {/* Animated background particles */}
       {particles.map(particle => (
         <div
@@ -116,7 +116,7 @@ export default function Error({ error, reset }: ErrorPageProps) {
         </div>
 
         {/* Error title with typing effect */}
-        <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold bg-linear-to-r from-red-400 via-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
           Oops! Something Broke
         </h1>
 
@@ -135,9 +135,9 @@ export default function Error({ error, reset }: ErrorPageProps) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={reset}
-            className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 overflow-hidden"
+            className="group relative px-8 py-4 bg-linear-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-linear-to-r from-purple-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative flex items-center gap-2">
               <RefreshCw className="w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
               Try Again

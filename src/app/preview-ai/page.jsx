@@ -335,10 +335,10 @@ export default function ProductManager() {
 
   if (view === 'list') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+      <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-50 p-6">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6 flex items-center justify-between">
+            <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-8 py-6 flex items-center justify-between">
               <div>
                 <h1 className="text-3xl font-bold text-white">Daftar Produk</h1>
                 <p className="text-blue-100 mt-2">{products.length} produk tersedia</p>
@@ -477,10 +477,10 @@ export default function ProductManager() {
     const discountedPrice = activeDiscount ? calculateDiscountedPrice(originalPrice, activeDiscount) : originalPrice;
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+      <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-50 p-6">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+            <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-8 py-6">
               <button
                 onClick={() => setView('list')}
                 className="text-white hover:text-blue-100 mb-4 flex items-center gap-2"
@@ -776,10 +776,10 @@ export default function ProductManager() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-50 p-6">
       <div className="max-w-5xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-6">
+          <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-8 py-6">
             <button
               onClick={() => {
                 setView('list');
@@ -1333,7 +1333,7 @@ export default function ProductManager() {
               <button
                 type="button"
                 onClick={handleSubmit}
-                className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+                className="flex-1 bg-linear-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
               >
                 {editMode ? 'Update Produk' : 'Simpan Produk'}
               </button>

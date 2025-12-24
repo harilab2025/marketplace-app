@@ -24,7 +24,7 @@ import {
     AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { userData } from "@/lib/auth.user";
-import { Loader2 } from "lucide-react";
+import { Loader2, LoaderCircle } from "lucide-react";
 const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
 interface LoginFormInputs {
     email: string;
@@ -124,47 +124,50 @@ export default function LoginForm() {
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>
-        </div> : status === "loading" ?
+        </div> : (status === "loading" ?
             <div className="flex items-center justify-center">
                 <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500"></div>
             </div> :
-            !window.grecaptcha ?
-                <div className="text-center">
-                    <h2 className="text-2xl font-bold mb-4">reCAPTCHA not loaded</h2>
-                    <p className="text-gray-600">Please refresh this page </p>
-                    <button onClick={() => window.location.reload()} className="text-white bg-sky-400 rounded-xl hover:bg-sky-500 mt-4 px-3 py-1 text-sm cursor-pointer">Refresh</button>
-                </div> :
-                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full max-w-md mx-auto">
-                    <Button type="button" variant="outline" className="w-full flex items-center gap-2 justify-center">
-                        <span className="text-red-500 text-lg">G</span> Sign in with google
-                    </Button>
-                    <Button type="button" variant="outline" className="w-full flex items-center gap-2 justify-center">
-                        <span className="text-blue-600 text-lg">f</span> Sign in with facebook
-                    </Button>
-                    <div className="text-center text-xs text-muted-foreground my-2">or use email</div>
-                    <div className="flex flex-col gap-1">
-                        <Label htmlFor="email">EMAIL ADDRESS</Label>
-                        <Input id="email" type="email" placeholder="name@example.com" {...register("email")} required autoComplete="email" />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                        <Label htmlFor="password">PASSWORD</Label>
-                        <div className="flex relative items-center">
-                            <Input id="password" type={viewtypepass} placeholder="Password" {...register("password")} required autoComplete="current-password" />
-                            {viewtypepass === 'text' ? <VscEye onClick={() => viewtypepass === 'text' ? setViewtypepass('password') : setViewtypepass('text')} size={20} className="cursor-pointer absolute right-3 text-zinc-300 transition-colors hover:text-zinc-500" /> :
-                                <VscEyeClosed onClick={() => viewtypepass === 'text' ? setViewtypepass('password') : setViewtypepass('text')} size={20} className="cursor-pointer absolute right-3 text-zinc-300 transition-colors hover:text-zinc-500" />}
+            (typeof window === 'undefined' ? <div className="flex w-full max-w-md mx-auto">
+                <LoaderCircle className="animate-spin mr-2" /> Loading...
+            </div> :
+                (!window?.grecaptcha ?
+                    <div className="text-center">
+                        <h2 className="text-2xl font-bold mb-4">reCAPTCHA not loaded</h2>
+                        <p className="text-gray-600">Please refresh this page </p>
+                        <button onClick={() => window.location.reload()} className="text-white bg-sky-400 rounded-xl hover:bg-sky-500 mt-4 px-3 py-1 text-sm cursor-pointer">Refresh</button>
+                    </div> :
+                    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 w-full max-w-md mx-auto">
+                        <Button type="button" variant="outline" className="w-full flex items-center gap-2 justify-center">
+                            <span className="text-red-500 text-lg">G</span> Sign in with google
+                        </Button>
+                        <Button type="button" variant="outline" className="w-full flex items-center gap-2 justify-center">
+                            <span className="text-blue-600 text-lg">f</span> Sign in with facebook
+                        </Button>
+                        <div className="text-center text-xs text-muted-foreground my-2">or use email</div>
+                        <div className="flex flex-col gap-1">
+                            <Label htmlFor="email">EMAIL ADDRESS</Label>
+                            <Input id="email" type="email" placeholder="name@example.com" {...register("email")} required autoComplete="email" />
                         </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                            <Checkbox id="remember" {...register("remember")} />
-                            <Label htmlFor="remember" className="text-xs">Remember me</Label>
+                        <div className="flex flex-col gap-1">
+                            <Label htmlFor="password">PASSWORD</Label>
+                            <div className="flex relative items-center">
+                                <Input id="password" type={viewtypepass} placeholder="Password" {...register("password")} required autoComplete="current-password" />
+                                {viewtypepass === 'text' ? <VscEye onClick={() => viewtypepass === 'text' ? setViewtypepass('password') : setViewtypepass('text')} size={20} className="cursor-pointer absolute right-3 text-zinc-300 transition-colors hover:text-zinc-500" /> :
+                                    <VscEyeClosed onClick={() => viewtypepass === 'text' ? setViewtypepass('password') : setViewtypepass('text')} size={20} className="cursor-pointer absolute right-3 text-zinc-300 transition-colors hover:text-zinc-500" />}
+                            </div>
                         </div>
-                        <Link href="/forgot" className="text-xs text-blue-600 hover:underline">Forgot Password?</Link>
-                    </div>
-                    <Button type="submit" className="w-full mt-2" disabled={isLoading}>
-                        {isLoading ? <Loader2 className="animate-spin" /> : 'Sign In'}
-                    </Button>
-                    <Link href="/signup" className="text-center text-xs text-blue-600 hover:underline mt-2">Create an account</Link>
-                </form>
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                                <Checkbox id="remember" {...register("remember")} />
+                                <Label htmlFor="remember" className="text-xs">Remember me</Label>
+                            </div>
+                            <Link href="/forgot" className="text-xs text-blue-600 hover:underline">Forgot Password?</Link>
+                        </div>
+                        <Button type="submit" className="w-full mt-2" disabled={isLoading}>
+                            {isLoading ? <Loader2 className="animate-spin" /> : 'Sign In'}
+                        </Button>
+                        <Link href="/signup" className="text-center text-xs text-blue-600 hover:underline mt-2">Create an account</Link>
+                    </form>)))
     );
 } 
