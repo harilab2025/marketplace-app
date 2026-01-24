@@ -21,7 +21,7 @@ export default function TransactionPage() {
     const [statusFilter, setStatusFilter] = useState<'all' | Order['status']>('all');
 
     // Mock orders data - In production, fetch from API
-    const orders: Order[] = [
+    const orders: Order[] = useMemo(() => [
         {
             orderId: 'ORD-12345',
             orderNumber: 'ORD-12345',
@@ -64,7 +64,7 @@ export default function TransactionPage() {
             itemCount: 2,
             total: 998000,
         },
-    ];
+    ], []);
 
     const statusOptions = [
         { value: 'all' as const, label: 'All Orders', icon: ShoppingBag, count: orders.length },

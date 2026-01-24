@@ -1,7 +1,7 @@
 'use client'
 import { menuDashboard } from '@/constants/menu/menu.dashboard';
-import { useToggleSidebar } from '@/context/dashboard/useToggle.sidebar';
-import { ChevronRight } from 'lucide-react'
+import { useToggleSidebar } from '@/contexts/dashboard/useToggle.sidebar';
+import { ChevronRight, StoreIcon } from 'lucide-react'
 import { useEffect, useState, useRef, useMemo } from 'react'
 import { motion } from "framer-motion";
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
@@ -105,12 +105,26 @@ export default function Sidebar() {
 
 
     return (
-        <div className={`${toggleSidebar ? 'w-64 min-w-64' : 'w-[3.3rem] min-w-[3.3rem]'} h-screen z-50 py-3 ml-3 transition-all duration-300 ease-in-out text-sm`}>
-            <div className='w-full h-full flex flex-col space-y-3 items-start bg-zinc-50 rounded-4xl shadow-2xl drop-shadow-2xl'>
-                <header className='bg-zinc-300 rounded-t-4xl w-full py-2 flex justify-center'>LOGO</header>
+        <div className={`${toggleSidebar ? 'w-64 min-w-64' : 'w-[3.3rem] min-w-[3.3rem]'} h-screen z-50 transition-all duration-300 ease-in-out text-sm`}>
+            <div className='w-full h-full flex flex-col space-y-3 items-start bg-white border-r border-zinc-200'>
+                <header className='w-full h-16 p-6 flex items-center justify-center'>
+                    <div className="flex items-center space-x-3">
+                        <span className="text-current transition-transform duration-200 ease-in-out">
+                            <StoreIcon size={20} />
+                        </span>
+                        {toggleSidebar && <motion.span
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={toggleSidebar ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                            transition={{ duration: 0.2 }}
+                            className="text-sm"
+                        >
+                            LOGO
+                        </motion.span>}
+                    </div>
+                </header>
                 <section className={`w-full ${toggleSidebar ? 'px-2' : ''}`}>
                     {data.map((section, index) => (
-                        <div key={index} className="mb-2 w-full">
+                        <div key={index} className="mb-2 w-full space-y-1">
                             {/* Section Header */}
                             <button
                                 type='button'

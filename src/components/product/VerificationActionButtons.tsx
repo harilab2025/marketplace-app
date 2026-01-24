@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Product, VerificationStatus } from '@/store/productsSlice';
+import { Product } from '@/store/productsSlice';
 import { Button } from '@/components/ui/button';
 import { submitProductForReview, approveProduct, publishProduct, unpublishProduct } from '@/services/fetch/product.verification.fetch';
 import { useRouter } from 'next/navigation';
@@ -30,8 +30,9 @@ export default function VerificationActionButtons({
             alert('Product submitted for review successfully!');
             onSuccess?.();
             router.refresh();
-        } catch (error: any) {
-            alert(error.response?.data?.message || 'Failed to submit product');
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Failed to submit product';
+            alert(errorMessage);
         } finally {
             setLoading(false);
         }
@@ -44,8 +45,9 @@ export default function VerificationActionButtons({
             alert('Product approved successfully!');
             onSuccess?.();
             router.refresh();
-        } catch (error: any) {
-            alert(error.response?.data?.message || 'Failed to approve product');
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Failed to approve product';
+            alert(errorMessage);
         } finally {
             setLoading(false);
         }
@@ -58,8 +60,9 @@ export default function VerificationActionButtons({
             alert('Product published successfully!');
             onSuccess?.();
             router.refresh();
-        } catch (error: any) {
-            alert(error.response?.data?.message || 'Failed to publish product');
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Failed to publish product';
+            alert(errorMessage);
         } finally {
             setLoading(false);
         }
@@ -73,8 +76,9 @@ export default function VerificationActionButtons({
             alert('Product unpublished successfully!');
             onSuccess?.();
             router.refresh();
-        } catch (error: any) {
-            alert(error.response?.data?.message || 'Failed to unpublish product');
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Failed to unpublish product';
+            alert(errorMessage);
         } finally {
             setLoading(false);
         }

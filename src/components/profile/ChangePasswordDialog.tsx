@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Lock, Eye, EyeOff, X } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface ChangePasswordDialogProps {
     isOpen: boolean;
@@ -81,7 +81,7 @@ export default function ChangePasswordDialog({ isOpen, onClose }: ChangePassword
         try {
             setIsSubmitting(true);
 
-            const response = await apiClient.put('/auth/change-password', {
+            const response = await axiosInstance.put('/auth/change-password', {
                 currentPassword: formData.currentPassword,
                 newPassword: formData.newPassword,
             });

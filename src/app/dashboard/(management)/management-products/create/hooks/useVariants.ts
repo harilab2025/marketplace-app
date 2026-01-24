@@ -38,7 +38,7 @@ export function useVariants() {
     const updateVariant = useCallback((
         id: number,
         field: keyof CreateVariant,
-        value: any
+        value: unknown
     ) => {
         setVariants(prev =>
             prev.map(v => (v.id === id ? { ...v, [field]: value } : v))

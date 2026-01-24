@@ -1,26 +1,51 @@
 'use server';
-import { decryptData } from "@/actions/crypto.action";
+
 import { auth } from "@/auth";
 import { Session } from "next-auth";
+
+/**
+ * Get user data from NextAuth session
+ *
+ * SIMPLIFIED: No token decryption needed
+ * Tokens are stored in HTTP-only cookies by backend
+ * This function only returns user info from session
+ */
 export async function userData() {
     try {
         const session: Session | null = await auth();
-        if (session && typeof session.user?.key === 'string') {
-            const result_string = await decryptData(session.user.key);
-            const result = JSON.parse(result_string);
+
+        if (session?.user) {
             return {
-                id: result.user.id,
-                name: result.user.name,
-                email: result.user.email,
-                role: result.user.role,
-                accessToken: result.accessToken,
-                refreshTokens: result.refreshTokens
+                id: session.user.id,
+                publicId: session.user.publicId,
+                name: session.user.name,
+                email: session.user.email,
+                role: session.user.role,
+                avatar: session.user.avatar,
+                securityLevel: session.user.securityLevel,
+                twoFactorEnabled: session.user.twoFactorEnabled,
             };
-        } else {
-            return null;
         }
+
+        return null;
     } catch (error) {
         console.error('Session error:', error);
-        return null
+        return null;
     }
+}
+
+/**
+ * Check if user is authenticated
+ */
+export async function isAuthenticated(): Promise<boolean> {
+    const user = await userData();
+    return user !== null;
+}
+
+/**
+ * Get user role
+ */
+export async function getUserRole(): Promise<string | null> {
+    const user = await userData();
+    return user?.role || null;
 }

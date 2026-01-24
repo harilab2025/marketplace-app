@@ -1,20 +1,20 @@
-import { apiClient } from "@/lib/axios";
+import axiosInstance from "@/lib/axiosInstance";
 
 // Submit product for review (DRAFT/REJECTED → PENDING)
 export async function submitProductForReview(productId: string) {
-    const res = await apiClient.post(`/products/${productId}/submit`);
+    const res = await axiosInstance.post(`/products/${productId}/submit`);
     return res.data;
 }
 
 // Approve product (PENDING → APPROVED)
 export async function approveProduct(productId: string) {
-    const res = await apiClient.post(`/products/${productId}/approve`);
+    const res = await axiosInstance.post(`/products/${productId}/approve`);
     return res.data;
 }
 
 // Reject product (PENDING → REJECTED)
 export async function rejectProduct(productId: string, reason: string) {
-    const res = await apiClient.post(`/products/${productId}/reject`, {
+    const res = await axiosInstance.post(`/products/${productId}/reject`, {
         reason
     });
     return res.data;
@@ -22,13 +22,13 @@ export async function rejectProduct(productId: string, reason: string) {
 
 // Publish product (APPROVED/UNPUBLISHED → PUBLISHED)
 export async function publishProduct(productId: string) {
-    const res = await apiClient.post(`/products/${productId}/publish`);
+    const res = await axiosInstance.post(`/products/${productId}/publish`);
     return res.data;
 }
 
 // Unpublish product (PUBLISHED → UNPUBLISHED)
 export async function unpublishProduct(productId: string, reason?: string) {
-    const res = await apiClient.post(`/products/${productId}/unpublish`, {
+    const res = await axiosInstance.post(`/products/${productId}/unpublish`, {
         reason
     });
     return res.data;
@@ -44,7 +44,7 @@ export async function getPendingProducts({
     limit?: number;
     signal?: AbortSignal;
 }) {
-    const res = await apiClient.get(`/products/pending/review`, {
+    const res = await axiosInstance.get(`/products/pending/review`, {
         params: { page, limit },
         timeout: 10000,
         signal
@@ -54,6 +54,6 @@ export async function getPendingProducts({
 
 // Get product history
 export async function getProductHistory(productId: string) {
-    const res = await apiClient.get(`/products/${productId}/history`);
+    const res = await axiosInstance.get(`/products/${productId}/history`);
     return res.data;
 }

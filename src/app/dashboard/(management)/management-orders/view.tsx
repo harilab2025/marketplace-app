@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import { Package, User, DollarSign, Calendar, Truck, MapPin, CreditCard, Clock, Phone, Mail } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
 import { Skeleton } from '@/components/ui/Skeleton';
 import type { OrderStatus, PaymentStatus } from '@/store/ordersSlice';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface ViewOrderProps {
     setActionContent: (action: string) => void;
@@ -57,7 +57,7 @@ export default function ViewOrder({ setActionContent, orderId }: ViewOrderProps)
         const fetchOrder = async () => {
             try {
                 setIsLoading(true);
-                const response = await apiClient.get<{ status: string; data: OrderData }>(`/orders/${orderId}`);
+                const response = await axiosInstance.get<{ status: string; data: OrderData }>(`/orders/${orderId}`);
 
                 if (response.data.status === 'success') {
                     setOrder(response.data.data);

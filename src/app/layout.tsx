@@ -4,8 +4,9 @@ import { Toaster } from "sonner";
 import { Providers } from "./providers";
 import { Inter } from 'next/font/google'
 import { RecaptchaLogo } from "@/components/RecaptchaLogo";
-import { ConfirmDialogProvider } from "@/context/dashboard/useConfirm";
-import { LoadingProvider } from "@/context/dashboard/useLoading";
+import { ConfirmDialogProvider } from "@/contexts/dashboard/useConfirm";
+import { LoadingProvider } from "@/contexts/dashboard/useLoading";
+import { EncryptionProvider } from "@/contexts/EncryptionContext";
 
 const fetchFont = Inter()
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           src="https://www.google.com/recaptcha/api.js?render=6LeMqh0rAAAAAMrCHgQ8cBoqko2xNi8l4FzsEyy_"
@@ -31,13 +32,15 @@ export default function RootLayout({
         // className={`${interFont.variable} ${atkinsonFont.variable} ${manropeFont.variable} ${outfitFont.variable} ${plusJakartaSans.variable} ${recursiveFont.variable} antialiased text-zinc-600 font-family-display`}
         className={`${fetchFont.className} antialiased text-zinc-600 font-family-display`}
       >
-        <Providers>
-          <LoadingProvider>
-            <ConfirmDialogProvider>
-              {children}
-            </ConfirmDialogProvider>
-          </LoadingProvider>
-        </Providers>
+        <EncryptionProvider>
+          <Providers>
+            <LoadingProvider>
+              <ConfirmDialogProvider>
+                {children}
+              </ConfirmDialogProvider>
+            </LoadingProvider>
+          </Providers>
+        </EncryptionProvider>
         <Toaster />
         {/* Custom reCAPTCHA logo with 30% opacity */}
         <RecaptchaLogo />

@@ -43,7 +43,7 @@ export interface FileUploadRequest {
     file: File;
     fileType?: FileType;
     isPublic?: boolean;
-    metadata?: Record<string, any>;
+    metadata?: Record<string, unknown>;
     tags?: string[];
     expiresAt?: string; // ISO date string
 }
@@ -65,7 +65,7 @@ export interface FileUploadResponse {
         url: string;
         fileType: FileType;
         isPublic: boolean;
-        metadata?: Record<string, any>;
+        metadata?: Record<string, unknown>;
         tags?: string[];
         createdAt: string;
     };

@@ -1,9 +1,6 @@
-// Login Page
+import { redirect } from 'next/navigation';
+
+// Redirect /login to root (where actual login is)
 export default function LoginPage() {
-  return (
-    <div>
-      <h1>Login Page</h1>
-      {/* Add login form here */}
-    </div>
-  );
+  redirect('/');
 }

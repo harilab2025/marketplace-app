@@ -120,9 +120,11 @@ const nextConfig: NextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Disable optimization in development (localhost resolves to private IP)
+    unoptimized: process.env.NODE_ENV === 'development',
     remotePatterns: [
       {
-        protocol: 'http',
+        protocol: (process.env.API_PROTOCOL || 'http') as 'http' | 'https',
         hostname: process.env.HOST || 'localhost',
         port: process.env.PORT_API || '3001',
         pathname: '/api/files/**',

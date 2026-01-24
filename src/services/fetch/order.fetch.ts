@@ -1,4 +1,4 @@
-import { apiClient } from "@/lib/axios";
+import axiosInstance from "@/lib/axiosInstance";
 
 export interface OrderSearchParams {
     query?: string;
@@ -62,7 +62,7 @@ export async function fetchOrders(params: OrderSearchParams) {
         cleanParams.sortOrder = params.sortOrder.trim();
     }
 
-    const res = await apiClient.get(`/orders`, {
+    const res = await axiosInstance.get(`/orders`, {
         params: cleanParams,
         timeout: 10000,
         signal: params.signal,
@@ -83,7 +83,7 @@ export async function getOrderSuggestions({
         return { status: 'success', data: { suggestions: [] } };
     }
 
-    const res = await apiClient.get(`/orders/suggestions`, {
+    const res = await axiosInstance.get(`/orders/suggestions`, {
         params: { query: query.trim(), limit },
         timeout: 5000,
         signal,
@@ -98,7 +98,7 @@ export async function getOrderStats(userId?: string, signal?: AbortSignal) {
         params.userId = userId;
     }
 
-    const res = await apiClient.get(`/orders/stats`, {
+    const res = await axiosInstance.get(`/orders/stats`, {
         params,
         timeout: 10000,
         signal,

@@ -48,8 +48,9 @@ export const getCacheStats = createAsyncThunk(
         try {
             const data = await fetchCacheStats();
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to fetch cache stats');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to fetch cache stats';
+            return rejectWithValue(message);
         }
     }
 );
@@ -60,8 +61,9 @@ export const checkHealth = createAsyncThunk(
         try {
             const data = await checkCacheHealth();
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to check cache health');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to check cache health';
+            return rejectWithValue(message);
         }
     }
 );
@@ -72,8 +74,9 @@ export const clearUsers = createAsyncThunk(
         try {
             const data = await clearUserCaches();
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to clear user caches');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to clear user caches';
+            return rejectWithValue(message);
         }
     }
 );
@@ -84,8 +87,9 @@ export const clearProducts = createAsyncThunk(
         try {
             const data = await clearProductCaches();
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to clear product caches');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to clear product caches';
+            return rejectWithValue(message);
         }
     }
 );
@@ -96,8 +100,9 @@ export const clearOrders = createAsyncThunk(
         try {
             const data = await clearOrderCaches();
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to clear order caches');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to clear order caches';
+            return rejectWithValue(message);
         }
     }
 );
@@ -108,8 +113,9 @@ export const clearAll = createAsyncThunk(
         try {
             const data = await clearAllAppCaches();
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to clear all caches');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to clear all caches';
+            return rejectWithValue(message);
         }
     }
 );
@@ -120,8 +126,9 @@ export const clearByPattern = createAsyncThunk(
         try {
             const data = await clearCacheByPattern(pattern);
             return data;
-        } catch (error: any) {
-            return rejectWithValue(error.response?.data?.message || 'Failed to clear cache by pattern');
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Failed to clear cache by pattern';
+            return rejectWithValue(message);
         }
     }
 );

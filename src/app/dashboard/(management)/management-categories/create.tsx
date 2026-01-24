@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
-import { useConfirm } from '@/context/dashboard/useConfirm';
-import { useLoadingUtils } from '@/context/dashboard/useLoading';
-import { apiClient } from '@/lib/axios';
+import { useConfirm } from '@/contexts/dashboard/useConfirm';
+import { useLoadingUtils } from '@/contexts/dashboard/useLoading';
+import axiosInstance from '@/lib/axiosInstance';
 import { AxiosError } from 'axios';
 import { useForm, Controller } from 'react-hook-form';
 import { toast } from 'sonner';
@@ -49,7 +49,7 @@ function CreateCategory({ setActionContent, onSuccess }: { setActionContent: (co
             onConfirm: async () => {
                 try {
                     showSaving('Saving your data...');
-                    const res = await apiClient.post(`/categories`, data);
+                    const res = await axiosInstance.post(`/categories`, data);
                     hide();
                     if (res.status !== 201) {
                         toast.error('Failed to create category');

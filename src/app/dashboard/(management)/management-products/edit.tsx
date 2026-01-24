@@ -4,13 +4,14 @@ import EditorPage, { initialValue } from '@/components/richtextEditor';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { apiClient } from '@/lib/axios';
 import { SerializedEditorState } from 'lexical';
 import { Controller, useForm } from 'react-hook-form';
 import { toast } from 'sonner';
 import { Loader2, LucideChevronDown, LucideChevronUp, Percent, Plus, Trash2, X } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
+import axiosInstance from '@/lib/axiosInstance';
+import { CreateDiscount, CreateVariant } from './create/types';
 
 interface EditProductInput {
     name: string;
@@ -43,11 +44,6 @@ interface EditDiscount {
     isActive: boolean;
 }
 
-interface EditAttribute {
-    key: string;
-    value: string;
-}
-
 interface Category {
     id: number;
     name: string;
@@ -73,7 +69,6 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
         handleSubmit,
         control,
         reset,
-        setValue,
         formState: { errors },
     } = useForm<EditProductInput>({
         defaultValues: {
@@ -138,11 +133,11 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
                 setIsLoading(true);
 
                 // Fetch categories
-                const categoriesResponse = await apiClient.get('/categories');
+                const categoriesResponse = await axiosInstance.get('/categories');
                 setCategories(categoriesResponse.data.categories || []);
 
                 // Fetch product with variants and discounts
-                const response = await apiClient.get(`/products/${productId}`);
+                const response = await axiosInstance.get(`/products/${productId}`);
                 const product = response.data;
 
                 reset({
@@ -157,7 +152,7 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
 
                 // Load variants if exists
                 if (product.variants && product.variants.length > 0) {
-                    const loadedVariants = product.variants.map((v: any) => ({
+                    const loadedVariants = product.variants.map((v: CreateVariant) => ({
                         id: v.id || Date.now(),
                         name: v.name || '',
                         sku: v.sku || '',
@@ -165,7 +160,7 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
                         stock: v.stock?.toString() || '0',
                         attributes: v.attributes || {},
                         isActive: v.isActive !== undefined ? v.isActive : true,
-                        discounts: v.discounts ? v.discounts.map((d: any) => ({
+                        discounts: v.discounts ? v.discounts.map((d: CreateDiscount) => ({
                             id: d.id || Date.now(),
                             variantId: v.id,
                             type: d.type || 'PERCENTAGE',
@@ -182,8 +177,8 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
                 // Load parent discounts if exists
                 if (product.discounts && product.discounts.length > 0) {
                     const loadedDiscounts = product.discounts
-                        .filter((d: any) => !d.variantId)
-                        .map((d: any) => ({
+                        .filter((d: CreateDiscount) => !d.variantId)
+                        .map((d: CreateDiscount) => ({
                             id: d.id || Date.now(),
                             variantId: null,
                             type: d.type || 'PERCENTAGE',
@@ -236,7 +231,7 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
         setVariants((prev) => prev.filter(v => v.id !== id));
     };
 
-    const updateVariant = (id: number, field: keyof EditVariant, value: any) => {
+    const updateVariant = (id: number, field: keyof EditVariant, value: unknown) => {
         setVariants((prev) =>
             prev.map(v => (v.id === id ? { ...v, [field]: value } : v))
         );
@@ -336,7 +331,7 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
         }
     };
 
-    const updateDiscount = (discountId: number, field: keyof EditDiscount, value: any, variantId: number | null = null) => {
+    const updateDiscount = (discountId: number, field: keyof EditDiscount, value: unknown, variantId: number | null = null) => {
         if (variantId) {
             // Update variant discount
             setVariants((prev) =>
@@ -400,7 +395,7 @@ function Edit({ setActionContent, productId, onSuccess }: EditProps) {
                 discounts: discountsData
             };
 
-            await apiClient.put(`/products/${productId}`, sendData);
+            await axiosInstance.put(`/products/${productId}`, sendData);
             toast.success('Product updated successfully');
             onSuccess();
             setActionContent('table');

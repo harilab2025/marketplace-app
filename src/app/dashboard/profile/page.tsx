@@ -6,28 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { UserCircle, Mail, Phone, Shield, Calendar, Edit2, Save, X } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
 import ChangePasswordDialog from '@/components/profile/ChangePasswordDialog';
 import AvatarUpload from '@/components/profile/AvatarUpload';
 import Image from 'next/image';
-
-interface UserProfile {
-    publicId: string;
-    email: string;
-    name: string;
-    role: string;
-    whatsappNumber: string | null;
-    isActive: boolean;
-    emailVerified: boolean;
-    phoneVerified: boolean;
-    avatar: string | null;
-    bio: string | null;
-    createdAt: string;
-    updatedAt: string;
-}
+import { getUserProfile, updateUserProfile, UserProfile } from '@/services/fetch/user.fetch';
 
 export default function ProfilePage() {
-    const { data: session } = useSession();
+    const { data: session, update: updateSession } = useSession();
     const [profile, setProfile] = useState<UserProfile | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [isEditing, setIsEditing] = useState(false);
@@ -46,15 +31,17 @@ export default function ProfilePage() {
         const fetchProfile = async () => {
             try {
                 setIsLoading(true);
-                const response = await apiClient.get('/auth/profile');
-                if (response.data.status === 'success') {
-                    const userData = response.data.data;
-                    setProfile(userData.user);
+                const response = await getUserProfile();
+                if (response.status === 'success') {
+                    const userData = response.data?.user || response.data;
+                    setProfile(userData);
                     setFormData({
-                        name: userData.user?.name || '',
-                        whatsappNumber: userData.user?.whatsappNumber || '',
-                        bio: userData.user?.bio || '',
+                        name: userData?.name || '',
+                        whatsappNumber: userData?.whatsappNumber || '',
+                        bio: userData?.bio || '',
                     });
+                } else {
+                    toast.error(response.message || 'Failed to load profile');
                 }
             } catch (error) {
                 console.error('Failed to fetch profile:', error);
@@ -80,18 +67,27 @@ export default function ProfilePage() {
     const handleSave = async () => {
         try {
             setIsSaving(true);
-            const response = await apiClient.put(`/users/${profile?.publicId}`, formData);
+            const response = await updateUserProfile(formData);
 
-            if (response.data.status === 'success') {
-                setProfile(response.data.data);
+            if (response.status === 'success') {
+                const updatedProfile = response.data?.user || response.data;
+                setProfile(updatedProfile);
                 setIsEditing(false);
                 toast.success('Profile updated successfully');
+
+                // Update NextAuth session only with data returned from backend (trusted source)
+                // This ensures session reflects actual server-side data, not client input
+                if (updatedProfile?.name && updatedProfile.name !== session?.user?.name) {
+                    await updateSession({
+                        name: updatedProfile.name
+                    });
+                }
+            } else {
+                toast.error(response.message || 'Failed to update profile');
             }
         } catch (error: unknown) {
-            const message = error instanceof Error && 'response' in error
-                ? (error as { response?: { data?: { message?: string } } }).response?.data?.message
-                : 'Failed to update profile';
-            toast.error(message || 'Failed to update profile');
+            const message = error instanceof Error ? error.message : 'Failed to update profile';
+            toast.error(message);
         } finally {
             setIsSaving(false);
         }
@@ -108,13 +104,28 @@ export default function ProfilePage() {
         setIsEditing(false);
     };
 
-    const handleAvatarUpload = (newAvatarUrl: string) => {
-        if (profile) {
-            setProfile({
-                ...profile,
-                avatar: newAvatarUrl || null
-            });
+    const handleAvatarUpload = async (newAvatarUrl: string) => {
+        if (!profile) return;
+
+        // Validate avatar URL - must be from our API or empty (for deletion)
+        const isValidAvatarUrl = !newAvatarUrl ||
+            newAvatarUrl.startsWith(`${process.env.NEXT_PUBLIC_API_URL?.replace('/api', '')}/api/files/`) ||
+            newAvatarUrl.includes('/api/files/');
+
+        if (!isValidAvatarUrl) {
+            console.error('Invalid avatar URL detected');
+            return;
         }
+
+        setProfile({
+            ...profile,
+            avatar: newAvatarUrl || null
+        });
+
+        // Update NextAuth session with new avatar (from trusted backend response)
+        await updateSession({
+            avatar: newAvatarUrl || null
+        });
     };
 
     const getRoleBadgeColor = (role: string) => {
@@ -166,7 +177,6 @@ export default function ProfilePage() {
             </div>
         );
     }
-    console.log(profile);
 
     return (
         <div className="w-full max-w-full px-2 sm:px-4 lg:px-6">
@@ -211,12 +221,16 @@ export default function ProfilePage() {
                         <div className="flex flex-col items-center">
                             {/* Avatar */}
                             <div className="relative">
-                                <div className="w-32 h-32 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
+                                <div className="w-32 h-32 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold overflow-hidden">
                                     {profile.avatar ? (
                                         <Image
                                             src={profile.avatar}
                                             alt={profile.name}
+                                            width={128}
+                                            height={128}
                                             className="w-full h-full rounded-full object-cover"
+                                            loading="eager"
+                                            priority
                                         />
                                     ) : (
                                         profile.name.charAt(0).toUpperCase()

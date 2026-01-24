@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { apiClient } from '@/lib/axios';
 import { toast } from 'sonner';
 import {
     Loader2,
@@ -22,6 +21,7 @@ import {
     Info
 } from 'lucide-react';
 import { SerializedEditorState } from 'lexical';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface ProductFile {
     publicId: string;
@@ -95,7 +95,7 @@ export default function View({ setActionContent, productId }: ViewProps) {
         const fetchProduct = async () => {
             try {
                 setIsLoading(true);
-                const response = await apiClient.get(`/products/${productId}`);
+                const response = await axiosInstance.get(`/products/${productId}`);
                 setProduct(response.data?.data || response.data);
             } catch (error: unknown) {
                 const message = error instanceof Error && 'response' in error
@@ -205,18 +205,9 @@ export default function View({ setActionContent, productId }: ViewProps) {
     }
 
     return (
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full">
             {/* Header */}
             <div className="mb-6">
-                <Button
-                    variant="ghost"
-                    onClick={() => setActionContent('table')}
-                    className="mb-4"
-                >
-                    <ArrowLeft className="h-4 w-4 mr-2" />
-                    Back to Table
-                </Button>
-
                 <div className="flex items-start justify-between gap-4 flex-wrap">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
@@ -229,9 +220,9 @@ export default function View({ setActionContent, productId }: ViewProps) {
                             </Badge>
                         </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right px-2">
                         <div className="text-sm text-gray-500 mb-1">Price Range</div>
-                        <div className="text-2xl font-bold text-blue-600">
+                        <div className="text-2xl font-bold text-slate-600">
                             {product.price
                                 ? formatCurrency(product.price)
                                 : `${formatCurrency(product.priceMin || 0)} - ${formatCurrency(product.priceMax || 0)}`

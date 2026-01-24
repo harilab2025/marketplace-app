@@ -3,14 +3,20 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Settings, RotateCcw, RefreshCw, Trash2, AlertTriangle } from "lucide-react";
+import { Settings, RotateCcw, RefreshCw, Trash2, AlertTriangle, Users, Package } from "lucide-react";
 import { toast } from "sonner";
 import {
     resetProductsIndex,
     reindexProducts,
     resetAndReindexProducts,
     deleteProductsIndex,
+    resetUsersIndex,
+    reindexUsers,
+    resetAndReindexUsers,
+    deleteUsersIndex,
 } from "@/services/fetch/elasticsearch.fetch";
+
+type IndexType = 'products' | 'users';
 
 interface ManagementActionsProps {
     onActionComplete: () => void;
@@ -18,6 +24,7 @@ interface ManagementActionsProps {
 
 export function ManagementActions({ onActionComplete }: ManagementActionsProps) {
     const [isLoading, setIsLoading] = useState<string | null>(null);
+    const [activeTab, setActiveTab] = useState<IndexType>('products');
     const [showConfirmDialog, setShowConfirmDialog] = useState<{
         show: boolean;
         action: string;
@@ -27,11 +34,16 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
         onConfirm: () => void;
     } | null>(null);
 
+    const getIndexLabel = () => activeTab === 'products' ? 'Products' : 'Users';
+
     const handleReset = async () => {
-        setIsLoading('reset');
+        const loadingKey = `reset-${activeTab}`;
+        setIsLoading(loadingKey);
         try {
+            const resetFn = activeTab === 'products' ? resetProductsIndex : resetUsersIndex;
+
             // Dry run first
-            const dryRunResult = await resetProductsIndex(true);
+            const dryRunResult = await resetFn(true);
             toast.info(`Dry Run: ${dryRunResult.message}`);
 
             // Confirm
@@ -39,7 +51,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                 setShowConfirmDialog({
                     show: true,
                     action: 'reset',
-                    title: 'Reset Products Index?',
+                    title: `Reset ${getIndexLabel()} Index?`,
                     description: 'This will DELETE and RECREATE the index (empty). All data will be lost. You will need to reindex afterward.',
                     destructive: true,
                     onConfirm: () => {
@@ -55,7 +67,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
             }
 
             // Execute
-            const result = await resetProductsIndex(false);
+            const result = await resetFn(false);
             toast.success(result.message);
             onActionComplete();
         } catch (error) {
@@ -67,17 +79,20 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
     };
 
     const handleReindex = async () => {
-        setIsLoading('reindex');
+        const loadingKey = `reindex-${activeTab}`;
+        setIsLoading(loadingKey);
         try {
+            const reindexFn = activeTab === 'products' ? reindexProducts : reindexUsers;
+
             // Dry run first
-            const dryRunResult = await reindexProducts(true);
+            const dryRunResult = await reindexFn(true);
             toast.info(`Dry Run: ${dryRunResult.message}`);
 
             // Execute
-            const result = await reindexProducts(false);
+            const result = await reindexFn(false);
             const data = result.data;
             toast.success(
-                `Reindexed ${data.indexed} products in ${data.duration}${
+                `Reindexed ${data.indexed} ${activeTab} in ${data.duration}${
                     data.errors > 0 ? ` (${data.errors} errors)` : ''
                 }`
             );
@@ -91,10 +106,13 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
     };
 
     const handleResetAndReindex = async () => {
-        setIsLoading('reset-reindex');
+        const loadingKey = `reset-reindex-${activeTab}`;
+        setIsLoading(loadingKey);
         try {
+            const resetAndReindexFn = activeTab === 'products' ? resetAndReindexProducts : resetAndReindexUsers;
+
             // Dry run first
-            const dryRunResult = await resetAndReindexProducts(true);
+            const dryRunResult = await resetAndReindexFn(true);
             toast.info(`Dry Run: ${dryRunResult.message}`);
 
             // Confirm
@@ -102,8 +120,8 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                 setShowConfirmDialog({
                     show: true,
                     action: 'reset-reindex',
-                    title: 'Reset & Reindex Products?',
-                    description: 'This will DELETE the index, RECREATE it, and REINDEX all products from database. This is the recommended way for full refresh.',
+                    title: `Reset & Reindex ${getIndexLabel()}?`,
+                    description: `This will DELETE the index, RECREATE it, and REINDEX all ${activeTab} from database. This is the recommended way for full refresh.`,
                     destructive: true,
                     onConfirm: () => {
                         setShowConfirmDialog(null);
@@ -118,10 +136,10 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
             }
 
             // Execute
-            const result = await resetAndReindexProducts(false);
+            const result = await resetAndReindexFn(false);
             const data = result.data;
             toast.success(
-                `Reset & Reindexed ${data.indexed} products in ${data.duration}${
+                `Reset & Reindexed ${data.indexed} ${activeTab} in ${data.duration}${
                     data.errors > 0 ? ` (${data.errors} errors)` : ''
                 }`
             );
@@ -135,14 +153,17 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
     };
 
     const handleDeleteIndex = async () => {
-        setIsLoading('delete');
+        const loadingKey = `delete-${activeTab}`;
+        setIsLoading(loadingKey);
         try {
+            const deleteFn = activeTab === 'products' ? deleteProductsIndex : deleteUsersIndex;
+
             // Confirm
             const confirmed = await new Promise((resolve) => {
                 setShowConfirmDialog({
                     show: true,
                     action: 'delete',
-                    title: 'Delete Products Index?',
+                    title: `Delete ${getIndexLabel()} Index?`,
                     description: 'DANGER: This will PERMANENTLY DELETE the index without reindexing. Use Reset & Reindex instead unless you know what you are doing.',
                     destructive: true,
                     onConfirm: () => {
@@ -158,7 +179,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
             }
 
             // Execute
-            const result = await deleteProductsIndex();
+            const result = await deleteFn();
             toast.success(result.message);
             onActionComplete();
         } catch (error) {
@@ -172,9 +193,45 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
     return (
         <>
             <Card className="p-6">
-                <div className="flex items-center gap-3 mb-6">
-                    <Settings className="h-5 w-5 text-blue-600" />
-                    <h3 className="text-lg font-semibold">Management Actions</h3>
+                <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                        <Settings className="h-5 w-5 text-blue-600" />
+                        <h3 className="text-lg font-semibold">Management Actions</h3>
+                    </div>
+
+                    {/* Tab Switcher */}
+                    <div className="flex bg-gray-100 rounded-lg p-1">
+                        <button
+                            onClick={() => setActiveTab('products')}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                                activeTab === 'products'
+                                    ? 'bg-white text-blue-600 shadow-sm'
+                                    : 'text-gray-600 hover:text-gray-900'
+                            }`}
+                        >
+                            <Package className="h-4 w-4" />
+                            Products
+                        </button>
+                        <button
+                            onClick={() => setActiveTab('users')}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                                activeTab === 'users'
+                                    ? 'bg-white text-blue-600 shadow-sm'
+                                    : 'text-gray-600 hover:text-gray-900'
+                            }`}
+                        >
+                            <Users className="h-4 w-4" />
+                            Users
+                        </button>
+                    </div>
+                </div>
+
+                {/* Active Index Indicator */}
+                <div className="mb-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p className="text-sm text-blue-800">
+                        <span className="font-semibold">Active Index:</span>{' '}
+                        {activeTab === 'products' ? 'Products Index' : 'Users Index'}
+                    </p>
                 </div>
 
                 <div className="space-y-3">
@@ -198,7 +255,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                                 size="sm"
                                 className="ml-3 bg-green-600 hover:bg-green-700"
                             >
-                                {isLoading === 'reset-reindex' ? (
+                                {isLoading === `reset-reindex-${activeTab}` ? (
                                     <>
                                         <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                                         Processing...
@@ -232,7 +289,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                                 size="sm"
                                 className="ml-3"
                             >
-                                {isLoading === 'reindex' ? (
+                                {isLoading === `reindex-${activeTab}` ? (
                                     <>
                                         <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                                         Reindexing...
@@ -266,7 +323,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                                 size="sm"
                                 className="ml-3 border-yellow-600 text-yellow-700 hover:bg-yellow-100"
                             >
-                                {isLoading === 'reset' ? (
+                                {isLoading === `reset-${activeTab}` ? (
                                     <>
                                         <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                                         Resetting...
@@ -301,7 +358,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                                 size="sm"
                                 className="ml-3"
                             >
-                                {isLoading === 'delete' ? (
+                                {isLoading === `delete-${activeTab}` ? (
                                     <>
                                         <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
                                         Deleting...
@@ -320,7 +377,7 @@ export function ManagementActions({ onActionComplete }: ManagementActionsProps) 
                 <div className="mt-4 p-3 bg-blue-50 rounded-lg">
                     <p className="text-xs text-blue-700">
                         💡 <span className="font-semibold">Tip:</span> All operations run a dry-run preview first.
-                        Use "Reset & Reindex" for best results.
+                        Use &quot;Reset & Reindex&quot; for best results.
                     </p>
                 </div>
             </Card>

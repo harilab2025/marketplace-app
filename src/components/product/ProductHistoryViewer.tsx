@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { getProductHistory } from '@/services/fetch/product.verification.fetch';
 import { LucideLoader2, LucideX, LucideHistory } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -57,24 +57,25 @@ export default function ProductHistoryViewer({
     const [data, setData] = useState<ProductHistoryData | null>(null);
     const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        if (isOpen && productId) {
-            fetchHistory();
-        }
-    }, [isOpen, productId]);
-
-    const fetchHistory = async () => {
+    const fetchHistory = useCallback(async () => {
         try {
             setLoading(true);
             setError(null);
             const response = await getProductHistory(productId);
             setData(response.data);
-        } catch (err: any) {
-            setError(err.response?.data?.message || 'Failed to load history');
+        } catch (err) {
+            const errorMessage = err instanceof Error ? err.message : 'Failed to load history';
+            setError(errorMessage);
         } finally {
             setLoading(false);
         }
-    };
+    }, [productId]);
+
+    useEffect(() => {
+        if (isOpen && productId) {
+            fetchHistory();
+        }
+    }, [isOpen, productId, fetchHistory]);
 
     const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleString('en-US', {

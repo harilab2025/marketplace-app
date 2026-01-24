@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { UserCircle, Mail, Phone, Shield, Lock, Eye, EyeOff } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface CreateUserProps {
     setActionContent: (action: string) => void;
@@ -107,7 +107,7 @@ export default function CreateUser({ setActionContent, onSuccess }: CreateUserPr
                 isActive: formData.isActive,
             };
 
-            const response = await apiClient.post('/users', submitData);
+            const response = await axiosInstance.post('/users', submitData);
 
             if (response.data.status === 'success') {
                 toast.success('User created successfully');

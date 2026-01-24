@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
-import { useConfirm } from '@/context/dashboard/useConfirm';
-import { useLoadingUtils } from '@/context/dashboard/useLoading';
-import { apiClient } from '@/lib/axios';
+import { useConfirm } from '@/contexts/dashboard/useConfirm';
+import { useLoadingUtils } from '@/contexts/dashboard/useLoading';
+import axiosInstance from '@/lib/axiosInstance';
 import { AxiosError } from 'axios';
 import { useEffect, useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
@@ -54,7 +54,7 @@ function EditCategory({ setActionContent, categoryId, onSuccess }: { setActionCo
         const fetchCategory = async () => {
             try {
                 setLoading(true);
-                const res = await apiClient.get(`/categories/${categoryId}`);
+                const res = await axiosInstance.get(`/categories/${categoryId}`);
                 const category: CategoryData = res.data.data;
                 setValue('name', category.name);
                 setValue('isActive', category.isActive);
@@ -80,7 +80,7 @@ function EditCategory({ setActionContent, categoryId, onSuccess }: { setActionCo
             onConfirm: async () => {
                 try {
                     showSaving('Saving your data...');
-                    const res = await apiClient.put(`/categories`, {
+                    const res = await axiosInstance.put(`/categories`, {
                         categoryId: categoryId,
                         ...data
                     });

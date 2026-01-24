@@ -67,7 +67,7 @@ export function useDiscounts(
     const updateDiscount = useCallback((
         discountId: number,
         field: keyof CreateDiscount,
-        value: any,
+        value: unknown,
         variantId: number | null = null
     ) => {
         if (variantId) {

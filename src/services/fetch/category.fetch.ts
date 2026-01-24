@@ -1,4 +1,4 @@
-import { apiClient } from "@/lib/axios";
+import axiosInstance from "@/lib/axiosInstance";
 
 export async function fetchCategoriesServer({
     page,
@@ -30,7 +30,7 @@ export async function fetchCategoriesServer({
         params.sortOrder = sortOrder.trim();
     }
 
-    const res = await apiClient.get(`/categories`, {
+    const res = await axiosInstance.get(`/categories`, {
         params,
         timeout: 10000,
         signal, // Pass AbortController signal

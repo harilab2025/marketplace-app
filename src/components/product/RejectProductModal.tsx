@@ -38,8 +38,9 @@ export default function RejectProductModal({
             onSuccess?.();
             onClose();
             setReason('');
-        } catch (error: any) {
-            alert(error.response?.data?.message || 'Failed to reject product');
+        } catch (error) {
+            const errorMessage = error instanceof Error ? error.message : 'Failed to reject product';
+            alert(errorMessage);
         } finally {
             setLoading(false);
         }

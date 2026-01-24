@@ -79,7 +79,6 @@ export const fetchUsersThunk = createAsyncThunk(
 
             // Parse filters
             const role = params?.role ?? (state.users.roleFilter.includes('all') || state.users.roleFilter.length === 4 ? undefined : state.users.roleFilter);
-            console.log('role s :', role);
 
             const isActive = params?.isActive ?? (state.users.isActiveFilter === 'all' ? undefined : state.users.isActiveFilter === 'true');
             const emailVerified = params?.emailVerified ?? (state.users.emailVerifiedFilter === 'all' ? undefined : state.users.emailVerifiedFilter === 'true');

@@ -27,12 +27,12 @@ import { Eye, Pencil, Trash2, UserCircle, Mail, Phone, Shield } from 'lucide-rea
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { DataTable, DataTableColumnHeader, type FilterConfig } from '@/components/data-table';
-import { apiClient } from '@/lib/axios';
-import { useConfirm } from '@/context/dashboard/useConfirm';
+import { useConfirm } from '@/contexts/dashboard/useConfirm';
 import { getUserSuggestions } from '@/services/fetch/user.fetch';
 import CreateUser from './create';
 import EditUser from './edit';
 import ViewUser from './view';
+import axiosInstance from '@/lib/axiosInstance';
 
 export default function ManagementUsersTable() {
     const dispatch = useDispatch<AppDispatch>();
@@ -106,7 +106,13 @@ export default function ManagementUsersTable() {
         try {
             const response = await getUserSuggestions({ query, limit: 5, signal });
             if (response.status === 'success' && response.data.suggestions) {
-                return response.data.suggestions;
+                // Handle both string[] and object[] responses
+                const suggestions = response.data.suggestions;
+                if (suggestions.length > 0 && typeof suggestions[0] === 'object') {
+                    // If suggestions are objects, extract the name or email
+                    return suggestions.map((s: { name?: string; email?: string }) => s.name || s.email || '');
+                }
+                return suggestions;
             }
             return [];
         } catch (error) {
@@ -137,7 +143,7 @@ export default function ManagementUsersTable() {
             cancelText: "Cancel",
             onConfirm: async () => {
                 try {
-                    await apiClient.delete(`/users/${userId}`);
+                    await axiosInstance.delete(`/users/${userId}`);
                     toast.success('User deleted successfully');
                     dispatch(fetchUsersThunk({ page, limit, query: search, sortBy, sortOrder }));
                 } catch (error: unknown) {
@@ -370,11 +376,11 @@ export default function ManagementUsersTable() {
                     onSortingChange={handleSortingChange}
                     // Search with suggestions
                     searchable={true}
-                    searchPlaceholder="Type to search users..."
-                    onSearch={handleSearch}
+                    searchPlaceholder="Type to search users... (Enter to search)"
+                    onSearch={handleSearch} // Called on Enter key or suggestion click
                     useSearchSuggestion={true}
                     suggestionFetchFn={fetchUserSuggestionsForTable}
-                    onSuggestionSelect={handleSearch}
+                    onSuggestionSelect={handleSearch} // Called when suggestion is clicked
                     suggestionDebounceMs={300}
                     suggestionMinChars={2}
                     suggestionLimit={5}

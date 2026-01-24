@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { UserCircle, Mail, Phone, Shield, Lock, Eye, EyeOff } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
 import { Skeleton } from '@/components/ui/Skeleton';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface EditUserProps {
     setActionContent: (action: string) => void;
@@ -47,7 +47,7 @@ export default function EditUser({ setActionContent, userId, onSuccess }: EditUs
         const fetchUser = async () => {
             try {
                 setIsLoading(true);
-                const response = await apiClient.get<{ status: string; data: UserData }>(`/users/${userId}`);
+                const response = await axiosInstance.get<{ status: string; data: UserData }>(`/users/${userId}`);
 
                 if (response.data.status === 'success') {
                     const user = response.data.data;
@@ -159,7 +159,7 @@ export default function EditUser({ setActionContent, userId, onSuccess }: EditUs
                 submitData.password = formData.password;
             }
 
-            const response = await apiClient.put(`/users/${userId}`, submitData);
+            const response = await axiosInstance.put(`/users/${userId}`, submitData);
 
             if (response.data.status === 'success') {
                 toast.success('User updated successfully');

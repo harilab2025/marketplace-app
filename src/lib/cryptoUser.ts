@@ -1,3 +1,14 @@
+/**
+ * @deprecated This client-side encryption is DEPRECATED and INSECURE
+ *
+ * Security Issue: Uses NEXT_PUBLIC_ env variable which exposes the key in browser
+ *
+ * Migration: Use server-side encryption instead:
+ * - Import: import { encryptData, decryptData } from '@/actions/crypto.action'
+ * - Uses: ServerCrypto (server-side only, key NOT exposed)
+ *
+ * DO NOT USE THIS FOR NEW CODE!
+ */
 
 interface EncryptionResult {
     encrypted: string;  // base64 encoded
@@ -5,6 +16,7 @@ interface EncryptionResult {
 }
 
 /**
+ * @deprecated Use ServerCrypto via server actions instead
  * Simple AES-GCM encryption/decryption using secret key from environment
  */
 export class CryptoUserData {
@@ -23,9 +35,9 @@ export class CryptoUserData {
             return CryptoUserData.cachedKey;
         }
 
-        const secretKey = process.env.ENCRYPTION_KEY_USERDATA;
+        const secretKey = process.env.NEXT_PUBLIC_ENCRYPTION_KEY_USERDATA;
         if (!secretKey) {
-            throw new Error('SECRET_KEY tidak ditemukan dalam environment variables');
+            throw new Error('NEXT_PUBLIC_ENCRYPTION_KEY_USERDATA tidak ditemukan dalam environment variables');
         }
 
         // Hash secret key untuk mendapatkan key yang konsisten

@@ -23,9 +23,9 @@ import { Pencil, Trash2 } from 'lucide-react';
 import CreateCategory from './create';
 import EditCategory from './edit';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
-import { useConfirm } from '@/context/dashboard/useConfirm';
+import { useConfirm } from '@/contexts/dashboard/useConfirm';
 import { DataTable, DataTableColumnHeader } from '@/components/data-table';
+import axiosInstance from '@/lib/axiosInstance';
 
 export default function ManagementCategoriesPage() {
     const dispatch = useDispatch<AppDispatch>();
@@ -50,7 +50,7 @@ export default function ManagementCategoriesPage() {
             cancelText: "Cancel",
             onConfirm: async () => {
                 try {
-                    await apiClient.delete(`/categories/${categoryId}`);
+                    await axiosInstance.delete(`/categories/${categoryId}`);
                     toast.success('Category deleted successfully');
                     dispatch(fetchCategories({ page, limit, search, sortBy, sortOrder }));
                 } catch (error: unknown) {

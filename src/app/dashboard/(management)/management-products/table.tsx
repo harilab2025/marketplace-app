@@ -32,8 +32,7 @@ import View from './view';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { DataTable, DataTableColumnHeader, type FilterConfig } from '@/components/data-table';
-import { apiClient } from '@/lib/axios';
-import { useConfirm } from '@/context/dashboard/useConfirm';
+import { useConfirm } from '@/contexts/dashboard/useConfirm';
 import { getProductSuggestions } from '@/services/fetch/product.fetch';
 import ProductStatusBadge from '@/components/product/ProductStatusBadge';
 import VerificationActionButtons from '@/components/product/VerificationActionButtons';
@@ -41,6 +40,7 @@ import ProductHistoryViewer from '@/components/product/ProductHistoryViewer';
 import RejectProductModal from '@/components/product/RejectProductModal';
 import { useSession } from 'next-auth/react';
 import { useDebounce } from '@/hooks/useDebounce';
+import axiosInstance from '@/lib/axiosInstance';
 
 export default function ManagementProductsPage() {
     const dispatch = useDispatch<AppDispatch>();
@@ -281,7 +281,7 @@ export default function ManagementProductsPage() {
             cancelText: "Cancel",
             onConfirm: async () => {
                 try {
-                    await apiClient.delete(`/products/${productId}`);
+                    await axiosInstance.delete(`/products/${productId}`);
                     toast.success('Product deleted successfully');
                     handleRefresh();
                 } catch (error: unknown) {

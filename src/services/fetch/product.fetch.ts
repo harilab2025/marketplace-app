@@ -1,4 +1,4 @@
-import { apiClient } from "@/lib/axios";
+import axiosInstance from "@/lib/axiosInstance";
 
 export async function fetchProductsServer({
     page,
@@ -47,7 +47,7 @@ export async function fetchProductsServer({
             : verificationStatusFilter;
     }
 
-    const res = await apiClient.get(`/products`, {
+    const res = await axiosInstance.get(`/products`, {
         params,
         timeout: 10000,
         signal, // Pass AbortController signal
@@ -106,7 +106,7 @@ export async function searchProductsElasticsearch({
         params.tags = tags.join(',');
     }
 
-    const res = await apiClient.get(`/products/search`, {
+    const res = await axiosInstance.get(`/products/search`, {
         params,
         timeout: 10000,
         signal,
@@ -128,7 +128,7 @@ export async function getProductSuggestions({
         return { status: 'success', data: { suggestions: [] } };
     }
 
-    const res = await apiClient.get(`/products/suggest`, {
+    const res = await axiosInstance.get(`/products/suggest`, {
         params: {
             query: query.trim(),
             limit

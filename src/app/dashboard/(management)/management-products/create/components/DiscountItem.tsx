@@ -8,12 +8,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Percent, X } from 'lucide-react';
 import { CreateDiscount } from '../types';
 import { calculateDiscountedPrice, calculateSavings } from '../utils/price';
-import { formatNumber, parseNumber } from '../utils/number';
+import { formatNumber } from '../utils/number';
 
 interface DiscountItemProps {
     discount: CreateDiscount;
     index: number;
-    onUpdate: (discountId: number, field: keyof CreateDiscount, value: any) => void;
+    onUpdate: (discountId: number, field: keyof CreateDiscount, value: unknown) => void;
     onRemove: (discountId: number) => void;
     basePrice?: number;
     showPreview?: boolean;

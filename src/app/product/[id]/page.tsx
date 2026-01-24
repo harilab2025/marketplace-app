@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { ArrowLeft, ShoppingCart, Plus, Minus, Package, Shield, Truck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { apiClient } from '@/lib/axios';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface Product {
     publicId: string;
@@ -32,7 +32,7 @@ export default function ProductPreviewPage({ params }: { params: { id: string } 
         const fetchProduct = async () => {
             try {
                 setIsLoading(true);
-                const response = await apiClient.get(`/products/${params.id}`);
+                const response = await axiosInstance.get(`/products/${params.id}`);
                 setProduct(response.data.data);
             } catch (error) {
                 toast.error('Failed to load product');
@@ -145,9 +145,8 @@ export default function ProductPreviewPage({ params }: { params: { id: string } 
                                 <button
                                     key={index}
                                     onClick={() => setSelectedImage(index)}
-                                    className={`aspect-square bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center text-4xl ${
-                                        selectedImage === index ? 'ring-2 ring-blue-500' : ''
-                                    }`}
+                                    className={`aspect-square bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center text-4xl ${selectedImage === index ? 'ring-2 ring-blue-500' : ''
+                                        }`}
                                 >
                                     {img}
                                 </button>
@@ -172,11 +171,10 @@ export default function ProductPreviewPage({ params }: { params: { id: string } 
 
                         {/* Stock Status */}
                         <div className="flex items-center gap-2">
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                                product.stock > 10 ? 'bg-green-100 text-green-800' :
+                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${product.stock > 10 ? 'bg-green-100 text-green-800' :
                                 product.stock > 0 ? 'bg-yellow-100 text-yellow-800' :
-                                'bg-red-100 text-red-800'
-                            }`}>
+                                    'bg-red-100 text-red-800'
+                                }`}>
                                 {product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}
                             </span>
                         </div>

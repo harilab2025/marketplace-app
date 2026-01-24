@@ -141,7 +141,7 @@ const PhotoGalleryOrganizer: React.FC<{ getFiles: (files: File[]) => void }> = (
                                         onDragStart={(e) => handleDragStart(e, index + 1)}
                                         onDragOver={(e) => handleDragOver(e, index + 1)}
                                         onDragEnd={handleDragEnd}
-                                        className={`group relative h-auto min-h-[80px] bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl cursor-move justify-items-center`}
+                                        className={`group relative h-auto min-h-20 bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-xl cursor-move justify-items-center`}
                                     >
                                         <div className="absolute top-2 right-2 z-10 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                                             <Button
@@ -167,7 +167,7 @@ const PhotoGalleryOrganizer: React.FC<{ getFiles: (files: File[]) => void }> = (
                                 ))}
                                 <Tooltip>
                                     <TooltipTrigger asChild>
-                                        <div className="flex flex-col h-auto min-h-[80px] items-center justify-center border-2 border-dashed border-slate-300 rounded-xl p-3 bg-white hover:bg-slate-50 cursor-pointer transition-colors" onClick={() => fileInputRef.current?.click()}>
+                                        <div className="flex flex-col h-auto min-h-20 items-center justify-center border-2 border-dashed border-slate-300 rounded-xl p-3 bg-white hover:bg-slate-50 cursor-pointer transition-colors" onClick={() => fileInputRef.current?.click()}>
                                             <input
                                                 ref={fileInputRef}
                                                 type="file"

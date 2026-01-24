@@ -16,7 +16,7 @@ export default function Home() {
                             Authentication Security
                         </h2>
                         <p className="text-indigo-100 leading-relaxed">
-                            Lindungi aplikasi Anda dengan sistem keamanan berlapis yang mengikuti standar industri terbaik.
+                            Protect your application with multi-layered security system following industry best practices.
                         </p>
                     </div>
 
@@ -27,7 +27,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-semibold mb-1">Multi-Factor Authentication</h3>
-                                <p className="text-sm text-indigo-100">Kombinasi password, SMS, dan biometric untuk keamanan berlapis</p>
+                                <p className="text-sm text-indigo-100">Combined password, OTP, and biometric for layered security</p>
                             </div>
                         </div>
 
@@ -37,7 +37,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-semibold mb-1">JWT Token Security</h3>
-                                <p className="text-sm text-indigo-100">Session management dengan refresh token dan secure storage</p>
+                                <p className="text-sm text-indigo-100">Session management with refresh token and secure storage</p>
                             </div>
                         </div>
 
@@ -47,7 +47,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-semibold mb-1">Role-Based Access</h3>
-                                <p className="text-sm text-indigo-100">Kontrol akses granular berdasarkan peran dan permissions</p>
+                                <p className="text-sm text-indigo-100">Granular access control based on roles and permissions</p>
                             </div>
                         </div>
 
@@ -57,7 +57,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-semibold mb-1">Activity Monitoring</h3>
-                                <p className="text-sm text-indigo-100">Real-time detection untuk aktivitas mencurigakan dan anomali</p>
+                                <p className="text-sm text-indigo-100">Real-time detection for suspicious activities and anomalies</p>
                             </div>
                         </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <h3 className="font-semibold mb-1">Brute Force Protection</h3>
-                                <p className="text-sm text-indigo-100">Rate limiting dan account lockout untuk mencegah serangan</p>
+                                <p className="text-sm text-indigo-100">Rate limiting and account lockout to prevent attacks</p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export default function Home() {
                     <div className="mt-8 p-4 bg-white/10 rounded-lg">
                         <p className="text-sm font-medium mb-2">🔒 Security Standards</p>
                         <p className="text-xs text-indigo-100">
-                            Mengikuti standar OWASP, OAuth 2.0, OpenID Connect, dan compliance GDPR untuk perlindungan data maksimal.
+                            Following OWASP standards, OAuth 2.0, OpenID Connect, and GDPR compliance for maximum data protection.
                         </p>
                     </div>
                 </div>

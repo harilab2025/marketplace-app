@@ -1,8 +1,6 @@
 import NextAuth, { AuthError } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import CredentialsProvider from "next-auth/providers/credentials"
-import axios from "axios"
-import { decryptData } from "@/actions/crypto.action";
 
 class CustomError extends AuthError {
     constructor(message: string) {
@@ -17,7 +15,19 @@ function generateUUID(): string {
     );
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+// ============================================================================
+// TYPES - User info only (no tokens - tokens are in HTTP-only cookies)
+// ============================================================================
+interface UserInfo {
+    publicId: string;
+    name: string;
+    email: string;
+    role: string;
+    avatar?: string;
+    securityLevel?: string;
+    twoFactorEnabled?: boolean;
+}
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
     providers: [
         GoogleProvider({
@@ -27,71 +37,49 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         CredentialsProvider({
             name: "Credentials",
             credentials: {
-                email: { label: "Email", type: "email" },
-                password: { label: "Password", type: "password" },
-                token: { label: "Token", type: "text" }
+                // User info as JSON string (no tokens!)
+                userInfo: { label: "User Info", type: "text" }
             },
             async authorize(credentials) {
-                // Validasi input - langsung throw error tanpa try-catch
-                if (!credentials?.email || !credentials?.password) {
-                    throw new CustomError('Email and password are required');
-                }
-                if (!credentials?.token) {
-                    throw new CustomError('reCAPTCHA verification is required');
+                // ============================================================
+                // SIMPLIFIED: Just validate and store user info
+                // Tokens are handled by HTTP-only cookies from backend
+                // ============================================================
+                if (!credentials?.userInfo) {
+                    throw new CustomError('Invalid authentication data');
                 }
 
                 try {
-                    const requestData = {
-                        email: credentials.email,
-                        password: credentials.password,
-                        token: credentials.token
+                    const userInfo: UserInfo = JSON.parse(credentials.userInfo as string);
+
+                    // Validate required user fields
+                    if (!userInfo.publicId || !userInfo.email || !userInfo.role) {
+                        throw new CustomError('Missing required user information');
+                    }
+
+                    // Return user object for NextAuth session
+                    const uuid: string = generateUUID();
+                    return {
+                        id: uuid,
+                        publicId: userInfo.publicId,
+                        name: userInfo.name,
+                        email: userInfo.email,
+                        role: userInfo.role,
+                        avatar: userInfo.avatar,
+                        securityLevel: userInfo.securityLevel,
+                        twoFactorEnabled: userInfo.twoFactorEnabled,
                     };
 
-                    const response = await axios.post(`${API_URL}/auth/login`, requestData, {
-                        headers: { 'Content-Type': 'application/json' },
-                        timeout: 10000, // 10 second timeout
-                    });
-
-                    // Cek response status dan data
-                    if (response.status === 200 && response.data?.data) {
-                        const result_key = response.data.data;
-                        const uuid: string = generateUUID();
-                        if (result_key) {
-                            return {
-                                id: uuid,
-                                key: result_key
-                            };
-                        }
-                    }
-
-                    // Jika sampai sini, response tidak valid
-                    throw new CustomError('Invalid response from server');
-
                 } catch (error) {
-                    // Handle axios errors
-                    if (axios.isAxiosError(error)) {
-                        if (error.response) {
-                            // Server responded with error status
-                            const apiErrorMessage = error.response.data?.message ||
-                                error.response.data?.error ||
-                                'Login failed';
-                            throw new CustomError(apiErrorMessage);
-                        } else if (error.request) {
-                            // Network error
-                            throw new CustomError('Unable to connect to server. Please try again.');
-                        } else {
-                            // Request setup error
-                            throw new CustomError('Network error occurred');
-                        }
+                    if (error instanceof SyntaxError) {
+                        throw new CustomError('Invalid user data format');
                     }
 
-                    // Re-throw other errors (termasuk dari validasi atau decryption)
-                    if (error instanceof Error) {
+                    if (error instanceof CustomError) {
                         throw error;
                     }
 
-                    // Fallback error
-                    throw new CustomError('An unexpected error occurred');
+                    throw new CustomError('Authentication failed');
                 }
             }
         })
@@ -104,37 +92,54 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     },
     trustHost: true,
     callbacks: {
-        async jwt({ token, user, account, trigger, session }) {
+        async jwt({ token, user, trigger, session }) {
+            // On initial sign-in, store user info
             if (user) {
                 token.id = user.id;
-                token.key = user.key;
+                token.publicId = user.publicId;
+                token.name = user.name;
+                token.email = user.email;
+                token.role = user.role;
+                token.avatar = user.avatar;
+                token.securityLevel = user.securityLevel;
+                token.twoFactorEnabled = user.twoFactorEnabled;
             }
 
-            if (account && account.access_token) {
-                token.accessToken = account.access_token;
-            }
-
+            // Allow session updates (e.g., role changes)
             if (trigger === "update" && session) {
                 token.role = session.role || token.role;
+                token.name = session.name || token.name;
+                token.avatar = session.avatar || token.avatar;
+                token.securityLevel = session.securityLevel || token.securityLevel;
+                token.twoFactorEnabled = session.twoFactorEnabled ?? token.twoFactorEnabled;
             }
 
             return token;
         },
 
         async session({ session, token }) {
+            // ============================================================
+            // Expose user info to client session
+            // NO tokens here - tokens are in HTTP-only cookies
+            // ============================================================
             if (token) {
                 session.user.id = token.id as string;
-                session.user.key = token.key as string;
+                session.user.publicId = token.publicId as string;
+                session.user.name = token.name as string;
+                session.user.email = token.email as string;
                 session.user.role = token.role as string;
+                session.user.avatar = token.avatar as string | undefined;
+                session.user.securityLevel = token.securityLevel as string | undefined;
+                session.user.twoFactorEnabled = token.twoFactorEnabled as boolean | undefined;
             }
             return session;
         },
     },
     pages: {
-        signIn: '/', // custom login page (opsional)
-        error: '/error', // custom error page (opsional)
+        signIn: '/',
+        error: '/error',
     },
-    debug: process.env.NODE_ENV === 'development', // enable debug di development
+    debug: process.env.NODE_ENV === 'development',
     logger: {
         error(error) {
             if (process.env.NODE_ENV === 'development') {
@@ -153,43 +158,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
     },
     events: {
-        async signOut(message) {
-            // Panggil API untuk invalidate token di server (optional)
-            try {
-                // Check if API_URL is available
-                if (!API_URL) {
-                    if (process.env.NODE_ENV === 'development') {
-                        console.warn('API_URL not configured, skipping server logout');
-                    }
-                    return;
-                }
-
-                const token = 'token' in message ? message.token : null;
-                if (token?.key && typeof token.key === 'string') {
-                    const result_string = await decryptData(token.key);
-                    const result = JSON.parse(result_string);
-
-                    if (result?.accessToken) {
-                        await axios.post(`${API_URL}/auth/logout`, {}, {
-                            headers: {
-                                'Authorization': `Bearer ${result.accessToken}`,
-                                'Content-Type': 'application/json'
-                            },
-                            timeout: 3000, // 3 second timeout
-                            validateStatus: () => {
-                                // Accept any status code - logout should always succeed
-                                return true;
-                            }
-                        });
-                    }
-                }
-            } catch (error) {
-                // Silently ignore logout errors - client logout should always succeed
-                // Only log in development for debugging
-                if (process.env.NODE_ENV === 'development') {
-                    console.warn('Server logout warning (ignored):', error);
-                }
-            }
+        async signOut() {
+            // Backend logout is handled separately via authService.logout()
+            // which uses HTTP-only cookies
+            // No need to manually call backend here
         }
     }
 })

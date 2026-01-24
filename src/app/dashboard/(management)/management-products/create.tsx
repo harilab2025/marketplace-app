@@ -9,9 +9,9 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
-import { useConfirm } from '@/context/dashboard/useConfirm';
-import { useLoadingUtils } from '@/context/dashboard/useLoading';
-import { apiClient } from '@/lib/axios';
+import { useConfirm } from '@/contexts/dashboard/useConfirm';
+import { useLoadingUtils } from '@/contexts/dashboard/useLoading';
+import axiosInstance from '@/lib/axiosInstance';
 import { objectToFormData } from '@/utils/formData.helper';
 import { AxiosError } from 'axios';
 import { SerializedEditorState } from 'lexical';
@@ -141,7 +141,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
         const fetchCategories = async () => {
             try {
                 setLoadingCategories(true);
-                const response = await apiClient.get('/categories/active');
+                const response = await axiosInstance.get('/categories/active');
                 if (response.data.status === 'success') {
                     setCategories(response.data.items || []);
                 }
@@ -205,7 +205,7 @@ function Create({ setActionContent }: { setActionContent: (content: string) => v
                     const formData = objectToFormData(sendData, files);
                     console.log('sendData : ', sendData);
                     // const res = { status: 201 };
-                    const res = await apiClient.post(`/products`, formData);
+                    const res = await axiosInstance.post(`/products`, formData);
                     hide();
                     if (res.status !== 201) {
                         toast.error('Failed to create product');

@@ -3,9 +3,9 @@
 import { useState, useRef } from 'react';
 import { Camera, Upload, X, Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import { uploadAvatar, deleteAvatar } from '@/services/fetch/user.fetch';
 
 interface AvatarUploadProps {
     currentAvatar: string | null;
@@ -55,28 +55,19 @@ export default function AvatarUpload({ currentAvatar, userName, onUploadSuccess 
         try {
             setIsUploading(true);
 
-            // Create FormData
-            const formData = new FormData();
-            formData.append('avatar', selectedFile);
+            const response = await uploadAvatar(selectedFile);
 
-            // Upload to backend
-            const response = await apiClient.post('/users/avatar', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
-
-            if (response.data.status === 'success') {
-                const newAvatarUrl = response.data.data.avatar;
+            if (response.status === 'success') {
+                const newAvatarUrl = response.data?.avatar || '';
                 toast.success('Avatar uploaded successfully');
                 onUploadSuccess(newAvatarUrl);
                 handleClose();
+            } else {
+                toast.error(response.message || 'Failed to upload avatar');
             }
         } catch (error: unknown) {
-            const message = error instanceof Error && 'response' in error
-                ? (error as { response?: { data?: { message?: string } } }).response?.data?.message
-                : 'Failed to upload avatar';
-            toast.error(message || 'Failed to upload avatar');
+            const message = error instanceof Error ? error.message : 'Failed to upload avatar';
+            toast.error(message);
         } finally {
             setIsUploading(false);
         }
@@ -86,18 +77,18 @@ export default function AvatarUpload({ currentAvatar, userName, onUploadSuccess 
         try {
             setIsUploading(true);
 
-            const response = await apiClient.delete('/users/avatar');
+            const response = await deleteAvatar();
 
-            if (response.data.status === 'success') {
+            if (response.status === 'success') {
                 toast.success('Avatar removed successfully');
                 onUploadSuccess('');
                 handleClose();
+            } else {
+                toast.error(response.message || 'Failed to remove avatar');
             }
         } catch (error: unknown) {
-            const message = error instanceof Error && 'response' in error
-                ? (error as { response?: { data?: { message?: string } } }).response?.data?.message
-                : 'Failed to remove avatar';
-            toast.error(message || 'Failed to remove avatar');
+            const message = error instanceof Error ? error.message : 'Failed to remove avatar';
+            toast.error(message);
         } finally {
             setIsUploading(false);
         }
@@ -154,13 +145,21 @@ export default function AvatarUpload({ currentAvatar, userName, onUploadSuccess 
                                     <Image
                                         src={previewUrl}
                                         alt="Preview"
+                                        width={160}
+                                        height={160}
                                         className="w-full h-full object-cover"
+                                        unoptimized // Required for base64/data URLs
+                                        loading="eager"
                                     />
                                 ) : currentAvatar ? (
                                     <Image
                                         src={currentAvatar}
                                         alt={userName}
+                                        width={160}
+                                        height={160}
                                         className="w-full h-full object-cover"
+                                        loading="eager"
+                                        priority
                                     />
                                 ) : (
                                     userName.charAt(0).toUpperCase()

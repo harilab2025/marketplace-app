@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import { UserCircle, Mail, Phone, Shield, Calendar, CheckCircle, XCircle, Clock } from 'lucide-react';
 import { toast } from 'sonner';
-import { apiClient } from '@/lib/axios';
 import { Skeleton } from '@/components/ui/Skeleton';
 import Image from 'next/image';
+import axiosInstance from '@/lib/axiosInstance';
 
 interface ViewUserProps {
     setActionContent: (action: string) => void;
@@ -34,7 +34,7 @@ export default function ViewUser({ setActionContent, userId }: ViewUserProps) {
         const fetchUser = async () => {
             try {
                 setIsLoading(true);
-                const response = await apiClient.get<{ status: string; data: UserData }>(`/users/${userId}`);
+                const response = await axiosInstance.get<{ status: string; data: UserData }>(`/users/${userId}`);
 
                 if (response.data.status === 'success') {
                     setUser(response.data.data);

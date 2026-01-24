@@ -365,13 +365,18 @@ export function DataTable<TData, TValue>({
     });
 
     // Effect to trigger API call when debounced value changes
+    // Note: When useSearchSuggestion is enabled, onSearch is only called on Enter or suggestion click
     useEffect(() => {
+        if (useSearchSuggestion) {
+            // Don't auto-search when using suggestions - only search on Enter or suggestion click
+            return;
+        }
         if (onSearch) {
             onSearch(debouncedSearch);
         } else if (searchColumn) {
             table.getColumn(searchColumn)?.setFilterValue(debouncedSearch);
         }
-    }, [debouncedSearch, onSearch, searchColumn, table]);
+    }, [debouncedSearch, onSearch, searchColumn, table, useSearchSuggestion]);
 
     // Handler for immediate UI update
     const handleSearchInput = useCallback((value: string) => {
@@ -403,8 +408,10 @@ export function DataTable<TData, TValue>({
                 abortControllerRef.current.signal
             );
 
-            setSuggestions(fetchedSuggestions.slice(0, suggestionLimit));
-            setShowSuggestionDropdown(fetchedSuggestions.length > 0);
+            // Remove duplicates and limit results
+            const uniqueSuggestions = [...new Set(fetchedSuggestions)].slice(0, suggestionLimit);
+            setSuggestions(uniqueSuggestions);
+            setShowSuggestionDropdown(uniqueSuggestions.length > 0);
         } catch (error: unknown) {
             if (error && typeof error === 'object' && 'name' in error && error.name !== 'AbortError') {
                 console.error('Failed to fetch suggestions:', error);
@@ -455,6 +462,24 @@ export function DataTable<TData, TValue>({
 
     // Handle keyboard navigation for suggestions
     const handleSuggestionKeyDown = useCallback((e: React.KeyboardEvent<HTMLInputElement>) => {
+        // Handle Enter key - search even without suggestions
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            // If suggestion is selected, use that
+            if (showSuggestionDropdown && selectedSuggestionIndex >= 0 && selectedSuggestionIndex < suggestions.length) {
+                handleSelectSuggestion(suggestions[selectedSuggestionIndex]);
+            } else {
+                // Otherwise, search with current input value
+                setShowSuggestionDropdown(false);
+                setSelectedSuggestionIndex(-1);
+                if (onSearch) {
+                    onSearch(searchInput.trim());
+                }
+            }
+            return;
+        }
+
+        // Other keys only work when dropdown is shown
         if (!showSuggestionDropdown || suggestions.length === 0) return;
 
         switch (e.key) {
@@ -468,18 +493,12 @@ export function DataTable<TData, TValue>({
                 e.preventDefault();
                 setSelectedSuggestionIndex(prev => prev > 0 ? prev - 1 : -1);
                 break;
-            case 'Enter':
-                e.preventDefault();
-                if (selectedSuggestionIndex >= 0 && selectedSuggestionIndex < suggestions.length) {
-                    handleSelectSuggestion(suggestions[selectedSuggestionIndex]);
-                }
-                break;
             case 'Escape':
                 setShowSuggestionDropdown(false);
                 setSelectedSuggestionIndex(-1);
                 break;
         }
-    }, [showSuggestionDropdown, suggestions, selectedSuggestionIndex, handleSelectSuggestion]);
+    }, [showSuggestionDropdown, suggestions, selectedSuggestionIndex, handleSelectSuggestion, onSearch, searchInput]);
 
     // Clear search input
     const handleClearSearch = useCallback(() => {

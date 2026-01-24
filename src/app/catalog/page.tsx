@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '@/store';
 import {
@@ -11,7 +11,6 @@ import {
     selectProductsLoading,
     selectProductsPagination,
     selectProductsSearch,
-    setLimit,
     setPage,
     setSearch,
 } from '@/store/productsSlice';
@@ -20,7 +19,6 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { Search, ShoppingCart, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import type { Product } from '@/store/productsSlice';
 
 export default function CatalogPage() {
