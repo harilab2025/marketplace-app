@@ -40,3 +40,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# documentation/planning files
+FRONTEND_IMPLEMENTATION_ROADMAP.md
+IMPLEMENTATION_ROADMAP.md
+PHASE_2.5_ADMIN_SECURITY_SUMMARY.md
+SECURE_SESSION_ARCHITECTURE.md
+SECURITY.md
+SESSION_NEXT_STEPS.md
+
+# misc
+nul
